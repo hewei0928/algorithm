@@ -139,6 +139,48 @@ public class leetcode {
 
 
     /**
+     * 35. 搜索插入位置
+     * 给定一个排序数组和一个目标值，在数组中找到目标值，并返回其索引。如果目标值不存在于数组中，返回它将会被按顺序插入的位置。
+     * 你可以假设数组中无重复元素。
+     * @param nums 有序数组
+     * @param target 要插入的数字
+     * @return 插入索引
+     */
+    public int searchInsert(int[] nums, int target) {
+        for (int i = 0; i < nums.length; i++) {
+            if (target <= nums[i]) {
+                return i;
+            }
+        }
+        return nums.length;
+    }
+
+
+
+    /**
+     * 53. 最大子序和
+     * 给定一个整数数组 nums ，找到一个具有最大和的连续子数组（子数组最少包含一个元素），返回其最大和。
+     * @param nums 输入数组
+     * @return 最大子序列和
+     */
+    public int maxSubArray(int[] nums) {
+        int maxSum = Integer.MIN_VALUE, sum = 0;
+        for (int num : nums) {
+            sum += num;
+            maxSum = Math.max(sum, maxSum);
+            if (sum < 0) {
+                sum = 0;
+            }
+        }
+
+        return maxSum;
+    }
+
+
+
+
+
+    /**
      * 69. x 的平方根
      * 实现 int sqrt(int x) 函数。
      * 计算并返回 x 的平方根，其中 x 是非负整数。
@@ -191,6 +233,63 @@ public class leetcode {
      */
     public int mySqrt1(int x) {
         return 0;
+    }
+
+
+    /**
+     * 75. 颜色分类
+     * 给定一个包含红色、白色和蓝色，一共 n 个元素的数组，
+     * 原地对它们进行排序，使得相同颜色的元素相邻，并按照红色、白色、蓝色顺序排列。
+     * 此题中，我们使用整数 0、 1 和 2 分别表示红色、白色和蓝色。
+     * @param nums 输入数组
+     */
+    public void sortColors(int[] nums) {
+        int zero = 0, one = 0, two = 0;
+        for (int i = 0; i < nums.length; i++) {
+            if (nums[i] == 0) {
+                zero ++;
+            } else if (nums[i] == 1) {
+                one ++;
+            } else {
+                two ++;
+            }
+        }
+
+        for (int i = 0; i < nums.length; i++) {
+            if (i < zero) {
+                nums[i] = 0;
+            } else if (i < zero + one) {
+                nums[i] = 1;
+            } else {
+                nums[i] = 2;
+            }
+        }
+    }
+
+
+    // TODO: 2018/8/5 重做一遍
+    /** 
+     * 75. 颜色分类
+     * 给定一个包含红色、白色和蓝色，一共 n 个元素的数组，
+     * 原地对它们进行排序，使得相同颜色的元素相邻，并按照红色、白色、蓝色顺序排列。
+     * 此题中，我们使用整数 0、 1 和 2 分别表示红色、白色和蓝色。
+     * @param nums 输入数组
+     */
+    public void sortColors1(int[] nums) {
+        int zeroIndex = 0, twoIndex = nums.length - 1;
+        for (int i = 0; i <= twoIndex; i++) {
+            if (nums[i] == 0) {
+                nums[i] = nums[zeroIndex];
+                nums[zeroIndex] = 0;
+                zeroIndex++;
+            }
+            if (nums[i] == 2) {
+                nums[i] = nums[twoIndex];
+                nums[twoIndex] = 2;
+                twoIndex--;
+                i--;
+            }
+        }
     }
 
 
@@ -320,6 +419,68 @@ public class leetcode {
         return result;
     }
 
+
+    /**
+     * 121. 买卖股票的最佳时机
+     * 给定一个数组，它的第 i 个元素是一支给定股票第 i 天的价格。
+     * 如果你最多只允许完成一笔交易（即买入和卖出一支股票），设计一个算法来计算你所能获取的最大利润。
+     * 注意你不能在买入股票前卖出股票。
+     * @param prices 价格数组
+     * @return 最大利润
+     */
+    public int maxProfit(int[] prices) {
+        if (prices.length == 0) {
+            return 0;
+        }
+        // 改变序列
+        for (int i = prices.length - 1; i > 0; i--) {
+            prices[i] = prices[i] - prices[i - 1];
+        }
+        prices[0] = 0;
+        // 求最大子序列
+
+        int maxSum=0,sum=0;
+        for(int i=0;i<prices.length;i++){
+            sum+=prices[i];
+            if(sum>maxSum){
+                maxSum=sum;
+            }
+            if(sum<0){
+                sum=0;
+            }
+        }
+        return maxSum;
+    }
+
+
+    /**
+     * 122. 买卖股票的最佳时机 II
+     * 给定一个数组，它的第 i 个元素是一支给定股票第 i 天的价格。
+     * 设计一个算法来计算你所能获取的最大利润。你可以尽可能地完成更多的交易（多次买卖一支股票）。
+     * 注意：你不能同时参与多笔交易（你必须在再次购买前出售掉之前的股票）。
+     * @param prices 价格列表
+     * @return 最大利润
+     */
+    public int maxProfit2(int[] prices) {
+        if (prices.length == 0) {
+            return 0;
+        }
+        for (int i = prices.length - 1; i > 0; i--) {
+            prices[i] = prices[i] - prices[i-1];
+        }
+        prices[0] = 0;
+
+        int maxSum = 0;
+        for (int price : prices) {
+            if (price > 0) {
+                maxSum += price;
+            }
+        }
+
+        return maxSum;
+    }
+
+
     /**
      * 141. 环形链表
      * 给定一个链表，判断链表中是否有环。(尾节点不一定指向首节点中间的环也可)
@@ -367,6 +528,85 @@ public class leetcode {
         }
         return false;
     }
+
+
+    /**
+     * 147. 对链表进行插入排序
+     * 对链表进行插入排序。
+     * @param head 头节点
+     * @return 排序后链表
+     */
+    public ListNode insertionSortList(ListNode head) {
+        if (head == null) {
+            return null;
+        }
+        ListNode result = head;
+        ListNode current = head;
+        while (current.next != null) {
+            // 要排序的节点
+            ListNode pre = current;
+            current = current.next;
+            // 插入遍历节点
+            ListNode node = result;
+            // 头节点之前插入
+            if (current.val <= node.val) {
+                pre.next = current.next;
+                current.next = node;
+                result = current;
+                current = pre;
+                continue;
+            }
+            while (node.next != current) {
+                if (node.val <= current.val && current.val <= node.next.val) {
+                    pre.next = current.next;
+                    current.next = node.next;
+                    node.next = current;
+                    current = pre;
+                    break;
+                }
+                node = node.next;
+            }
+        }
+        return result;
+    }
+
+
+    /**
+     * 147. 对链表进行插入排序
+     * 对链表进行插入排序。
+     * @param head 头节点
+     * @return
+     */
+    public ListNode insertionSortList1(ListNode head) {
+        ListNode helper=new ListNode(0);
+        ListNode pre=helper;
+        ListNode current=head;
+        while(current!=null) {
+            pre=helper;
+            while(pre.next!=null&&pre.next.val<current.val) {
+                pre=pre.next;
+            }
+            ListNode next=current.next;
+            current.next=pre.next;
+            pre.next=current;
+            current=next;
+        }
+        return helper.next;
+    }
+
+
+    /**
+     * 148. 排序链表
+     * 在 O(n log n) 时间复杂度和常数级空间复杂度下，对链表进行排序。
+     * @param head 链表
+     * @return 排序后的链表
+     */
+//    public ListNode sortList(ListNode head) {
+//        ListNode
+//    }
+
+
+
 
 
     /**
@@ -433,6 +673,34 @@ public class leetcode {
         }
         return null;
     }
+
+
+    /**
+     * 167. 两数之和 II - 输入有序数组
+     * 给定一个已按照 升序排列 的有序数组，找到两个数使得它们相加之和等于目标数。
+     * 函数应该返回这两个下标值 index1 和 index2，其中 index1 必须小于 index2。
+     * 说明:
+     * 返回的下标值（index1 和 index2）不是从零开始的。
+     * 你可以假设每个输入只对应唯一的答案，而且你不可以重复使用相同的元素。
+     * @param numbers 有序数组
+     * @param target 两个数的和
+     * @return 两个下标值
+     */
+    public int[] twoSum1(int[] numbers, int target) {
+        Map<Integer, Integer> maps = new HashMap<>();
+        for (int i = 0; i < numbers.length; i++) {
+            if (maps.containsKey(numbers[i])) {
+                return new int[]{maps.get(numbers[i]) + 1, i + 1};
+            } else {
+                maps.put(target - numbers[i], i);
+            }
+        }
+
+        return null;
+    }
+
+
+
 
 
     /**
@@ -547,6 +815,28 @@ public class leetcode {
 
 
     /**
+     * 217. 存在重复元素
+     * 给定一个整数数组，判断是否存在重复元素。
+     * 如果任何值在数组中出现至少两次，函数返回 true。如果数组中每个元素都不相同，则返回 false。
+     * @param nums 给定数组
+     * @return 是否存在重复值
+     */
+    public boolean containsDuplicate(int[] nums) {
+        Set<Integer> sets = new HashSet<>();
+        for (int num : nums) {
+            if (sets.contains(num)) {
+                return true;
+            } else {
+                sets.add(num);
+            }
+        }
+        return false;
+    }
+
+
+
+
+    /**
      * 234. 回文链表
      * 请判断一个链表是否为回文链表。
      *
@@ -595,6 +885,76 @@ public class leetcode {
         node.val = node.next.val;
         node.next = node.next.next;
     }
+
+
+    /**
+     * 242. 有效的字母异位词
+     * 给定两个字符串 s 和 t ，编写一个函数来判断 t 是否是 s 的一个字母异位词。
+     * @param s
+     * @param t
+     * @return
+     */
+    public boolean isAnagram(String s, String t) {
+        if (s.length() != t.length()) {
+            return false;
+        }
+        char[] sArray = s.toCharArray();
+        char[] tArray = t.toCharArray();
+        Arrays.sort(sArray);
+        Arrays.sort(tArray);
+        for (int i = 0; i < sArray.length; i ++) {
+            if (sArray[i] != tArray[i]) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+
+    /**
+     * 242. 有效的字母异位词
+     * 给定两个字符串 s 和 t ，编写一个函数来判断 t 是否是 s 的一个字母异位词。
+     * @param s
+     * @param t
+     * @return
+     */
+    public boolean isAnagram1(String s, String t) {
+        if (s.length() != t.length()) {
+            return false;
+        }
+        int[] table = new int[26];
+        for (int i = 0; i < s.length(); i++) {
+            table[s.charAt(i) - 'a'] ++;
+        }
+
+        for (int i = 0; i < s.length(); i++) {
+            table[t.charAt(i) - 'a'] --;
+            if (table[t.charAt(i) - 'a'] < 0) {
+                return false;
+            }
+        }
+        return true;
+
+    }
+
+
+    /**
+     * 268. 缺失数字
+     * 给定一个包含 0, 1, 2, ..., n 中 n 个数的序列，找出 0 .. n 中没有出现在序列中的那个数。
+     * @param nums 数组
+     * @return 缺失的数字
+     */
+    public int missingNumber(int[] nums) {
+        int sum = 0;
+        for (int i : nums) {
+            sum += i;
+        }
+        int all = (nums.length + 1) * nums.length / 2;
+        return  all - sum;
+    }
+
+
+
 
 
     /**
@@ -652,6 +1012,125 @@ public class leetcode {
     public boolean canWinNim(int n) {
         return (n % 4) > 0;
     }
+
+
+    /**
+     * 349. 两个数组的交集
+     * 给定两个数组，写一个函数来计算它们的交集。
+     * 例子:
+     * 给定 num1= [1, 2, 2, 1], nums2 = [2, 2], 返回 [2].
+     * 每个在结果中的元素必定是唯一的
+     * @param nums1 数组1
+     * @param nums2 数组2
+     * @return 交集数组
+     */
+    public int[] intersection(int[] nums1, int[] nums2) {
+        Set<Integer> sets = new HashSet<>();
+        Arrays.sort(nums1);
+        Arrays.sort(nums2);
+        for (int i = 0, j = 0; i < nums1.length && j <nums2.length;) {
+            if (nums1[i] == nums2[j]) {
+                sets.add(nums1[i]);
+                i++;
+                j++;
+            } else if (nums1[i] > nums2[j]) {
+                j++;
+            } else {
+                i++;
+            }
+        }
+
+        int[] results = new int[sets.size()];
+        int i = 0;
+        for (Integer result : sets) {
+            results[i] = result;
+            i++;
+        }
+        return results;
+    }
+
+
+    /**
+     * 350. 两个数组的交集 II
+     * 给定两个数组，写一个方法来计算它们的交集。
+     * 给定 nums1 = [1, 2, 2, 1], nums2 = [2, 2], 返回 [2, 2].
+     * 输出结果中每个元素出现的次数，应与元素在两个数组中出现的次数一致。
+     * @param nums1 数组1
+     * @param nums2 数组2
+     * @return 交集
+     */
+    public int[] intersect(int[] nums1, int[] nums2) {
+        List<Integer> list = new ArrayList<>();
+        Arrays.sort(nums1);
+        Arrays.sort(nums2);
+        for (int i = 0, j = 0; i < nums1.length && j <nums2.length;) {
+            if (nums1[i] == nums2[j]) {
+                list.add(nums1[i]);
+                i++;
+                j++;
+            } else if (nums1[i] > nums2[j]) {
+                j++;
+            } else {
+                i++;
+            }
+        }
+        int[] result = new int[list.size()];
+        int index = 0;
+        for (Integer i : list) {
+            result[index ++] = i;
+        }
+        return result;
+    }
+
+
+    // TODO: 2018/8/6  重写一遍 
+    /** 
+     * 448. 找到所有数组中消失的数字
+     * 给定一个范围在  1 ≤ a[i] ≤ n ( n = 数组大小 ) 的 整型数组，数组中的元素一些出现了两次，另一些只出现一次。
+     * 找到所有在 [1, n] 范围之间没有出现在数组中的数字。
+     * 您能在不使用额外空间且时间复杂度为O(n)的情况下完成这个任务吗? 你可以假定返回的数组不算在额外空间内。
+     * @param nums 给定数组
+     * @return 消失的数字集合
+     */
+    public List<Integer> findDisappearedNumbers(int[] nums) {
+        List<Integer> result = new ArrayList<>();
+        for (int i = 0; i < nums.length; i++) {
+            int index = Math.abs(nums[i]) - 1;
+            if (nums[index] > 0) {
+                nums[index] = -nums[index];
+            }
+        }
+
+        for (int i = 0; i < nums.length; i++) {
+            if (nums[i] > 0) {
+                result.add(i);
+            }
+        }
+        return result;
+    }
+
+
+
+    /**
+     * 485. 最大连续1的个数
+     * 给定一个二进制数组， 计算其中最大连续1的个数。
+     * @param nums 给定数组 [1,1,0,1,1,1]
+     * @return 连续1的个数
+     */
+    public int findMaxConsecutiveOnes(int[] nums) {
+        int index = 0, max = 0;
+        for (int num : nums) {
+            if (num == 1) {
+                index++;
+            } else {
+                index = 0;
+            }
+            max = Math.max(index, max);
+        }
+
+        return max;
+    }
+
 
 
     /**
