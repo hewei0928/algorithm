@@ -114,6 +114,55 @@ public class leetcode {
 
 
     /**
+     * 26. 删除排序数组中的重复项
+     * 给定一个排序数组，你需要在原地删除重复出现的元素，使得每个元素只出现一次，返回移除后数组的新长度。
+     * 不要使用额外的数组空间，你必须在原地修改输入数组并在使用 O(1) 额外空间的条件下完成。
+     * @param nums 输入数组
+     * @return 删除后数组的有效长度
+     */
+    public int removeDuplicates(int[] nums) {
+        //重复数的数量
+        int duplicateCount = 0;
+        for (int i = 0; i < nums.length - duplicateCount - 1; i++) {
+            if (nums[i] == nums[i + 1]) {
+                int temp = nums[i];
+                for (int j = i; j < nums.length - duplicateCount - 1;j++) {
+                    nums[j] = nums[j + 1];
+                }
+                nums[nums.length-duplicateCount - 1] = temp;
+                duplicateCount++;
+                i--;
+            }
+        }
+        return nums.length - duplicateCount;
+    }
+
+
+    // TODO: 2018/8/7 重做一遍
+    /** 
+     * 26. 删除排序数组中的重复项
+     * 给定一个排序数组，你需要在原地删除重复出现的元素，使得每个元素只出现一次，返回移除后数组的新长度。
+     * 不要使用额外的数组空间，你必须在原地修改输入数组并在使用 O(1) 额外空间的条件下完成。
+     * @param nums 输入数组
+     * @return 删除后数组的有效长度
+     * 思路: 双指针
+     */
+    public int removeDuplicates1(int[] nums) {
+        if (nums.length == 0) return 0;
+        int i = 0;
+        for (int j = 1; j < nums.length; j++) {
+            if (nums[i] != nums[j]) {
+                i++;
+                nums[i] = nums[j];
+            }
+        }
+        return i + 1;
+    }
+
+
+
+
+    /**
      * 27. 移除元素
      * 给定一个数组 nums 和一个值 val，你需要原地移除所有数值等于 val 的元素，返回移除后数组的新长度。
      * 不要使用额外的数组空间，你必须在原地修改输入数组并在使用 O(1) 额外空间的条件下完成。
@@ -1186,6 +1235,151 @@ public class leetcode {
 
 
     /**
+     * 605. 种花问题
+     * 假设你有一个很长的花坛，一部分地块种植了花，另一部分却没有。可是，花卉不能种植在相邻的地块上，它们会争夺水源，两者都会死去。
+     * 给定一个花坛（表示为一个数组包含0和1，其中0表示没种植花，1表示种植了花），和一个数 n 。
+     * 能否在不打破种植规则的情况下种入 n 朵花？能则返回True，不能则返回False。
+     * @param flowerbed 已有花坛数组
+     * @param n 要种的花的数量
+     * @return 能否成功
+     */
+    public boolean canPlaceFlowers(int[] flowerbed, int n) {
+        //记录间隔数的集合
+        List<Integer> places = new ArrayList<>();
+        int count = 1;
+        for (int i = 0; i < flowerbed.length; i++) {
+            if (flowerbed[i] != 1) {
+                count ++ ;
+                if (i == flowerbed.length - 1) {
+                    places.add(count + 1);
+                }
+            } else {
+                places.add(count);
+                count = 0;
+            }
+        }
+
+        int flowers = 0;
+        for (Integer place : places) {
+            flowers += (place - 1)/2;
+        }
+        return flowers >= n;
+    }
+
+
+    // TODO: 2018/8/7 重做  思路有问题
+    /**
+     * 628. 三个数的最大乘积
+     * 给定一个整型数组，在数组中找出由三个数组成的最大乘积，并输出这个乘积。
+     * @param nums 数组
+     * @return 最大乘积
+     */
+    public int maximumProduct(int[] nums) {
+        int min = 0, secondMin = 0, max = Integer.MAX_VALUE, secondMax = Integer.MAX_VALUE, thirdMax = Integer.MAX_VALUE;
+        for (int i: nums){
+            if (i <= min) {
+                secondMin = min;
+                min = i;
+            } else if (i < secondMin) {
+                secondMin = i;
+            } else if (max <= i) {
+                thirdMax = secondMax;
+                secondMax = max;
+                max = i;
+            } else if (secondMax <= i) {
+                thirdMax = secondMax;
+                secondMax = i;
+            } else if (thirdMax < i){
+                thirdMax = i;
+            }
+        }
+
+        if (min * secondMin > max * secondMax || min * secondMin > thirdMax * secondMax) {
+            return min * secondMin * max;
+        } else {
+            return max * secondMax * thirdMax;
+        }
+    }
+
+
+    /**
+     * 665. 非递减数列
+     * 给定一个长度为 n 的整数数组，你的任务是判断在最多改变 1 个元素的情况下，该数组能否变成一个非递减数列。
+     *  我们是这样定义一个非递减数列的： 对于数组中所有的 i (1 <= i < n)，满足 array[i] <= array[i + 1]。
+     * @param nums 数组
+     * @return 能否成功
+     * 思路 找到第一个大于后一个数的数下标，当它为i-1或i+1时其后的数组是否有序
+     */
+//    public boolean checkPossibility(int[] nums) {
+//        for (int i = 0; i < nums.length - 1; i++) {
+//            if (nums[i] > nums[i + 1]) {
+//                int temp = nums[i];
+//                if (i != 0) {
+//                    nums[i] = nums[i-1];
+//                    for (int j = i; j < nums.length - 1; j++) {
+//                        if (nums[j] > nums[j + 1]) {
+//                            return false;
+//                        }
+//                    }
+//                    nums[i] = temp;
+//                }
+//                nums[i] = nums[i + 1];
+//                for (int k = i; k < nums.length - 1; k++) {
+//                    if (nums[k] > )
+//                }
+//            }
+//        }
+//        return true;
+//    }
+
+
+    /**
+     * 697. 数组的度
+     * 给定一个非空且只包含非负数的整数数组 nums, 数组的度的定义是指数组里任一元素出现频数的最大值。
+     * 你的任务是找到与 nums 拥有相同大小的度的最短连续子数组，返回其长度。
+     * @param nums 数组
+     * @return 度
+     */
+    public int findShortestSubArray(int[] nums) {
+        Map<Integer, List<Integer>> result = new HashMap<>();
+        for (int i = 0; i < nums.length; i++) {
+            if (result.containsKey(nums[i])) {
+                List<Integer> list = result.get(nums[i]);
+                list.set(0, list.get(0) + 1);
+                list.set(2, i);
+            } else {
+                List<Integer> list = new ArrayList<>();
+                list.add(1);
+                list.add(i);
+                list.add(i);
+                result.put(nums[i], list);
+            }
+        }
+
+        int max = 0, length = nums.length;
+        for (int i : result.keySet()) {
+            List<Integer> list = result.get(i);
+            if (list.get(0) >= max) {
+                max = list.get(0);
+            }
+        }
+
+        for (int i : result.keySet()) {
+            List<Integer> list = result.get(i);
+            if (list.get(0) == max) {
+                int temp = list.get(2) - list.get(1) + 1;
+                if (temp < length) {
+                    length = temp;
+                }
+            }
+        }
+
+        return length;
+    }
+
+
+
+    /**
      * 707. 设计链表
      */
     public class MyLinkedList {
@@ -1326,6 +1520,66 @@ public class leetcode {
 
 
     /**
+     * 717. 1比特与2比特字符
+     * 有两种特殊字符。第一种字符可以用一比特0来表示。第二种字符可以用两比特(10 或 11)来表示。
+     * 现给一个由若干比特组成的字符串。问最后一个字符是否必定为一个一比特字符。给定的字符串总是由0结束。
+     * @param bits 字符数组
+     * @return 最后一个字符是否必定为一个一比特字符
+     * 思路： 遇0 +1， 遇1 +2
+     */
+    public boolean isOneBitCharacter(int[] bits) {
+        for (int i = 0; i < bits.length; ) {
+            if (bits[i] == 0) {
+                if (i == bits.length-1) {
+                    return true;
+                } else {
+                    i++;
+                }
+            } else {
+                i += 2;
+            }
+        }
+        return false;
+    }
+
+    /**
+     * 746. 使用最小花费爬楼梯
+     * 数组的每个索引做为一个阶梯，第 i个阶梯对应着一个非负数的体力花费值 cost[i](索引从0开始)。
+     * 每当你爬上一个阶梯你都要花费对应的体力花费值，然后你可以选择继续爬一个阶梯或者爬两个阶梯。
+     * 您需要找到达到楼层顶部的最低花费。在开始时，你可以选择从索引为 0 或 1 的元素作为初始阶梯。
+     * @param cost 数组
+     * @return 最低花费
+     */
+    public int minCostClimbingStairs(int[] cost) {
+
+    }
+
+    /**
+     * 747. 至少是其他数字两倍的最大数
+     * 在一个给定的非负数组nums中，总是存在一个最大元素 。
+     * 查找数组中的最大元素是否至少是数组中每个其他数字的两倍。
+     * 如果是，则返回最大元素的索引，否则返回-1。
+     * @param nums 数组
+     * @return 最大数的索引
+     */
+    public int dominantIndex(int[] nums) {
+        int index = 0, max = 0, second = 0;
+        for (int i = 0; i < nums.length; i++) {
+            if (nums[i] > max) {
+                second = max;
+                max = nums[i];
+                index = i;
+            } else if (nums[i] > second) {
+                second = nums[i];
+            }
+        }
+        if (max >= (2 * second)) {
+            return index;
+        } else return -1;
+    }
+
+
+    /**
      * 766. 托普利茨矩阵
      * 如果一个矩阵的每一方向由左上到右下的对角线上具有相同元素，那么这个矩阵是托普利茨矩阵。
      * 给定一个 M x N 的矩阵，当且仅当它是托普利茨矩阵时返回 True。
@@ -1354,6 +1608,80 @@ public class leetcode {
         }
         return true;
     }
+
+    /**
+     * 830. 较大分组的位置
+     * 在一个由小写字母构成的字符串 S 中，包含由一些连续的相同字符所构成的分组。
+     * 例如，在字符串 S = "abbxxxxzyy" 中，就含有 "a", "bb", "xxxx", "z" 和 "yy" 这样的一些分组。
+     * 我们称所有包含大于或等于三个连续字符的分组为较大分组。找到每一个较大分组的起始和终止位置。
+     * 最终结果按照字典顺序输出。
+     * @param S
+     * @return
+     */
+    public List<List<Integer>> largeGroupPositions(String S) {
+        List<List<Integer>> result = new ArrayList<>();
+        char[] chars = S.toCharArray();
+        int count = 1, start = 0, end = 0;
+        for (int i = 1; i < chars.length; i++) {
+            if (chars[i] == chars[i - 1]) {
+                if (i == chars.length - 1) {
+                    count++;
+                    if (count >= 3) {
+                        end = i;
+                        List<Integer> list = new ArrayList<>();
+                        list.add(start);
+                        list.add(end);
+                        result.add(list);
+                    }
+
+                } else {
+                    if (count == 1) {
+                        start = i - 1;
+                    }
+                    count++;
+                    if (count >= 3) {
+                        end = i;
+                    }
+                }
+            } else {
+                if (count >= 3) {
+                    List<Integer> list = new ArrayList<>();
+                    list.add(start);
+                    list.add(end);
+                    result.add(list);
+                }
+                count = 1;
+            }
+        }
+        return result;
+    }
+
+
+    /**
+     * 830. 较大分组的位置
+     * 在一个由小写字母构成的字符串 S 中，包含由一些连续的相同字符所构成的分组。
+     * 例如，在字符串 S = "abbxxxxzyy" 中，就含有 "a", "bb", "xxxx", "z" 和 "yy" 这样的一些分组。
+     * 我们称所有包含大于或等于三个连续字符的分组为较大分组。找到每一个较大分组的起始和终止位置。
+     * 最终结果按照字典顺序输出。
+     * @param S
+     * @return
+     */
+    public List<List<Integer>> largeGroupPositions1(String S) {
+        List<List<Integer>> result = new ArrayList<>();
+        int start = 0, length = S.length();
+        for (int i = 0; i < length; i++) {
+            if (i == length - 1 || S.charAt(i) != S.charAt(i + 1)) {
+                if (i - start + 1 >= 3) {
+                    result.add(Arrays.asList(start, i));
+                }
+                start = i + 1;
+            }
+        }
+        return result;
+    }
+
+
+
 
     /**
      * 852. 山脉数组的峰顶索引

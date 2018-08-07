@@ -9,7 +9,7 @@ package com.hw.leetcode;
  */
 public class PSVM {
     public static void main(String[] args) throws Exception{
-//        leetcode leetcode1 = new leetcode();
+        leetcode leetcode1 = new leetcode();
 //        com.hw.leetcode.leetcode.ListNode listNode = leetcode1. new ListNode(3);
 //        com.hw.leetcode.leetcode.ListNode listNode1 = leetcode1. new ListNode(1); listNode1.next = listNode;
 //        com.hw.leetcode.leetcode.ListNode listNode2 = leetcode1. new ListNode(2); listNode2.next = listNode1;
@@ -17,12 +17,12 @@ public class PSVM {
 //
 ////        int[] a = new int[]{-1,1,1,1,2,1};
 ////        System.out.println(leetcode1.removeElement(a, 1));
-//        System.out.println(leetcode1.insertionSortList(listNode3));
-//        int[] a = new int[]{-1,1,1,1,2,1};
-
-        int c = 2;
-        int[] a = new int[]{-1,1,1,c,2,1};
-        a[3] = a[3]++;
-        System.out.println(1);
+//
+        int[] a = new int[]{1,1,2};
+        System.out.println(leetcode1.largeGroupPositions("abbxxxxzzy"));
+//        int c = 2;
+//        int[] a = new int[]{-1,1,1,c,2,1};
+//        a[3] = a[3]++;
+//        System.out.println(1);
     }
 }
