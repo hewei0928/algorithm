@@ -10,7 +10,7 @@ import java.util.*;
  * @Description: leetcode刷题记录
  * @Date: Created in 17:08 2018/7/27
  */
-public class leetcode {
+public class Leetcode {
 
     /**
      * 1. 两数之和
@@ -220,7 +220,7 @@ public class leetcode {
     }
 
 
-
+    // TODO: 2018/8/10  重新做一遍
     /**
      * 53. 最大子序和
      * 给定一个整数数组 nums ，找到一个具有最大和的连续子数组（子数组最少包含一个元素），返回其最大和。
@@ -590,7 +590,7 @@ public class leetcode {
         }
         prices[0] = 0;
         // 求最大子序列
-
+        // TODO: 2018/8/10  重新做一遍
         int maxSum=0,sum=0;
         for (int price : prices) {
             sum += price;
@@ -978,7 +978,18 @@ public class leetcode {
                 }
             }
         }
-        return quickUnionUF.getCount();
+
+        //判断该点位陆地且根节点值与其下标值相同
+        int count = 0;
+        int[] a = quickUnionUF.getArray();
+        for(int i = 0; i < row; i++){
+            for(int j = 0; j < col; j++){
+                if(a[i * col + j] == (i * col + j) && grid[i][j] == '1'){
+                    count ++;
+                }
+            }
+        }
+        return count;
     }
 
 
@@ -1242,8 +1253,6 @@ public class leetcode {
 
 
 
-
-
     /**
      * 283. 移动零
      * 给定一个数组 nums，编写一个函数将所有 0 移动到数组的末尾，同时保持非零元素的相对顺序。
@@ -1447,6 +1456,40 @@ public class leetcode {
     }
 
 
+    /**
+     * 463. 岛屿的周长
+     * 给定一个包含 0 和 1 的二维网格地图，其中 1 表示陆地 0 表示水域。网格中的格子水平和垂直方向相连（对角线方向不相连）。
+     * 整个网格被水完全包围，但其中恰好有一个岛屿（或者说，一个或多个表示陆地的格子相连组成的岛屿）。
+     * 岛屿中没有“湖”（“湖” 指水域在岛屿内部且不和岛屿周围的水相连）。
+     * 格子是边长为 1 的正方形。网格为长方形，且宽度和高度均不超过 100 。计算这个岛屿的周长。
+     * @param grid 地图数组
+     * @return 岛屿周长
+     */
+    public int islandPerimeter(int[][] grid) {
+        if (grid == null || grid.length == 0) {
+            return 0;
+        }
+        // 1方块数量以及内部连接变
+        int count = 0, adjacent = 0;
+        for (int i = 0; i < grid.length; i++) {
+            for (int j = 0; j < grid[0].length; j++) {
+                if (grid[i][j] == 1) {
+                    count++;
+                    if ((i > 0 && grid[i-1][j] == 1)) {
+                        adjacent++;
+                    }
+                    if ((j > 0 && grid[i][j-1] == 1)) {
+                        adjacent++;
+                    }
+                }
+            }
+        }
+        return count*4 - 2*adjacent;
+    }
+
+
+
+
 
     /**
      * 485. 最大连续1的个数
@@ -1470,6 +1513,31 @@ public class leetcode {
 
         return max;
     }
+
+
+    /**
+     * 532. 数组中的K-diff数对
+     * 给定一个整数数组和一个整数 k, 你需要在数组里找到不同的 k-diff 数对。
+     * 这里将 k-diff 数对定义为一个整数对 (i, j),
+     * 其中 i 和 j 都是数组中的数字，且两数之差的绝对值是 k.
+     * @param nums 数组
+     * @param k 差值
+     * @return k-diff 数对 数量
+     */
+    public int findPairs(int[] nums, int k) {
+        if (nums == null) {
+            return 0;
+        }
+        int count = 0;
+        Set<Integer> sets = new HashSet<>();
+        for (int i = 0; i < nums.length; i++) {
+            if (Math.abs(nums[i]) < k) {
+                count++;
+            }
+            sets.add(nums[i]);
+        }
+    }
+
 
 
 
@@ -1529,6 +1597,19 @@ public class leetcode {
 
 
     /**
+     * 581. 最短无序连续子数组
+     * 给定一个整数数组，你需要寻找一个连续的子数组，如果对这个子数组进行升序排序，那么整个数组都会变为升序排序。
+     * 你找到的子数组应是最短的，请输出它的长度。
+     * @param nums
+     * @return
+     */
+    public int findUnsortedSubarray(int[] nums) {
+
+    }
+
+
+
+    /**
      * 605. 种花问题
      * 假设你有一个很长的花坛，一部分地块种植了花，另一部分却没有。可是，花卉不能种植在相邻的地块上，它们会争夺水源，两者都会死去。
      * 给定一个花坛（表示为一个数组包含0和1，其中0表示没种植花，1表示种植了花），和一个数 n 。
@@ -1564,36 +1645,121 @@ public class leetcode {
     }
 
 
-    // TODO: 2018/8/7 重做  思路有问题
     /**
      * 628. 三个数的最大乘积
      * 给定一个整型数组，在数组中找出由三个数组成的最大乘积，并输出这个乘积。
      * @param nums 数组
      * @return 最大乘积
+     * 思路 不论正负， 最大值总是min*secondmin*max 和max*secondmax*thirdmax的较大值（三个最大值中有1到2个负数则最大值一定为min*secondmin*max）
      */
     public int maximumProduct(int[] nums) {
         if (nums == null) {
             return 0;
         }
-        int min = 0, secondMin = 0, max = Integer.MAX_VALUE, secondMax = Integer.MAX_VALUE, thirdMax = Integer.MAX_VALUE;
-        for (int i: nums){
-            if (i <= min) {
-                secondMin = min;
-                min = i;
-            } else if (i < secondMin) {
-                secondMin = i;
-            } else if (max <= i) {
+        int min = Integer.MAX_VALUE, secondMin = Integer.MAX_VALUE, max = Integer.MIN_VALUE, secondMax = Integer.MIN_VALUE, thirdMax = Integer.MIN_VALUE;
+        for (int num : nums){
+            if (num >= max) {
                 thirdMax = secondMax;
                 secondMax = max;
-                max = i;
+                max = num;
+            } else if (num >= secondMax) {
+                thirdMax = secondMax;
+                secondMax = num;
+            } else if (num > thirdMax){
+                thirdMax = num;
+            }
+
+            if (num <= min) {
+                secondMin = min;
+                min = num;
+            } else if (num < secondMin) {
+                secondMin = num;
             }
         }
 
-        if (min * secondMin > max * secondMax || min * secondMin > thirdMax * secondMax) {
-            return min * secondMin * max;
-        } else {
-            return max * secondMax * thirdMax;
+        return Math.max(min*secondMin*max, max*secondMax*thirdMax);
+    }
+
+
+    /**
+     * 643. 子数组最大平均数 I
+     * 给定 n 个整数，找出平均数最大且长度为 k 的连续子数组，并输出该最大平均数。
+     * @param nums 给定数组
+     * @param k 子数组长度
+     * @return 最大平均数
+     */
+    public double findMaxAverage(int[] nums, int k) {
+        if (nums == null) {
+            return 0;
         }
+        int max = Integer.MIN_VALUE;
+        for (int i = 0; i < nums.length - k + 1; i++) {
+            int count = 0;
+            for (int j = i; j < i + k; j++) {
+                count += nums[j];
+            }
+            max = Math.max(count, max);
+        }
+        return ((double)max) / k;
+    }
+
+
+    /**
+     * 661. 图片平滑器
+     * 包含整数的二维矩阵 M 表示一个图片的灰度。
+     * 你需要设计一个平滑器来让每一个单元的灰度成为平均灰度 (向下舍入)，
+     * 平均灰度的计算是周围的8个单元和它本身的值求平均，如果周围的单元格不足八个，则尽可能多的利用它们。
+     * @param M 表示图片的数组
+     * @return 平滑后的数组
+     */
+    public int[][] imageSmoother(int[][] M) {
+        if (M == null || M.length == 0) {
+            return null;
+        }
+        int row = M.length, col = M[0].length;
+        int[][] result = new int[row][col];
+        for (int i = 0; i < row; i++) {
+            for (int j = 0; j < col; j++) {
+                int total = M[i][j], count = 1;
+                if (i > 0) {
+                    total += M[i-1][j];
+                    count++;
+                    if (j > 0) {
+                        total += M[i-1][j-1];
+                        count++;
+                    }
+                    if (j < col-1) {
+                        total += M[i-1][j+1];
+                        count++;
+                    }
+                }
+
+                if (i < row - 1) {
+                    total += M[i+1][j];
+                    count++;
+                    if (j > 0) {
+                        total += M[i+1][j-1];
+                        count++;
+                    }
+                    if (j < col-1) {
+                        total += M[i+1][j+1];
+                        count++;
+                    }
+                }
+
+                if (j > 0) {
+                    total += M[i][j-1];
+                    count++;
+                }
+                if (j < col - 1) {
+                    total += M[i][j+1];
+                    count++;
+                }
+
+                result[i][j] = total/count;
+            }
+        }
+        return result;
     }
 
 
@@ -1630,6 +1796,33 @@ public class leetcode {
         }
         return true;
     }
+
+
+    /**
+     * 674. 最长连续递增序列
+     * 给定一个未经排序的整数数组，找到最长且连续的的递增序列。
+     * @param nums 数组
+     * @return 最长递增子序列
+     */
+    public int findLengthOfLCIS(int[] nums) {
+        if (nums == null || nums.length == 0) {
+            return 0;
+        }
+        int max = 1,temp = 1;
+        for (int i = 1; i < nums.length; i++) {
+            if (nums[i] > nums[i-1]) {
+                temp++;
+            } else {
+                max = Math.max(max, temp);
+                temp = 1;
+            }
+        }
+        max = Math.max(max, temp);
+
+        return max;
+    }
+
+
 
 
     // TODO: 2018/8/10 union_found的变形
@@ -1750,7 +1943,7 @@ public class leetcode {
         /**
          * Initialize your data structure here.
          */
-        public MyLinkedList() {
+        MyLinkedList() {
         }
 
         /**
@@ -1894,7 +2087,36 @@ public class leetcode {
         return false;
     }
 
-    // TODO: 2018/8/9
+
+    /**
+     * 724. 寻找数组的中心索引
+     * 给定一个整数类型的数组 nums，请编写一个能够返回数组“中心索引”的方法。
+     * 我们是这样定义数组中心索引的：数组中心索引的左侧所有元素相加的和等于右侧所有元素相加的和。
+     * 如果数组不存在中心索引，那么我们应该返回 -1。如果数组有多个中心索引，那么我们应该返回最靠近左边的那一个。
+     * @param nums 数组
+     * @return 中心索引下标
+     */
+    public int pivotIndex(int[] nums) {
+        if (nums == null) {
+            return -1;
+        }
+        int total = 0, left = 0;
+        for (int num : nums) {
+            total += num;
+        }
+
+        for (int i = 0; i < nums.length; i++) {
+            if (total - left - nums[i] == left) {
+                return i;
+            }
+            left += nums[i];
+        }
+        return -1;
+    }
+
+
+
+    // TODO: 2018/8/9 动态规划重新做一遍
     /** 
      * 746. 使用最小花费爬楼梯
      * 数组的每个索引做为一个阶梯，第 i个阶梯对应着一个非负数的体力花费值 cost[i](索引从0开始)。
@@ -1903,9 +2125,29 @@ public class leetcode {
      * @param cost 数组
      * @return 最低花费
      */
-//    public int minCostClimbingStairs(int[] cost) {
-//
-//    }
+    public int minCostClimbingStairs(int[] cost) {
+        if (cost == null) return 0;
+//        int length = cost.length + 1;
+//        // 登上下标为i的台阶需要的花费
+//        int[] dp = new int[length];
+//        dp[0] = 0;
+//        dp[1] = 0;
+//        for (int i = 2; i < length; i++) {
+//            dp[i] = Math.min(dp[i - 2] + cost[i - 2], dp[i - 1] + cost[i - 1]);
+//        }
+//        return dp[length - 1];
+        int length = cost.length + 1;
+        int dp0 = 0;
+        int dp1 = 0;
+        int dp2 = 0;
+        for (int i = 2; i < length; i++) {
+            dp2 = Math.min(dp0 + cost[i - 2] , dp1 + cost[i - 1]);
+            dp0 = dp1;
+            dp1 = dp2;
+        }
+        return dp2;
+
+    }
 
     /**
      * 747. 至少是其他数字两倍的最大数
@@ -2045,6 +2287,77 @@ public class leetcode {
         return result;
     }
 
+    /**
+     * 840. 矩阵中的幻方
+     * 3 x 3 的幻方是一个填充有从 1 到 9 的 不同数字 的 3 x 3 矩阵，其中每行，每列以及两条对角线上的各数之和都相等。
+     * 给定一个由整数组成的 N × N 矩阵，其中有多少个 3 × 3 的 “幻方” 子矩阵？（每个子矩阵都是连续的）。
+     * @param grid 矩阵
+     * @return 幻方的数量
+     */
+    public int numMagicSquaresInside(int[][] grid) {
+        if (grid == null || grid.length < 3) {
+            return 0;
+        }
+        int count = 0;
+        for (int i = 1; i < grid.length - 1; i++) {
+            for (int j = 1; j < grid[i].length - 1; j++) {
+                if (grid[i][j] == 5) {
+                    int num0 = grid[i-1][j-1],
+                            num1 = grid[i-1][j],
+                            num2 = grid[i-1][j+1],
+                            num3 = grid[i][j-1],
+                            num4 = grid[i][j],
+                            num5 = grid[i][j+1],
+                            num6 = grid[i+1][j-1],
+                            num7 = grid[i+1][j],
+                            num8 = grid[i+1][j+1];
+                    if (magic(num0, num1, num2, num3, num4, num5, num6, num7, num8)) {
+                        count++;
+                    }
+                }
+            }
+        }
+
+        return count;
+    }
+
+    private boolean magic(int... vals) {
+        int[] count = new int[16];
+        for (int v: vals) count[v]++;
+        for (int v = 1; v <= 9; ++v)
+            if (count[v] != 1)
+                return false;
+
+        return (vals[0] + vals[1] + vals[2] == 15 &&
+                vals[3] + vals[4] + vals[5] == 15 &&
+                vals[6] + vals[7] + vals[8] == 15 &&
+                vals[0] + vals[3] + vals[6] == 15 &&
+                vals[1] + vals[4] + vals[7] == 15 &&
+                vals[2] + vals[5] + vals[8] == 15 &&
+                vals[0] + vals[4] + vals[8] == 15 &&
+                vals[2] + vals[4] + vals[6] == 15);
+    }
+
+
+
+    /**
+     * 849. 到最近的人的最大距离
+     * 在一排座位（ seats）中，1 代表有人坐在座位上，0 代表座位上是空的。
+     * 至少有一个空座位，且至少有一人坐在座位上。
+     * 亚历克斯希望坐在一个能够使他与离他最近的人之间的距离达到最大化的座位上。
+     * 返回他到离他最近的人的最大距离。
+     * @param seats 座位数组
+     * @return 最大距离
+     */
+//    public int maxDistToClosest(int[] seats) {
+//        if (seats == null) {
+//            return 0;
+//        }
+//        int start = -1, end = -1, max = 0, temp = 0;
+//        for (int i = 0; i < seats.length; i++) {
+//            if (seats[i] == 1);
+//        }
+//    }
 
 
 
