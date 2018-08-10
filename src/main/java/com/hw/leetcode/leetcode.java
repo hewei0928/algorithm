@@ -1,5 +1,7 @@
 package com.hw.leetcode;
 
+import com.hw.algorithm.union_found.WeightedQuickUnionUF;
+
 import java.math.BigDecimal;
 import java.util.*;
 
@@ -16,6 +18,9 @@ public class leetcode {
      * 你可以假设每个输入只对应一种答案，且同样的元素不能被重复利用
      */
     public int[] twoSum(int[] nums, int target) {
+        if (nums == null) {
+            return null;
+        }
         Map<Integer, Integer> map = new HashMap<>();
         for (int i = 0; i < nums.length; i++) {
             if (map.containsKey(nums[i])) {
@@ -88,7 +93,7 @@ public class leetcode {
                     node.next = n;
                     node = n;
                     l2 = l2.next;
-                } else if (l2 == null) {
+                } else {
                     ListNode n = new ListNode(l1.val);
                     node.next = n;
                     node = n;
@@ -121,14 +126,15 @@ public class leetcode {
      * @return 删除后数组的有效长度
      */
     public int removeDuplicates(int[] nums) {
+        if (nums == null) {
+            return 0;
+        }
         //重复数的数量
         int duplicateCount = 0;
         for (int i = 0; i < nums.length - duplicateCount - 1; i++) {
             if (nums[i] == nums[i + 1]) {
                 int temp = nums[i];
-                for (int j = i; j < nums.length - duplicateCount - 1;j++) {
-                    nums[j] = nums[j + 1];
-                }
+                System.arraycopy(nums, i + 1, nums, i, nums.length - duplicateCount - 1 - i);
                 nums[nums.length-duplicateCount - 1] = temp;
                 duplicateCount++;
                 i--;
@@ -148,6 +154,9 @@ public class leetcode {
      * 思路: 双指针
      */
     public int removeDuplicates1(int[] nums) {
+        if (nums == null) {
+            return 0;
+        }
         if (nums.length == 0) return 0;
         int i = 0;
         for (int j = 1; j < nums.length; j++) {
@@ -173,6 +182,9 @@ public class leetcode {
      * @return 新数组长度
      */
     public int removeElement(int[] nums, int val) {
+        if (nums == null) {
+            return 0;
+        }
         int num = 0;
         for (int i = 0; i < nums.length; i++) {
             if (nums[i] != val) {
@@ -196,6 +208,9 @@ public class leetcode {
      * @return 插入索引
      */
     public int searchInsert(int[] nums, int target) {
+        if (nums == null) {
+            return 0;
+        }
         for (int i = 0; i < nums.length; i++) {
             if (target <= nums[i]) {
                 return i;
@@ -213,6 +228,9 @@ public class leetcode {
      * @return 最大子序列和
      */
     public int maxSubArray(int[] nums) {
+        if (nums == null) {
+            return 0;
+        }
         int maxSum = Integer.MIN_VALUE, sum = 0;
         for (int num : nums) {
             sum += num;
@@ -226,9 +244,63 @@ public class leetcode {
     }
 
 
+    /**
+     * 66. 加一
+     * 给定一个非负整数组成的非空数组，在该数的基础上加一，返回一个新的数组。
+     * 最高位数字存放在数组的首位， 数组中每个元素只存储一个数字。
+     * 你可以假设除了整数 0 之外，这个整数不会以零开头。
+     * @param digits 非负整数非空数组
+     * @return 新数组
+     */
+    public int[] plusOne(int[] digits) {
+        if (digits == null) {
+            return null;
+        }
+        int[] result = new int[digits.length];
+        int newValue = 1;
+        for (int i = digits.length - 1; i >= 0; i--) {
+            result[i] = (digits[i] + newValue) % 10;
+            newValue = (digits[i] + newValue) / 10;
+        }
+        if (newValue == 1) {
+            int[] temp = new int[result.length + 1];
+            temp[0] = 1;
+            System.arraycopy(result, 0, temp, 1, result.length);
+            return temp;
+        }
+        return result;
+    }
 
 
+    // TODO: 2018/8/9  重写一遍 理解思想
+    /**
+     * 66. 加一
+     * 给定一个非负整数组成的非空数组，在该数的基础上加一，返回一个新的数组。
+     * 最高位数字存放在数组的首位， 数组中每个元素只存储一个数字。
+     * 你可以假设除了整数 0 之外，这个整数不会以零开头。
+     * @param digits 非负整数非空数组
+     * @return 新数组
+     * 思路： 数组大小变化时，必定为99，999，9999,....
+     */
+    public int[] plusOne1(int[] digits) {
+        if (digits == null) {
+            return null;
+        }
+        int length = digits.length;
+        for (int i = length - 1; i >= 0; i--) {
+            if (digits[i] < 9) {
+                digits[i]++;
+                return digits;
+            }
+            digits[i] = 0;
+        }
+        int[] result = new int[length + 1];
+        result[0] = 1;
+        return result;
+    }
 
+
+    // TODO: 2018/8/10 重做
     /**
      * 69. x 的平方根
      * 实现 int sqrt(int x) 函数。
@@ -244,8 +316,8 @@ public class leetcode {
         }
         BigDecimal min = new BigDecimal(1), max = new BigDecimal(x);
         BigDecimal xB = new BigDecimal(x);
-        while (min.compareTo(max) == 0 || min.compareTo(max) == -1) {
-            BigDecimal mid = min.add(max).divide(new BigDecimal(2));
+        while (min.compareTo(max) == 0 || min.compareTo(max) < 0) {
+            BigDecimal mid = min.add(max).divide(new BigDecimal(2), 2);
             BigDecimal s = mid.multiply(mid);
             if (s.compareTo(xB) == 0) {
                 return mid.intValue();
@@ -281,7 +353,7 @@ public class leetcode {
      * @return 平方根的整数部分
      */
     public int mySqrt1(int x) {
-        return 0;
+        return x;
     }
 
 
@@ -293,14 +365,15 @@ public class leetcode {
      * @param nums 输入数组
      */
     public void sortColors(int[] nums) {
-        int zero = 0, one = 0, two = 0;
-        for (int i = 0; i < nums.length; i++) {
-            if (nums[i] == 0) {
-                zero ++;
-            } else if (nums[i] == 1) {
-                one ++;
-            } else {
-                two ++;
+        if (nums == null) {
+            return;
+        }
+        int zero = 0, one = 0;
+        for (int num : nums) {
+            if (num == 0) {
+                zero++;
+            } else if (num == 1) {
+                one++;
             }
         }
 
@@ -325,6 +398,9 @@ public class leetcode {
      * @param nums 输入数组
      */
     public void sortColors1(int[] nums) {
+        if (nums == null) {
+            return;
+        }
         int zeroIndex = 0, twoIndex = nums.length - 1;
         for (int i = 0; i <= twoIndex; i++) {
             if (nums[i] == 0) {
@@ -369,7 +445,6 @@ public class leetcode {
 
             if (contain) {
                 head = head.next;
-                continue;
             } else {
                 ListNode val = new ListNode(head.val);
                 node.next = val;
@@ -379,6 +454,7 @@ public class leetcode {
         return listNode.next;
     }
 
+    // TODO: 2018/8/9
     /**
      * 改变原链表
      * 83. 删除排序链表中的重复元素
@@ -404,6 +480,33 @@ public class leetcode {
         }
         return result;
     }
+
+
+    // TODO: 2018/8/9 重写一遍，理解思想
+    /**
+     * 88. 合并两个有序数组
+     * 给定两个有序整数数组 nums1 和 nums2，将 nums2 合并到 nums1 中，使得 num1 成为一个有序数组。
+     * 说明:
+     * 初始化 nums1 和 nums2 的元素数量分别为 m 和 n。
+     * 你可以假设 nums1 有足够的空间（空间大小大于或等于 m + n）来保存 nums2 中的元素。
+     * @param nums1 数组1
+     * @param m 实际存储数量
+     * @param nums2 数组2
+     * @param n 实际存储的数量
+     */
+    public void merge(int[] nums1, int m, int[] nums2, int n) {
+        int j = m - 1, k = n - 1, l = n + m - 1;
+        while (j> -1 && k > -1) {
+            nums1[l--] = nums1[j] > nums2[k] ? nums1[j--] : nums2[k--];
+        }
+        // nums2先合并完则数组已经有序，无须再运行这行代码
+        while (k > -1) {
+            nums1[l--] = nums2[k--];
+        }
+    }
+    
+
+
 
     /**
      * 118. 杨辉三角
@@ -478,7 +581,7 @@ public class leetcode {
      * @return 最大利润
      */
     public int maxProfit(int[] prices) {
-        if (prices.length == 0) {
+        if (prices == null || prices.length == 0) {
             return 0;
         }
         // 改变序列
@@ -489,13 +592,13 @@ public class leetcode {
         // 求最大子序列
 
         int maxSum=0,sum=0;
-        for(int i=0;i<prices.length;i++){
-            sum+=prices[i];
-            if(sum>maxSum){
-                maxSum=sum;
+        for (int price : prices) {
+            sum += price;
+            if (sum > maxSum) {
+                maxSum = sum;
             }
-            if(sum<0){
-                sum=0;
+            if (sum < 0) {
+                sum = 0;
             }
         }
         return maxSum;
@@ -511,7 +614,7 @@ public class leetcode {
      * @return 最大利润
      */
     public int maxProfit2(int[] prices) {
-        if (prices.length == 0) {
+        if (prices == null || prices.length == 0) {
             return 0;
         }
         for (int i = prices.length - 1; i > 0; i--) {
@@ -624,11 +727,11 @@ public class leetcode {
      * 147. 对链表进行插入排序
      * 对链表进行插入排序。
      * @param head 头节点
-     * @return
+     * @return  插入后的链表
      */
     public ListNode insertionSortList1(ListNode head) {
         ListNode helper=new ListNode(0);
-        ListNode pre=helper;
+        ListNode pre;
         ListNode current=head;
         while(current!=null) {
             pre=helper;
@@ -644,15 +747,16 @@ public class leetcode {
     }
 
 
+    // TODO: 2018/8/10  重做
     /**
      * 148. 排序链表
      * 在 O(n log n) 时间复杂度和常数级空间复杂度下，对链表进行排序。
      * @param head 链表
      * @return 排序后的链表
      */
-//    public ListNode sortList(ListNode head) {
-//        ListNode
-//    }
+    public ListNode sortList(ListNode head) {
+        return head;
+    }
 
 
 
@@ -736,6 +840,9 @@ public class leetcode {
      * @return 两个下标值
      */
     public int[] twoSum1(int[] numbers, int target) {
+        if (numbers == null) {
+            return null;
+        }
         Map<Integer, Integer> maps = new HashMap<>();
         for (int i = 0; i < numbers.length; i++) {
             if (maps.containsKey(numbers[i])) {
@@ -761,15 +868,18 @@ public class leetcode {
      * @return 众数元素
      */
     public int majorityElement(int[] nums) {
+        if (nums == null) {
+            return 0;
+        }
         Arrays.sort(nums);
         int num = 0;
         int result = nums[0];
-        for (int i = 0; i < nums.length; i++) {
-            if (result == nums[i]) {
+        for (int num1 : nums) {
+            if (result == num1) {
                 num++;
             } else {
                 num = 1;
-                result = nums[i];
+                result = num1;
             }
 
             if (num >= ((nums.length / 2) + 1)) {
@@ -779,6 +889,99 @@ public class leetcode {
 
         return result;
     }
+
+
+    /**
+     * 189. 旋转数组
+     * 给定一个数组，将数组中的元素向右移动 k 个位置，其中 k 是非负数。
+     * @param nums 数组
+     * @param k 平移次数
+     */
+    public void rotate(int[] nums, int k) {
+        if (nums == null) {
+            return;
+        }
+        int length = nums.length;
+        k = k % length;
+        for (int i = 0; i < k; i++) {
+            int temp = nums[0];
+            for (int j = 0; j < length; j++) {
+                int value = nums[(j + 1) % length];
+                nums[(j + 1) % length] = temp;
+                temp = value;
+            }
+        }
+    }
+
+
+    /**
+     * 189. 旋转数组
+     * 给定一个数组，将数组中的元素向右移动 k 个位置，其中 k 是非负数。
+     * @param nums 数组
+     * @param k 平移次数
+     * 思路：
+     * Original List                   : 1 2 3 4 5 6 7
+     * After reversing all numbers     : 7 6 5 4 3 2 1
+     * After reversing first k numbers : 5 6 7 4 3 2 1
+     * After revering last n-k numbers : 5 6 7 1 2 3 4 --> Result
+     */
+    public void rotate1(int[] nums, int k) {
+        if (nums == null) {
+            return;
+        }
+        k = k % nums.length;
+        reverse(nums,0, nums.length - 1);
+        reverse(nums, 0, k-1);
+        reverse(nums, k, nums.length - 1);
+    }
+
+    /**
+     * 反转数组某一范围内的数
+     * @param nums 数组
+     * @param start 起始下标
+     * @param end 结束下标
+     */
+    private void reverse(int nums[], int start, int end) {
+        while (start < end) {
+            int temp = nums[start];
+            nums[start] = nums[end];
+            nums[end] = temp;
+            start++;
+            end--;
+        }
+    }
+
+
+    /**
+     * 200. 岛屿的个数
+     * 给定一个由 '1'（陆地）和 '0'（水）组成的的二维网格，计算岛屿的数量。
+     * 一个岛被水包围，并且它是通过水平方向或垂直方向上相邻的陆地连接而成的。
+     * 你可以假设网格的四个边均被水包围。
+     * @param grid 岛屿数组
+     * @return 岛屿数量
+     */
+    public int numIslands(char[][] grid) {
+        if (grid == null) {
+            return 0;
+        }
+        int row = grid.length, col = grid[0].length;
+        WeightedQuickUnionUF quickUnionUF = new WeightedQuickUnionUF(row * col);
+        for (int i = 0; i < row; i++) {
+            for (int j = 0; j < col; j++) {
+                if (grid[i][j] == '1') {
+                    if (i > 0 && grid[i-1][j] == '1') {
+                        quickUnionUF.union(i*col+j, (i-1)*col+j);
+                    }
+                    if (j > 0 && grid[i][j - 1] == '1') {
+                        quickUnionUF.union(i*col+j, i*col+j-1);
+                    }
+                }
+            }
+        }
+        return quickUnionUF.getCount();
+    }
+
+
 
     /**
      * 203. 删除链表中的节点
@@ -871,6 +1074,9 @@ public class leetcode {
      * @return 是否存在重复值
      */
     public boolean containsDuplicate(int[] nums) {
+        if (nums == null) {
+            return false;
+        }
         Set<Integer> sets = new HashSet<>();
         for (int num : nums) {
             if (sets.contains(num)) {
@@ -883,14 +1089,40 @@ public class leetcode {
     }
 
 
+    /**
+     * 219. 存在重复元素 II
+     * 给定一个整数数组和一个整数 k，判断数组中是否存在两个不同的索引 i 和 j，
+     * 使得 nums [i] = nums [j]，并且 i 和 j 的差的绝对值最大为 k。
+     * @param nums 数组
+     * @param k 整数
+     * @return 是否存在
+     */
+    public boolean containsNearbyDuplicate(int[] nums, int k) {
+        if (nums == null) {
+            return false;
+        }
+        Map<Integer, Integer> map = new HashMap<>();
+        for (int i = 0; i < nums.length; i++) {
+            if (map.containsKey(nums[i])) {
+                if (Math.abs(i - map.get(nums[i])) <= k) {
+                    return true;
+                }
+            }
+            map.put(nums[i], i);
+
+        }
+        return false;
+    }
+
+
 
 
     /**
      * 234. 回文链表
      * 请判断一个链表是否为回文链表。
      *
-     * @param head
-     * @return
+     * @param head 链表
+     * @return 是否为回文链表
      */
     public boolean isPalindrome(ListNode head) {
         ListNode fast = head, slow = head;
@@ -928,6 +1160,9 @@ public class leetcode {
      * @param node 要删除的节点
      */
     public void deleteNode(ListNode node) {
+        if (node == null) {
+            return;
+        }
         if (node.next == null) {
             return;
         }
@@ -939,12 +1174,12 @@ public class leetcode {
     /**
      * 242. 有效的字母异位词
      * 给定两个字符串 s 和 t ，编写一个函数来判断 t 是否是 s 的一个字母异位词。
-     * @param s
-     * @param t
-     * @return
+     * @param s s
+     * @param t t
+     * @return 是否是字母异位词
      */
     public boolean isAnagram(String s, String t) {
-        if (s.length() != t.length()) {
+        if (s == null || t == null || s.length() != t.length()) {
             return false;
         }
         char[] sArray = s.toCharArray();
@@ -963,12 +1198,12 @@ public class leetcode {
     /**
      * 242. 有效的字母异位词
      * 给定两个字符串 s 和 t ，编写一个函数来判断 t 是否是 s 的一个字母异位词。
-     * @param s
-     * @param t
-     * @return
+     * @param s s
+     * @param t t
+     * @return 是否是字母异位词
      */
     public boolean isAnagram1(String s, String t) {
-        if (s.length() != t.length()) {
+        if (s == null || t == null || s.length() != t.length()) {
             return false;
         }
         int[] table = new int[26];
@@ -994,6 +1229,9 @@ public class leetcode {
      * @return 缺失的数字
      */
     public int missingNumber(int[] nums) {
+        if (nums == null) {
+            return 0;
+        }
         int sum = 0;
         for (int i : nums) {
             sum += i;
@@ -1013,6 +1251,9 @@ public class leetcode {
      * @param nums 传入数组
      */
     public void moveZeroes(int[] nums) {
+        if (nums == null) {
+            return;
+        }
         int sumOfZero = 0;
         for (int i = 0; i < nums.length; i++) {
             if (nums[i] == 0) {
@@ -1037,6 +1278,9 @@ public class leetcode {
      * @param nums 传入数组
      */
     public void moveZeroes1(int[] nums) {
+        if (nums == null) {
+            return;
+        }
         int nunZeroNums = 0;
         for (int i = 0; i < nums.length; i++) {
             if (nums[i] != 0) {
@@ -1074,15 +1318,18 @@ public class leetcode {
      * @return 交集数组
      */
     public int[] intersection(int[] nums1, int[] nums2) {
+        if (nums1 == null || nums2 == null) {
+            return null;
+        }
         Set<Integer> sets = new HashSet<>();
         Arrays.sort(nums1);
         Arrays.sort(nums2);
         for (int i = 0, j = 0; i < nums1.length && j <nums2.length;) {
             if (nums1[i] == nums2[j]) {
                 sets.add(nums1[i]);
-                i++;
                 j++;
-            } else if (nums1[i] > nums2[j]) {
+                i++;
+            } else if (nums2[j] < nums1[i]) {
                 j++;
             } else {
                 i++;
@@ -1109,6 +1356,9 @@ public class leetcode {
      * @return 交集
      */
     public int[] intersect(int[] nums1, int[] nums2) {
+        if (nums1 == null || nums2 == null) {
+            return null;
+        }
         List<Integer> list = new ArrayList<>();
         Arrays.sort(nums1);
         Arrays.sort(nums2);
@@ -1132,6 +1382,41 @@ public class leetcode {
     }
 
 
+    // TODO: 2018/8/10 重写一遍
+    /**
+     * 414. 第三大的数
+     * 给定一个非空数组，返回此数组中第三大的数。如果不存在，则返回数组中最大的数。要求算法时间复杂度必须是O(n)。
+     * @param nums 数组
+     * @return 返回值
+     */
+    public int thirdMax(int[] nums) {
+        if (nums == null || nums.length == 0) {
+            return 0;
+        }
+        Integer max = null;
+        Integer second = null;
+        Integer third = null;
+        for (Integer num : nums) {
+            if (num.equals(max) || num.equals(second) || num.equals(third)) {
+                continue;
+            }
+            if (max == null || num > max) {
+                third = second;
+                second = max;
+                max = num;
+            } else if ((second == null || (num < max && num > second))) {
+                third = second;
+                second = num;
+            } else if ((third == null || (num < second && num > third))) {
+                third = num;
+            }
+        }
+
+        return (third == null) ? max : third;
+    }
+
+
+
     // TODO: 2018/8/6  重写一遍 
     /** 
      * 448. 找到所有数组中消失的数字
@@ -1142,6 +1427,9 @@ public class leetcode {
      * @return 消失的数字集合
      */
     public List<Integer> findDisappearedNumbers(int[] nums) {
+        if (nums == null) {
+            return null;
+        }
         List<Integer> result = new ArrayList<>();
         for (int i = 0; i < nums.length; i++) {
             int index = Math.abs(nums[i]) - 1;
@@ -1167,6 +1455,9 @@ public class leetcode {
      * @return 连续1的个数
      */
     public int findMaxConsecutiveOnes(int[] nums) {
+        if (nums == null) {
+            return 0;
+        }
         int index = 0, max = 0;
         for (int num : nums) {
             if (num == 1) {
@@ -1193,6 +1484,9 @@ public class leetcode {
      * 主要思路 排序后两两分组，每组中较小值求和
      */
     public int arrayPairSum(int[] nums) {
+        if (nums == null) {
+            return 0;
+        }
         int n = nums.length / 2;
         Arrays.sort(nums);
         int result = 0;
@@ -1216,7 +1510,7 @@ public class leetcode {
      * @return 返回结果
      */
     public int[][] matrixReshape(int[][] nums, int r, int c) {
-        if (nums.length == 0 || r * c != nums.length * nums[0].length)
+        if (nums == null || nums.length == 0 || r * c != nums.length * nums[0].length)
             return nums;
         int[][] result = new int[r][c];
         int rol = 0, col = 0;
@@ -1244,6 +1538,9 @@ public class leetcode {
      * @return 能否成功
      */
     public boolean canPlaceFlowers(int[] flowerbed, int n) {
+        if (flowerbed == null) {
+            return false;
+        }
         //记录间隔数的集合
         List<Integer> places = new ArrayList<>();
         int count = 1;
@@ -1275,6 +1572,9 @@ public class leetcode {
      * @return 最大乘积
      */
     public int maximumProduct(int[] nums) {
+        if (nums == null) {
+            return 0;
+        }
         int min = 0, secondMin = 0, max = Integer.MAX_VALUE, secondMax = Integer.MAX_VALUE, thirdMax = Integer.MAX_VALUE;
         for (int i: nums){
             if (i <= min) {
@@ -1286,11 +1586,6 @@ public class leetcode {
                 thirdMax = secondMax;
                 secondMax = max;
                 max = i;
-            } else if (secondMax <= i) {
-                thirdMax = secondMax;
-                secondMax = i;
-            } else if (thirdMax < i){
-                thirdMax = i;
             }
         }
 
@@ -1302,6 +1597,7 @@ public class leetcode {
     }
 
 
+    // TODO: 2018/8/10 重做
     /**
      * 665. 非递减数列
      * 给定一个长度为 n 的整数数组，你的任务是判断在最多改变 1 个元素的情况下，该数组能否变成一个非递减数列。
@@ -1310,27 +1606,77 @@ public class leetcode {
      * @return 能否成功
      * 思路 找到第一个大于后一个数的数下标，当它为i-1或i+1时其后的数组是否有序
      */
-//    public boolean checkPossibility(int[] nums) {
-//        for (int i = 0; i < nums.length - 1; i++) {
-//            if (nums[i] > nums[i + 1]) {
-//                int temp = nums[i];
-//                if (i != 0) {
-//                    nums[i] = nums[i-1];
-//                    for (int j = i; j < nums.length - 1; j++) {
-//                        if (nums[j] > nums[j + 1]) {
-//                            return false;
-//                        }
-//                    }
-//                    nums[i] = temp;
-//                }
-//                nums[i] = nums[i + 1];
+    public boolean checkPossibility(int[] nums) {
+        if (nums == null) {
+            return false;
+        }
+        for (int i = 0; i < nums.length - 1; i++) {
+            if (nums[i] > nums[i + 1]) {
+                int temp = nums[i];
+                if (i != 0) {
+                    nums[i] = nums[i-1];
+                    for (int j = i; j < nums.length - 1; j++) {
+                        if (nums[j] > nums[j + 1]) {
+                            return false;
+                        }
+                    }
+                    nums[i] = temp;
+                }
+                nums[i] = nums[i + 1];
 //                for (int k = i; k < nums.length - 1; k++) {
 //                    if (nums[k] > )
 //                }
-//            }
-//        }
-//        return true;
-//    }
+            }
+        }
+        return true;
+    }
+
+
+    // TODO: 2018/8/10 union_found的变形
+    /**
+     * 695. 岛屿的最大面积
+     * 给定一个包含了一些 0 和 1的非空二维数组 grid ,
+     * 一个 岛屿 是由四个方向 (水平或垂直) 的 1 (代表土地) 构成的组合。
+     * 你可以假设二维矩阵的四个边缘都被水包围着。
+     * 找到给定的二维数组中最大的岛屿面积。(如果没有岛屿，则返回面积为0。)
+     * @param grid 地图数组
+     * @return 最大岛屿面积
+     */
+    public int maxAreaOfIsland(int[][] grid) {
+        if (grid == null) {
+            return 0;
+        }
+        int length = grid.length * grid[0].length, row = grid.length, col = grid[0].length;
+        WeightedQuickUnionUF quickUnionUF = new WeightedQuickUnionUF(length);
+        for (int i = 0; i < row; i++) {
+            for (int j = 0; j < col; j++) {
+                if (grid[i][j] == 1) {
+                    if (j > 0 && grid[i][j - 1] == 1) {
+                        quickUnionUF.union( i*col+j, i*col+j-1);
+                    }
+                    if (i > 0 && grid[i - 1][j] == 1) {
+                        quickUnionUF.union(i*col+j, (i-1)*col+j);
+                    }
+                } else {
+                    quickUnionUF.array[i*col+j] = -1;
+                }
+            }
+        }
+
+        int max = 0;
+        for (int i = 0; i < row; i++) {
+            for (int j = 0; j < col; j++) {
+                int size = quickUnionUF.size(i*col+j);
+                if (size > max) {
+                    max = size;
+                }
+            }
+        }
+        return max;
+    }
+
+
+
 
 
     /**
@@ -1341,6 +1687,9 @@ public class leetcode {
      * @return 度
      */
     public int findShortestSubArray(int[] nums) {
+        if (nums == null) {
+            return 0;
+        }
         Map<Integer, List<Integer>> result = new HashMap<>();
         for (int i = 0; i < nums.length; i++) {
             if (result.containsKey(nums[i])) {
@@ -1415,7 +1764,7 @@ public class leetcode {
                 }
                 n = n.next;
             }
-            return -1;
+            return n.val;
         }
 
         /**
@@ -1528,6 +1877,9 @@ public class leetcode {
      * 思路： 遇0 +1， 遇1 +2
      */
     public boolean isOneBitCharacter(int[] bits) {
+        if (bits == null) {
+            return false;
+        }
         for (int i = 0; i < bits.length; ) {
             if (bits[i] == 0) {
                 if (i == bits.length-1) {
@@ -1542,7 +1894,8 @@ public class leetcode {
         return false;
     }
 
-    /**
+    // TODO: 2018/8/9
+    /** 
      * 746. 使用最小花费爬楼梯
      * 数组的每个索引做为一个阶梯，第 i个阶梯对应着一个非负数的体力花费值 cost[i](索引从0开始)。
      * 每当你爬上一个阶梯你都要花费对应的体力花费值，然后你可以选择继续爬一个阶梯或者爬两个阶梯。
@@ -1550,9 +1903,9 @@ public class leetcode {
      * @param cost 数组
      * @return 最低花费
      */
-    public int minCostClimbingStairs(int[] cost) {
-
-    }
+//    public int minCostClimbingStairs(int[] cost) {
+//
+//    }
 
     /**
      * 747. 至少是其他数字两倍的最大数
@@ -1563,6 +1916,9 @@ public class leetcode {
      * @return 最大数的索引
      */
     public int dominantIndex(int[] nums) {
+        if (nums == null) {
+            return 0;
+        }
         int index = 0, max = 0, second = 0;
         for (int i = 0; i < nums.length; i++) {
             if (nums[i] > max) {
@@ -1588,6 +1944,9 @@ public class leetcode {
      * @return 是否为托普利茨矩阵
      */
     public boolean isToeplitzMatrix(int[][] matrix) {
+        if (matrix == null) {
+            return false;
+        }
         for (int i = 0; i < matrix[0].length; i++) {
             int k = i;
             int pre = matrix[0][i];
@@ -1615,10 +1974,13 @@ public class leetcode {
      * 例如，在字符串 S = "abbxxxxzyy" 中，就含有 "a", "bb", "xxxx", "z" 和 "yy" 这样的一些分组。
      * 我们称所有包含大于或等于三个连续字符的分组为较大分组。找到每一个较大分组的起始和终止位置。
      * 最终结果按照字典顺序输出。
-     * @param S
-     * @return
+     * @param S 字符串
+     * @return  较大分组位置
      */
     public List<List<Integer>> largeGroupPositions(String S) {
+        if (S == null) {
+            return null;
+        }
         List<List<Integer>> result = new ArrayList<>();
         char[] chars = S.toCharArray();
         int count = 1, start = 0, end = 0;
@@ -1663,10 +2025,13 @@ public class leetcode {
      * 例如，在字符串 S = "abbxxxxzyy" 中，就含有 "a", "bb", "xxxx", "z" 和 "yy" 这样的一些分组。
      * 我们称所有包含大于或等于三个连续字符的分组为较大分组。找到每一个较大分组的起始和终止位置。
      * 最终结果按照字典顺序输出。
-     * @param S
-     * @return
+     * @param S 字符串
+     * @return  较大分组位置
      */
     public List<List<Integer>> largeGroupPositions1(String S) {
+        if (S == null) {
+            return null;
+        }
         List<List<Integer>> result = new ArrayList<>();
         int start = 0, length = S.length();
         for (int i = 0; i < length; i++) {
@@ -1694,6 +2059,9 @@ public class leetcode {
      * @return 山脉数组的i值
      */
     public int peakIndexInMountainArray(int[] A) {
+        if (A == null) {
+            return 0;
+        }
         int min = 0, max = A.length - 1;
         while (min <= max) {
             int mid = (min + max) / 2;
@@ -1717,6 +2085,9 @@ public class leetcode {
      * @return 转置后的矩阵
      */
     public int[][] transpose(int[][] A) {
+        if (A == null) {
+            return null;
+        }
         int[][] result = new int[A[0].length][A.length];
         for (int i = 0; i < A.length; i++) {
             for (int j = 0; j < A[i].length; j++) {

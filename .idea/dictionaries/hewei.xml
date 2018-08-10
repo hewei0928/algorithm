@@ -2,6 +2,8 @@
   <dictionary name="hewei">
     <words>
       <w>nums</w>
+      <w>toeplitz</w>
+      <w>vals</w>
     </words>
   </dictionary>
 </component>

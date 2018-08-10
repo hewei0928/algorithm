@@ -18,9 +18,9 @@ public class PSVM {
 ////        int[] a = new int[]{-1,1,1,1,2,1};
 ////        System.out.println(leetcode1.removeElement(a, 1));
 //
-        int[] a = new int[]{1,1,2};
-        System.out.println(leetcode1.largeGroupPositions("abbxxxxzzy"));
-//        int c = 2;
+        int[] a = new int[]{1,2,3,4,5,6,7};
+        leetcode1.rotate(a, 3);
+        //        int c = 2;
 //        int[] a = new int[]{-1,1,1,c,2,1};
 //        a[3] = a[3]++;
 //        System.out.println(1);
