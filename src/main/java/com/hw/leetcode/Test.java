@@ -22,7 +22,6 @@ public class Test {
         System.out.println(Arrays.toString(Leetcode.plusOne(null)));
         System.out.println(Arrays.toString(Leetcode.plusOne1(null)));
         System.out.println(Leetcode.mySqrt(1));
-        System.out.println(Leetcode.mySqrt1(1));
         Leetcode.sortColors(null);
         Leetcode.sortColors1(null);
         System.out.println(Leetcode.deleteDuplicates(null));
@@ -80,7 +79,6 @@ public class Test {
         System.out.println(Leetcode.largeGroupPositions1(null));
         System.out.println(Leetcode.peakIndexInMountainArray(null));
         System.out.println(Arrays.deepToString(Leetcode.transpose(null)));
-        System.out.println(Leetcode.sortList(null));
         System.out.println(Leetcode.maximumProduct(null));
         System.out.println(Leetcode.checkPossibility(null));
         System.out.println(Leetcode.minCostClimbingStairs(null));

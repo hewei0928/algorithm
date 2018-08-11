@@ -9,9 +9,10 @@ package com.hw.leetcode;
  */
 public class PSVM {
     public static void main(String[] args) throws Exception{
-        Leetcode leetcode1 = new Leetcode();
-        System.out.println((1.0)/1);
-        int[] a = new int[]{-1};
+//        Leetcode leetcode1 = new Leetcode();
+//        System.out.println((1.0)/1);
+//        int[] a = new int[]{-1};
+        System.out.println(2147483647+1);
 
     }
 }

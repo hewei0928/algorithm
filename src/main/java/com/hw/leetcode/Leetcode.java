@@ -2,7 +2,6 @@ package com.hw.leetcode;
 
 import com.hw.algorithm.union_found.WeightedQuickUnionUF;
 
-import java.math.BigDecimal;
 import java.util.*;
 
 /**
@@ -144,8 +143,9 @@ public class Leetcode {
     }
 
 
-    // TODO: 2018/8/7 重做一遍
-    /** 
+
+
+    /**
      * 26. 删除排序数组中的重复项
      * 给定一个排序数组，你需要在原地删除重复出现的元素，使得每个元素只出现一次，返回移除后数组的新长度。
      * 不要使用额外的数组空间，你必须在原地修改输入数组并在使用 O(1) 额外空间的条件下完成。
@@ -220,12 +220,14 @@ public class Leetcode {
     }
 
 
-    // TODO: 2018/8/10  重新做一遍
+
+
     /**
      * 53. 最大子序和
      * 给定一个整数数组 nums ，找到一个具有最大和的连续子数组（子数组最少包含一个元素），返回其最大和。
      * @param nums 输入数组
      * @return 最大子序列和
+     * 思路： 如果加到某个下标处和小于零，则一定不包含在最大子序列内
      */
     public int maxSubArray(int[] nums) {
         if (nums == null) {
@@ -239,7 +241,6 @@ public class Leetcode {
                 sum = 0;
             }
         }
-
         return maxSum;
     }
 
@@ -272,7 +273,6 @@ public class Leetcode {
     }
 
 
-    // TODO: 2018/8/9  重写一遍 理解思想
     /**
      * 66. 加一
      * 给定一个非负整数组成的非空数组，在该数的基础上加一，返回一个新的数组。
@@ -286,21 +286,21 @@ public class Leetcode {
         if (digits == null) {
             return null;
         }
-        int length = digits.length;
-        for (int i = length - 1; i >= 0; i--) {
+        for (int i = digits.length - 1; i >= 0; i--) {
             if (digits[i] < 9) {
-                digits[i]++;
+                digits[i] += 1;
                 return digits;
             }
             digits[i] = 0;
         }
-        int[] result = new int[length + 1];
+
+        // 利用数组初始值每位都为1
+        int[] result = new int[digits.length + 1];
         result[0] = 1;
         return result;
     }
 
 
-    // TODO: 2018/8/10 重做
     /**
      * 69. x 的平方根
      * 实现 int sqrt(int x) 函数。
@@ -309,52 +309,20 @@ public class Leetcode {
      *
      * @param x 输入值
      * @return 平方根的整数部分
+     * x / i < i
      */
     public int mySqrt(int x) {
-        if (x < 0) {
-            return 0;
+        if (x == 1) {
+            return 1;
         }
-        BigDecimal min = new BigDecimal(1), max = new BigDecimal(x);
-        BigDecimal xB = new BigDecimal(x);
-        while (min.compareTo(max) == 0 || min.compareTo(max) < 0) {
-            BigDecimal mid = min.add(max).divide(new BigDecimal(2), 2);
-            BigDecimal s = mid.multiply(mid);
-            if (s.compareTo(xB) == 0) {
-                return mid.intValue();
-            } else if (s.compareTo(xB) < 0) {
-                s = mid.add(new BigDecimal(1)).multiply(mid.add(new BigDecimal(1)));
-                if (s.compareTo(xB) > 0) {
-                    return mid.add(new BigDecimal(1)).intValue();
-                } else if (s.compareTo(xB) > 0) {
-                    return mid.intValue();
-                } else {
-                    min = mid.add(new BigDecimal(1));
-                }
-            } else {
-                s = ((mid.subtract(new BigDecimal(1)).multiply(mid.subtract(new BigDecimal(1)))));
-                if (s.compareTo(xB) < 0 || s.compareTo(xB) == 0) {
-                    return mid.subtract(new BigDecimal(1)).intValue();
-                } else {
-                    max = mid.subtract(new BigDecimal(1));
-                }
+        for (int i = 1; i <= x; i++) {
+            if (x / i < i) {
+                return i - 1;
             }
         }
-        return x;
+        return 0;
     }
 
-
-    /**
-     * 69. x 的平方根
-     * 实现 int sqrt(int x) 函数。
-     * 计算并返回 x 的平方根，其中 x 是非负整数。
-     * 由于返回类型是整数，结果只保留整数的部分，小数部分将被舍去。
-     *
-     * @param x 输入值
-     * @return 平方根的整数部分
-     */
-    public int mySqrt1(int x) {
-        return x;
-    }
 
 
     /**
@@ -389,8 +357,7 @@ public class Leetcode {
     }
 
 
-    // TODO: 2018/8/5 重做一遍
-    /** 
+    /**
      * 75. 颜色分类
      * 给定一个包含红色、白色和蓝色，一共 n 个元素的数组，
      * 原地对它们进行排序，使得相同颜色的元素相邻，并按照红色、白色、蓝色顺序排列。
@@ -401,17 +368,19 @@ public class Leetcode {
         if (nums == null) {
             return;
         }
-        int zeroIndex = 0, twoIndex = nums.length - 1;
-        for (int i = 0; i <= twoIndex; i++) {
+        int indexBefore = 0, indexEnd = nums.length - 1;
+        for (int i = 0; i <= indexEnd; i++) {
             if (nums[i] == 0) {
-                nums[i] = nums[zeroIndex];
-                nums[zeroIndex] = 0;
-                zeroIndex++;
-            }
-            if (nums[i] == 2) {
-                nums[i] = nums[twoIndex];
-                nums[twoIndex] = 2;
-                twoIndex--;
+                int temp = nums[i];
+                nums[i] = nums[indexBefore];
+                nums[indexBefore] = temp;
+                indexBefore++;
+            } else if (nums[i] == 2) {
+                int temp = nums[i];
+                nums[i] = nums[indexEnd];
+                nums[indexEnd] = temp;
+                indexEnd--;
+                //往后移index-- 往前则无须-1
                 i--;
             }
         }
@@ -454,7 +423,7 @@ public class Leetcode {
         return listNode.next;
     }
 
-    // TODO: 2018/8/9
+
     /**
      * 改变原链表
      * 83. 删除排序链表中的重复元素
@@ -482,7 +451,8 @@ public class Leetcode {
     }
 
 
-    // TODO: 2018/8/9 重写一遍，理解思想
+
+
     /**
      * 88. 合并两个有序数组
      * 给定两个有序整数数组 nums1 和 nums2，将 nums2 合并到 nums1 中，使得 num1 成为一个有序数组。
@@ -495,13 +465,20 @@ public class Leetcode {
      * @param n 实际存储的数量
      */
     public void merge(int[] nums1, int m, int[] nums2, int n) {
-        int j = m - 1, k = n - 1, l = n + m - 1;
-        while (j> -1 && k > -1) {
-            nums1[l--] = nums1[j] > nums2[k] ? nums1[j--] : nums2[k--];
+        int j = m - 1, k = n - 1, l = m + n - 1;
+        while (k > -1 && j > -1) {
+            if (nums2[k] >= nums1[j]) {
+                nums1[l] = nums2[k];
+                k--;
+            } else {
+                nums1[l] = nums1[j];
+                j--;
+            }
+            l--;
         }
-        // nums2先合并完则数组已经有序，无须再运行这行代码
-        while (k > -1) {
-            nums1[l--] = nums2[k--];
+        while (k >= 0) {
+            nums1[k] = nums2[k];
+            k--;
         }
     }
     
@@ -590,7 +567,6 @@ public class Leetcode {
         }
         prices[0] = 0;
         // 求最大子序列
-        // TODO: 2018/8/10  重新做一遍
         int maxSum=0,sum=0;
         for (int price : prices) {
             sum += price;
@@ -745,20 +721,6 @@ public class Leetcode {
         }
         return helper.next;
     }
-
-
-    // TODO: 2018/8/10  重做
-    /**
-     * 148. 排序链表
-     * 在 O(n log n) 时间复杂度和常数级空间复杂度下，对链表进行排序。
-     * @param head 链表
-     * @return 排序后的链表
-     */
-    public ListNode sortList(ListNode head) {
-        return head;
-    }
-
-
 
 
 
@@ -1391,7 +1353,6 @@ public class Leetcode {
     }
 
 
-    // TODO: 2018/8/10 重写一遍
     /**
      * 414. 第三大的数
      * 给定一个非空数组，返回此数组中第三大的数。如果不存在，则返回数组中最大的数。要求算法时间复杂度必须是O(n)。
@@ -1426,14 +1387,14 @@ public class Leetcode {
 
 
 
-    // TODO: 2018/8/6  重写一遍 
     /** 
      * 448. 找到所有数组中消失的数字
-     * 给定一个范围在  1 ≤ a[i] ≤ n ( n = 数组大小 ) 的 整型数组，数组中的元素一些出现了两次，另一些只出现一次。
+     * 给定一个范围在  1 ≤ a[i] ≤ n ( n = 数组大小 ) 的 整型数组，数组中的元素一些出现了(两次)，另一些只出现一次。
      * 找到所有在 [1, n] 范围之间没有出现在数组中的数字。
      * 您能在不使用额外空间且时间复杂度为O(n)的情况下完成这个任务吗? 你可以假定返回的数组不算在额外空间内。
      * @param nums 给定数组
      * @return 消失的数字集合
+     * 思路： 重点在出现一次和两次以及出现的数范围上
      */
     public List<Integer> findDisappearedNumbers(int[] nums) {
         if (nums == null) {
@@ -1449,7 +1410,7 @@ public class Leetcode {
 
         for (int i = 0; i < nums.length; i++) {
             if (nums[i] > 0) {
-                result.add(i);
+                result.add(i + 1);
             }
         }
         return result;
@@ -1489,8 +1450,6 @@ public class Leetcode {
 
 
 
-
-
     /**
      * 485. 最大连续1的个数
      * 给定一个二进制数组， 计算其中最大连续1的个数。
@@ -1515,6 +1474,7 @@ public class Leetcode {
     }
 
 
+    // TODO: 2018/8/11
     /**
      * 532. 数组中的K-diff数对
      * 给定一个整数数组和一个整数 k, 你需要在数组里找到不同的 k-diff 数对。
@@ -1536,6 +1496,7 @@ public class Leetcode {
             }
             sets.add(nums[i]);
         }
+        return 0;
     }
 
 
@@ -1603,9 +1564,9 @@ public class Leetcode {
      * @param nums
      * @return
      */
-    public int findUnsortedSubarray(int[] nums) {
-
-    }
+//    public int findUnsortedSubarray(int[] nums) {
+//
+//    }
 
 
 
@@ -1763,7 +1724,7 @@ public class Leetcode {
     }
 
 
-    // TODO: 2018/8/10 重做
+    // TODO: 2018/8/10 未完成
     /**
      * 665. 非递减数列
      * 给定一个长度为 n 的整数数组，你的任务是判断在最多改变 1 个元素的情况下，该数组能否变成一个非递减数列。
@@ -1824,8 +1785,6 @@ public class Leetcode {
 
 
 
-
-    // TODO: 2018/8/10 union_found的变形
     /**
      * 695. 岛屿的最大面积
      * 给定一个包含了一些 0 和 1的非空二维数组 grid ,
@@ -2116,7 +2075,7 @@ public class Leetcode {
 
 
 
-    // TODO: 2018/8/9 动态规划重新做一遍
+    // TODO: 2018/8/9 动态规划 重点
     /** 
      * 746. 使用最小花费爬楼梯
      * 数组的每个索引做为一个阶梯，第 i个阶梯对应着一个非负数的体力花费值 cost[i](索引从0开始)。
@@ -2127,15 +2086,6 @@ public class Leetcode {
      */
     public int minCostClimbingStairs(int[] cost) {
         if (cost == null) return 0;
-//        int length = cost.length + 1;
-//        // 登上下标为i的台阶需要的花费
-//        int[] dp = new int[length];
-//        dp[0] = 0;
-//        dp[1] = 0;
-//        for (int i = 2; i < length; i++) {
-//            dp[i] = Math.min(dp[i - 2] + cost[i - 2], dp[i - 1] + cost[i - 1]);
-//        }
-//        return dp[length - 1];
         int length = cost.length + 1;
         int dp0 = 0;
         int dp1 = 0;
@@ -2209,6 +2159,27 @@ public class Leetcode {
         }
         return true;
     }
+
+
+    /**
+     * 771. 宝石与石头
+     *  给定字符串J 代表石头中宝石的类型，和字符串 S代表你拥有的石头。
+     *  S 中每个字符代表了一种你拥有的石头的类型，你想知道你拥有的石头中有多少是宝石。
+     *  J 中的字母不重复，J 和 S中的所有字符都是字母。字母区分大小写，因此"a"和"A"是不同类型的石头。
+     * @param J
+     * @param S
+     * @return
+     */
+//    public int numJewelsInStones(String J, String S) {
+//        int count = 0;
+//        for (int i = 0; i < S.length(); i++) {
+//            if (J.co) {
+//
+//            }
+//        }
+//    }
+
+
 
     /**
      * 830. 较大分组的位置
