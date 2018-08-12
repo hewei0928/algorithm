@@ -80,14 +80,33 @@ public class Test {
         System.out.println(Leetcode.peakIndexInMountainArray(null));
         System.out.println(Arrays.deepToString(Leetcode.transpose(null)));
         System.out.println(Leetcode.maximumProduct(null));
-        System.out.println(Leetcode.checkPossibility(null));
         System.out.println(Leetcode.minCostClimbingStairs(null));
         System.out.println(Leetcode.islandPerimeter(null));
         System.out.println(Arrays.deepToString(Leetcode.imageSmoother(null)));
         System.out.println(Leetcode.findLengthOfLCIS(null));
         System.out.println(Leetcode.pivotIndex(null));
-//        System.out.println(Leetcode.maxDistToClosest(null));
         System.out.println(Leetcode.numMagicSquaresInside(null));
         System.out.println(Leetcode.findMaxAverage(null, 1));
+        System.out.println(Leetcode.numJewelsInStones(null, null));
+        System.out.println(Leetcode.maxIncreaseKeepingSkyline(null));
+        System.out.println(Leetcode.toLowerCase(null));
+        System.out.println(Leetcode.world());
+        System.out.println(Arrays.deepToString(Leetcode.flipAndInvertImage(null)));
+        System.out.println(Leetcode.person());
+        System.out.println(Leetcode.hammingDistance(1, 2));
+        System.out.println(Leetcode.mergeTrees(null, null));
+        System.out.println(Leetcode.invertTree(null));
+        System.out.println(Leetcode.findComplement(1));
+        System.out.println(Leetcode.reverseString(null));
+        System.out.println(Leetcode.movie());
+        System.out.println(Leetcode.reverseWords(null));
+        System.out.println(Arrays.toString(Leetcode.findWords(null)));
+        System.out.println(Leetcode.selfDividingNumbers(1, 10));
+        System.out.println(Leetcode.updateSalary());
+        System.out.println(Leetcode.judgeCircle(null));
+        System.out.println(Leetcode.uniqueMorseRepresentations(null));
+        System.out.println(Leetcode.maxDepth(Leetcode.new Node(1, null)));
+        System.out.println(Leetcode.maxDepth(Leetcode.new Node()));
+        System.out.println(Leetcode.maxDepth(Leetcode.new TreeNode(1)));
     }
 }

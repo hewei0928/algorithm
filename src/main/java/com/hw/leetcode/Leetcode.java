@@ -3,6 +3,7 @@ package com.hw.leetcode;
 import com.hw.algorithm.union_found.WeightedQuickUnionUF;
 
 import java.util.*;
+import java.util.stream.Stream;
 
 /**
  * @Author: Hewei
@@ -451,8 +452,6 @@ public class Leetcode {
     }
 
 
-
-
     /**
      * 88. 合并两个有序数组
      * 给定两个有序整数数组 nums1 和 nums2，将 nums2 合并到 nums1 中，使得 num1 成为一个有序数组。
@@ -465,6 +464,9 @@ public class Leetcode {
      * @param n 实际存储的数量
      */
     public void merge(int[] nums1, int m, int[] nums2, int n) {
+        if (nums1 == null || nums2 == null) {
+            return;
+        }
         int j = m - 1, k = n - 1, l = m + n - 1;
         while (k > -1 && j > -1) {
             if (nums2[k] >= nums1[j]) {
@@ -481,7 +483,29 @@ public class Leetcode {
             k--;
         }
     }
-    
+
+
+    /**
+     * 104. 二叉树的最大深度
+     * 给定一个二叉树，找出其最大深度。
+     * 二叉树的深度为根节点到最远叶子节点的最长路径上的节点数。
+     * 说明: 叶子节点是指没有子节点的节点。
+     * @param root 树的根节点
+     * @return 树的深度
+     */
+    public int maxDepth(TreeNode root) {
+        return getMax(root, 0, 0);
+    }
+
+    private int getMax(TreeNode node, int max, int dep) {
+        if (node == null) {
+            return Math.max(dep, max);
+        }
+        dep += 1;
+        max = getMax(node.left, max, dep);
+        max = getMax(node.right, max, dep);
+        return max;
+    }
 
 
 
@@ -854,6 +878,16 @@ public class Leetcode {
 
 
     /**
+     * 182. 查找重复的电子邮箱
+     * @return String
+     * 注意： where语句中不能有分组函数
+     */
+    public String person() {
+        return "select Email from Person group by Email having count(Email) > 1";
+    }
+
+
+    /**
      * 189. 旋转数组
      * 给定一个数组，将数组中的元素向右移动 k 个位置，其中 k 是非负数。
      * @param nums 数组
@@ -1088,6 +1122,26 @@ public class Leetcode {
     }
 
 
+    /**
+     * 226. 翻转二叉树
+     * 翻转一棵二叉树。
+     * @param root 二叉树
+     * @return 反转后的二叉树
+     */
+    public TreeNode invertTree(TreeNode root) {
+        if (root == null) {
+            return null;
+        }
+        TreeNode treeNode = new TreeNode(root.val);
+        if (root.left != null) {
+            treeNode.right = invertTree(root.left);
+        }
+        if (root.right != null) {
+            treeNode.left = invertTree(root.right);
+        }
+        return treeNode;
+    }
+
 
 
     /**
@@ -1279,6 +1333,28 @@ public class Leetcode {
 
 
     /**
+     * 344. 反转字符串
+     * 编写一个函数，其作用是将输入的字符串反转过来。
+     * @param s 字符串
+     * @return 反转后的字符串
+     */
+    public String reverseString(String s) {
+        if (s == null) {
+            return null;
+        }
+        char[] result = s.toCharArray();
+        for (int i = 0; i < result.length / 2; i++) {
+            char c = result[i];
+            result[i] = result[result.length - 1 - i];
+            result[result.length - 1 - i] = c;
+        }
+        return new String(result);
+    }
+
+
+
+
+    /**
      * 349. 两个数组的交集
      * 给定两个数组，写一个函数来计算它们的交集。
      * 例子:
@@ -1418,6 +1494,19 @@ public class Leetcode {
 
 
     /**
+     * 461. 汉明距离
+     * 两个整数之间的汉明距离指的是这两个数字对应二进制位不同的位置的数目。
+     * 给出两个整数 x 和 y，计算它们之间的汉明距离。
+     * @param x x
+     * @param y y
+     * @return 汉明距离
+     */
+    public int hammingDistance(int x, int y) {
+        return Integer.bitCount(x ^ y);
+    }
+
+
+    /**
      * 463. 岛屿的周长
      * 给定一个包含 0 和 1 的二维网格地图，其中 1 表示陆地 0 表示水域。网格中的格子水平和垂直方向相连（对角线方向不相连）。
      * 整个网格被水完全包围，但其中恰好有一个岛屿（或者说，一个或多个表示陆地的格子相连组成的岛屿）。
@@ -1449,6 +1538,24 @@ public class Leetcode {
     }
 
 
+    /**
+     * 476. 数字的补数
+     * 给定一个正整数，输出它的补数。补数是对该数的二进制表示取反。
+     * 注意:
+     * 给定的整数保证在32位带符号整数的范围内。
+     * 你可以假定二进制数不包含前导零位。
+     * @param num 给定数字
+     * @return 补数
+     */
+    public int findComplement(int num) {
+        int i = Integer.highestOneBit(num);
+        int max = 0;
+        do {
+            max += i;
+        } while ( (i = i / 2) != 0);
+        return num ^ max;
+    }
+
 
     /**
      * 485. 最大连续1的个数
@@ -1474,32 +1581,90 @@ public class Leetcode {
     }
 
 
-    // TODO: 2018/8/11
+    // TODO: 2018/8/12 java 8 Stream lambda表达式的使用
     /**
-     * 532. 数组中的K-diff数对
-     * 给定一个整数数组和一个整数 k, 你需要在数组里找到不同的 k-diff 数对。
-     * 这里将 k-diff 数对定义为一个整数对 (i, j),
-     * 其中 i 和 j 都是数组中的数字，且两数之差的绝对值是 k.
-     * @param nums 数组
-     * @param k 差值
-     * @return k-diff 数对 数量
+     * 500. 键盘行
+     * 给定一个单词列表，只返回可以使用在键盘同一行的字母打印出来的单词。键盘如下图所示。
+     * @param words 单词数组
+     * @return 过滤后的按次数组
      */
-    public int findPairs(int[] nums, int k) {
-        if (nums == null) {
-            return 0;
+    public String[] findWords(String[] words) {
+        if (words == null) {
+            return null;
         }
-        int count = 0;
-        Set<Integer> sets = new HashSet<>();
-        for (int i = 0; i < nums.length; i++) {
-            if (Math.abs(nums[i]) < k) {
-                count++;
-            }
-            sets.add(nums[i]);
-        }
-        return 0;
+        return Stream.of(words).filter(s -> s.toLowerCase().matches("[qwertyuiop]*|[asdfghjkl]*|[zxcvbnm]*")).toArray(String[]::new);
     }
 
 
+    /**
+     * 557. 反转字符串中的单词 III
+     * 给定一个字符串，你需要反转字符串中每个单词的字符顺序，同时仍保留空格和单词的初始顺序。
+     * @param s S
+     * @return 反转后的字符串
+     */
+    public String reverseWords(String s) {
+        if (s == null) {
+            return null;
+        }
+        String[] ss = s.split(" ");
+        StringBuilder result = new StringBuilder("");
+        for (String s1 : ss) {
+            StringBuilder si = new StringBuilder(s1);
+            si.reverse();
+            result.append(si).append(" ");
+        }
+        return result.toString().substring(0, result.length() - 1);
+    }
+
+    /**
+     * n叉树节点
+     */
+    class Node {
+        int val;
+        List<Node> children;
+
+        Node() {}
+
+        Node(int _val, List<Node> _children) {
+            val = _val;
+            children = _children;
+        }
+    }
+
+
+    /**
+     * 559. N叉树的最大深度
+     * 给定一个N叉树，找到其最大深度。
+     * 最大深度是指从根节点到最远叶子节点的最长路径上的节点总数。
+     * @param root 树根节点
+     * @return 树的最大深度
+     */
+    public int maxDepth(Node root) {
+        return getMax(root, 0, 0);
+    }
+
+    /**
+     * 获取某个节点的最大深度
+     * @param node 节点
+     * @param max 最大深度
+     * @param dep 深度
+     * @return 最大深度
+     */
+    private int getMax(Node node, int max, int dep) {
+        if (node == null) {
+            return Math.max(max, dep);
+        } else {
+            dep += 1;
+            if (node.children != null && node.children.size() != 0) {
+                for (Node child : node.children) {
+                    max = getMax(child, max, dep);
+                }
+            } else {
+                max = getMax((TreeNode) null, max, dep);
+            }
+            return max;
+        }
+    }
 
 
     /**
@@ -1556,18 +1721,12 @@ public class Leetcode {
         return result;
     }
 
-
     /**
-     * 581. 最短无序连续子数组
-     * 给定一个整数数组，你需要寻找一个连续的子数组，如果对这个子数组进行升序排序，那么整个数组都会变为升序排序。
-     * 你找到的子数组应是最短的，请输出它的长度。
-     * @param nums
-     * @return
+     * 595. 大的国家
      */
-//    public int findUnsortedSubarray(int[] nums) {
-//
-//    }
-
+    public String world() {
+        return "select name, population, area from World where area > 3000000 or population  > 25000000";
+    }
 
 
     /**
@@ -1603,6 +1762,64 @@ public class Leetcode {
             flowers += (place - 1)/2;
         }
         return flowers >= n;
+    }
+
+
+    /**
+     * 树节点
+     */
+    class TreeNode {
+      int val;
+      TreeNode left;
+      TreeNode right;
+      TreeNode(int x) { val = x; }
+    }
+
+    /**
+     * 617. 合并二叉树
+     * 给定两个二叉树，想象当你将它们中的一个覆盖到另一个上时，两个二叉树的一些节点便会重叠。
+     * 你需要将他们合并为一个新的二叉树。
+     * 合并的规则是如果两个节点重叠，那么将他们的值相加作为节点合并后的新值，否则不为 NULL 的节点将直接作为新二叉树的节点。
+     * @param t1 树1
+     * @param t2 树2
+     * @return 新树
+     */
+    public TreeNode mergeTrees(TreeNode t1, TreeNode t2) {
+        TreeNode treeNode = null;
+        if (t1 != null || t2 != null) {
+            if (t1 == null) {
+                treeNode = new TreeNode(t2.val);
+                treeNode.left = mergeTrees(null, t2.left);
+                treeNode.right = mergeTrees(null, t2.right);
+            } else if (t2 == null) {
+                treeNode = new TreeNode(t1.val);
+                treeNode.left = mergeTrees(t1.left, null);
+                treeNode.right = mergeTrees(t1.right, null);
+            } else {
+                treeNode = new TreeNode(t1.val + t2.val);
+                treeNode.left = mergeTrees(t1.left, t2.left);
+                treeNode.right = mergeTrees(t1.right, t2.right);
+            }
+        }
+        return treeNode;
+    }
+
+
+    /**
+     * 620. 有趣的电影
+     * @return sql
+     */
+    public String movie() {
+        return "select * from cinema where description != 'boring' and id&1 order by rating desc;";
+    }
+
+
+    /**
+     * 627. 交换工资
+     * @return 交换工资
+     */
+    public String updateSalary() {
+        return "update salary set sex = ( case sex when 'f' then 'm' when 'm' then 'f' end)";
     }
 
 
@@ -1666,6 +1883,42 @@ public class Leetcode {
 
 
     /**
+     * 657. 判断路线成圈
+     * 初始位置 (0, 0) 处有一个机器人。给出它的一系列动作，
+     * 判断这个机器人的移动路线是否形成一个圆圈，换言之就是判断它是否会移回到原来的位置。
+     * 移动顺序由一个字符串表示。每一个动作都是由一个字符来表示的。
+     * 机器人有效的动作有 R（右），L（左），U（上）和 D（下）。输出应为 true 或 false，表示机器人移动路线是否成圈。
+     * @param moves 移动
+     * @return 是否回到原点
+     */
+    public boolean judgeCircle(String moves) {
+        if (moves == null) {
+            return true;
+        }
+        int x = 0, y = 0;
+        for (int i = 0; i < moves.length(); i++) {
+            char move = moves.charAt(i);
+            switch (move) {
+                case 'R':
+                    x++;
+                    break;
+                case 'L':
+                    x--;
+                    break;
+                case 'U':
+                    y++;
+                    break;
+                case 'D':
+                    y--;
+                    break;
+            }
+        }
+        return (x == 0 && y == 0);
+    }
+
+
+
+    /**
      * 661. 图片平滑器
      * 包含整数的二维矩阵 M 表示一个图片的灰度。
      * 你需要设计一个平滑器来让每一个单元的灰度成为平均灰度 (向下舍入)，
@@ -1723,40 +1976,6 @@ public class Leetcode {
         return result;
     }
 
-
-    // TODO: 2018/8/10 未完成
-    /**
-     * 665. 非递减数列
-     * 给定一个长度为 n 的整数数组，你的任务是判断在最多改变 1 个元素的情况下，该数组能否变成一个非递减数列。
-     *  我们是这样定义一个非递减数列的： 对于数组中所有的 i (1 <= i < n)，满足 array[i] <= array[i + 1]。
-     * @param nums 数组
-     * @return 能否成功
-     * 思路 找到第一个大于后一个数的数下标，当它为i-1或i+1时其后的数组是否有序
-     */
-    public boolean checkPossibility(int[] nums) {
-        if (nums == null) {
-            return false;
-        }
-        for (int i = 0; i < nums.length - 1; i++) {
-            if (nums[i] > nums[i + 1]) {
-                int temp = nums[i];
-                if (i != 0) {
-                    nums[i] = nums[i-1];
-                    for (int j = i; j < nums.length - 1; j++) {
-                        if (nums[j] > nums[j + 1]) {
-                            return false;
-                        }
-                    }
-                    nums[i] = temp;
-                }
-                nums[i] = nums[i + 1];
-//                for (int k = i; k < nums.length - 1; k++) {
-//                    if (nums[k] > )
-//                }
-            }
-        }
-        return true;
-    }
 
 
     /**
@@ -1879,7 +2098,7 @@ public class Leetcode {
     }
 
 
-
+    // TODO: 2018/8/11 未完成
     /**
      * 707. 设计链表
      */
@@ -2021,6 +2240,28 @@ public class Leetcode {
 
 
     /**
+     * 709. 转换成小写字母
+     * 实现函数 ToLowerCase()，该函数接收一个字符串参数 str，
+     * 并将该字符串中的大写字母转换成小写字母，之后返回新的字符串。
+     * @param str 初始字符串
+     * @return 转换后的小写字符串
+     */
+    public String toLowerCase(String str) {
+        if (str == null) {
+            return null;
+        }
+        char[] result = str.toCharArray();
+        for (int i = 0; i < result.length; i++) {
+            if ( 64 < result[i] && result[i] < 91) {
+                result[i] = (char)(result[i] + 32);
+            }
+        }
+        return new String(result);
+    }
+
+
+
+    /**
      * 717. 1比特与2比特字符
      * 有两种特殊字符。第一种字符可以用一比特0来表示。第二种字符可以用两比特(10 或 11)来表示。
      * 现给一个由若干比特组成的字符串。问最后一个字符是否必定为一个一比特字符。给定的字符串总是由0结束。
@@ -2074,8 +2315,39 @@ public class Leetcode {
     }
 
 
+    /**
+     * 728. 自除数
+     * 自除数 是指可以被它包含的每一位数除尽的数。
+     * 例如，128 是一个自除数，因为 128 % 1 == 0，128 % 2 == 0，128 % 8 == 0。
+     * 还有，自除数不允许包含 0 。
+     * 给定上边界和下边界数字，输出一个列表，列表的元素是边界（含边界）内所有的自除数。
+     * @param left 左边界
+     * @param right 右边界
+     * @return 自除数集合
+     */
+    public List<Integer> selfDividingNumbers(int left, int right) {
+        List<Integer> result = new ArrayList<>();
+        if (right >= left) {
+            for (int i = left; i <= right; i++) {
+                int temp = i;
+                boolean isSelfDividingNumber = true;
+                do {
+                    int remainder = temp % 10;
+                    if (remainder == 0 || i % remainder != 0) {
+                        isSelfDividingNumber = false;
+                        break;
+                    }
+                } while ((temp /= 10) != 0);
+                if (isSelfDividingNumber) {
+                    result.add(i);
+                }
+            }
+        }
+        return result;
+    }
 
-    // TODO: 2018/8/9 动态规划 重点
+
+    // TODO: 2018/8/9 动态规划 重做
     /** 
      * 746. 使用最小花费爬楼梯
      * 数组的每个索引做为一个阶梯，第 i个阶梯对应着一个非负数的体力花费值 cost[i](索引从0开始)。
@@ -2160,24 +2432,90 @@ public class Leetcode {
         return true;
     }
 
-
     /**
      * 771. 宝石与石头
-     *  给定字符串J 代表石头中宝石的类型，和字符串 S代表你拥有的石头。
-     *  S 中每个字符代表了一种你拥有的石头的类型，你想知道你拥有的石头中有多少是宝石。
-     *  J 中的字母不重复，J 和 S中的所有字符都是字母。字母区分大小写，因此"a"和"A"是不同类型的石头。
-     * @param J
-     * @param S
-     * @return
+     * 给定字符串J 代表石头中宝石的类型，和字符串 S代表你拥有的石头。
+     * S 中每个字符代表了一种你拥有的石头的类型，你想知道你拥有的石头中有多少是宝石。
+     * J 中的字母不重复，J 和 S中的所有字符都是字母。字母区分大小写，因此"a"和"A"是不同类型的石头。
+     * @param J 宝石数组
+     * @param S 拥有石头数组
+     * @return 宝石数量
      */
-//    public int numJewelsInStones(String J, String S) {
-//        int count = 0;
-//        for (int i = 0; i < S.length(); i++) {
-//            if (J.co) {
-//
-//            }
-//        }
-//    }
+    public int numJewelsInStones(String J, String S) {
+        if (S == null || J == null) {
+            return 0;
+        }
+        int count = 0;
+        for (int i = 0; i < S.length(); i++) {
+            if (J.indexOf(S.charAt(i)) != -1) {
+                count++;
+            }
+        }
+        return count;
+    }
+
+
+    /**
+     * 804. 唯一摩尔斯密码词
+     * @param words 单次数组
+     * @return 数量
+     */
+    public int uniqueMorseRepresentations(String[] words) {
+        if (words == null) {
+            return 0;
+        }
+        String[] d = {".-", "-...", "-.-.", "-..", ".", "..-.", "--.", "....", "..", ".---", "-.-", ".-..", "--", "-.", "---", ".--.", "--.-", ".-.", "...", "-", "..-", "...-", ".--", "-..-", "-.--", "--.."};
+        HashSet<String> s = new HashSet<>();
+        for (String word : words) {
+            StringBuilder code = new StringBuilder();
+            for (char c : word.toCharArray()) code.append(d[c - 'a']);
+            s.add(code.toString());
+        }
+        return s.size();
+    }
+
+
+    /**
+     * 807. 保持城市天际线
+     * 在二维数组grid中，grid[i][j]代表位于某处的建筑物的高度。
+     * 我们被允许增加任何数量（不同建筑物的数量可能不同）的建筑物的高度。 高度 0 也被认为是建筑物。
+     * 最后，从新数组的所有四个方向（即顶部，底部，左侧和右侧）观看的“天际线”必须与原始数组的天际线相同。
+     * 城市的天际线是从远处观看时，由所有建筑物形成的矩形的外部轮廓。 请看下面的例子。
+     * 建筑物高度可以增加的最大总和是多少？
+     * @param grid 城市数组
+     * @return 最大增高数
+     */
+    public int maxIncreaseKeepingSkyline(int[][] grid) {
+        if (grid == null || grid.length == 0) {
+            return 0;
+        }
+        // 各行最大值， 各列最大值
+        int[] maxRow = new int[grid.length], maxRol = new int[grid[0].length];
+        for (int i = 0; i < grid.length; i++) {
+            int max = 0;
+            for (int j = 0; j < grid[i].length; j++) {
+                max = Math.max(max, grid[i][j]);
+            }
+            maxRow[i] = max;
+        }
+
+        for (int i = 0; i < grid[0].length; i++) {
+            int max = 0;
+            for (int[] aGrid : grid) {
+                max = Math.max(max, aGrid[i]);
+            }
+            maxRol[i] = max;
+        }
+        int count = 0;
+        for (int i = 0; i < grid.length; i++) {
+            for (int j = 0; j < grid[0].length; j++) {
+                int max = Math.min(maxRol[i], maxRow[j]);
+                count += max - grid[i][j];
+            }
+        }
+
+        return count;
+    }
 
 
 
@@ -2258,6 +2596,34 @@ public class Leetcode {
         return result;
     }
 
+
+    /**
+     * 832. 翻转图像
+     * 给定一个二进制矩阵 A，我们想先水平翻转图像，然后反转图像并返回结果。
+     * 水平翻转图片就是将图片的每一行都进行翻转，即逆序。例如，水平翻转 [1, 1, 0] 的结果是 [0, 1, 1]。
+     * 反转图片的意思是图片中的 0 全部被 1 替换， 1 全部被 0 替换。例如，反转 [0, 1, 1] 的结果是 [1, 0, 0]。
+     * @param A 原数组
+     * @return 操作后的数组
+     */
+    public int[][] flipAndInvertImage(int[][] A) {
+        if (A == null) {
+            return null;
+        }
+        for (int i = 0; i < A.length; i++) {
+            for (int j = 0; j < A[i].length / 2; j++) {
+                int temp = 1 - A[i][j];
+                A[i][j] = 1 - A[i][A[i].length - 1 - j];
+                A[i][A[i].length - 1 - j] = temp;
+            }
+            if (A[i].length % 2 == 1) {
+                A[i][A[i].length/2] = 1 - A[i][A[i].length/2];
+            }
+        }
+
+        return A;
+    }
+
+
     /**
      * 840. 矩阵中的幻方
      * 3 x 3 的幻方是一个填充有从 1 到 9 的 不同数字 的 3 x 3 矩阵，其中每行，每列以及两条对角线上的各数之和都相等。
@@ -2308,27 +2674,6 @@ public class Leetcode {
                 vals[0] + vals[4] + vals[8] == 15 &&
                 vals[2] + vals[4] + vals[6] == 15);
     }
-
-
-
-    /**
-     * 849. 到最近的人的最大距离
-     * 在一排座位（ seats）中，1 代表有人坐在座位上，0 代表座位上是空的。
-     * 至少有一个空座位，且至少有一人坐在座位上。
-     * 亚历克斯希望坐在一个能够使他与离他最近的人之间的距离达到最大化的座位上。
-     * 返回他到离他最近的人的最大距离。
-     * @param seats 座位数组
-     * @return 最大距离
-     */
-//    public int maxDistToClosest(int[] seats) {
-//        if (seats == null) {
-//            return 0;
-//        }
-//        int start = -1, end = -1, max = 0, temp = 0;
-//        for (int i = 0; i < seats.length; i++) {
-//            if (seats[i] == 1);
-//        }
-//    }
 
 
 
