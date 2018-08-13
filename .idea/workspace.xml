@@ -5,7 +5,13 @@
     <bookmark url="file://D:/SUNAOS/B1.0.1/08程序/a源代码/运营管理平台（SunAOS）/运营管理平台-系统管理-system/src/main/java/com/sunyard/aos/system/dao/ModuleDao.java" description="* @param query 模块号" line="195" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6e035667-41d0-4d8c-9993-943dc018bc60" name="Default" comment="" />
+    <list default="true" id="6e035667-41d0-4d8c-9993-943dc018bc60" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/hewei.xml" afterPath="$PROJECT_DIR$/.idea/dictionaries/hewei.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hw/leetcode/Leetcode.java" afterPath="$PROJECT_DIR$/src/main/java/com/hw/leetcode/Leetcode.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hw/leetcode/Test.java" afterPath="$PROJECT_DIR$/src/main/java/com/hw/leetcode/Test.java" />
+    </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -16,6 +22,9 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/algorithm$PSVM.coverage" NAME="PSVM Coverage Results" MODIFIED="1533208042621" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.hw.leetcode.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/algorithm$Test.coverage" NAME="Test Coverage Results" MODIFIED="1534143143687" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.hw.leetcode.*</FILTER>
     </SUITE>
   </component>
@@ -36,8 +45,8 @@
       <file leaf-file-name="Leetcode.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/hw/leetcode/Leetcode.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="308">
-              <caret line="2633" column="33" lean-forward="false" selection-start-line="2633" selection-start-column="33" selection-end-line="2633" selection-end-column="33" />
+            <state relative-caret-position="-8400">
+              <caret line="851" column="40" lean-forward="false" selection-start-line="851" selection-start-column="40" selection-end-line="851" selection-end-column="40" />
               <folding>
                 <element signature="docComment;class#Leetcode#0" expanded="false" />
                 <element signature="docComment;method#twoSum#0;class#Leetcode#0" expanded="false" />
@@ -75,6 +84,7 @@
                 <element signature="docComment;method#merge#0;class#Leetcode#0" expanded="false" />
                 <element signature="method#merge#0;class#Leetcode#0" expanded="false" />
                 <element signature="docComment;method#maxDepth#0;class#Leetcode#0" expanded="false" />
+                <element signature="method#getMax#0;class#Leetcode#0" expanded="false" />
                 <element signature="docComment;method#generate#0;class#Leetcode#0" expanded="false" />
                 <element signature="method#generate#0;class#Leetcode#0" expanded="false" />
                 <element signature="docComment;method#getRow#0;class#Leetcode#0" expanded="false" />
@@ -98,8 +108,16 @@
                 <element signature="method#getIntersectionNode1#0;class#Leetcode#0" expanded="false" />
                 <element signature="docComment;method#twoSum1#0;class#Leetcode#0" expanded="false" />
                 <element signature="method#twoSum1#0;class#Leetcode#0" expanded="false" />
+                <element signature="docComment;method#convertToTitle#0;class#Leetcode#0" expanded="false" />
+                <element signature="method#convertToTitle#0;class#Leetcode#0" expanded="false" />
                 <element signature="docComment;method#majorityElement#0;class#Leetcode#0" expanded="false" />
                 <element signature="method#majorityElement#0;class#Leetcode#0" expanded="false" />
+                <element signature="docComment;method#titleToNumber#0;class#Leetcode#0" expanded="false" />
+                <element signature="method#titleToNumber#0;class#Leetcode#0" expanded="false" />
+                <element signature="docComment;method#twoTable#0;class#Leetcode#0" expanded="false" />
+                <element signature="method#twoTable#0;class#Leetcode#0" expanded="false" />
+                <element signature="docComment;method#employee#0;class#Leetcode#0" expanded="false" />
+                <element signature="method#employee#0;class#Leetcode#0" expanded="false" />
                 <element signature="docComment;method#person#0;class#Leetcode#0" expanded="false" />
                 <element signature="docComment;method#rotate#0;class#Leetcode#0" expanded="false" />
                 <element signature="method#rotate#0;class#Leetcode#0" expanded="false" />
@@ -142,6 +160,8 @@
                 <element signature="method#intersection#0;class#Leetcode#0" expanded="false" />
                 <element signature="docComment;method#intersect#0;class#Leetcode#0" expanded="false" />
                 <element signature="method#intersect#0;class#Leetcode#0" expanded="false" />
+                <element signature="docComment;method#fizzBuzz#0;class#Leetcode#0" expanded="false" />
+                <element signature="method#fizzBuzz#0;class#Leetcode#0" expanded="false" />
                 <element signature="docComment;method#thirdMax#0;class#Leetcode#0" expanded="false" />
                 <element signature="method#thirdMax#0;class#Leetcode#0" expanded="false" />
                 <element signature="docComment;method#findDisappearedNumbers#0;class#Leetcode#0" expanded="false" />
@@ -157,8 +177,12 @@
                 <element signature="method#findWords#0;class#Leetcode#0" expanded="false" />
                 <element signature="docComment;method#reverseWords#0;class#Leetcode#0" expanded="false" />
                 <element signature="method#reverseWords#0;class#Leetcode#0" expanded="false" />
-                <element signature="e#40103#40104#0" expanded="true" />
-                <element signature="e#40144#40145#0" expanded="true" />
+                <element signature="docComment;class#Node#0;class#Leetcode#0" expanded="false" />
+                <element signature="class#Node#0;class#Leetcode#0" expanded="false" />
+                <element signature="method#Node#1;class#Node#0;class#Leetcode#0" expanded="false" />
+                <element signature="docComment;method#maxDepth#1;class#Leetcode#0" expanded="false" />
+                <element signature="docComment;method#getMax#1;class#Leetcode#0" expanded="false" />
+                <element signature="method#getMax#1;class#Leetcode#0" expanded="false" />
                 <element signature="docComment;method#arrayPairSum#0;class#Leetcode#0" expanded="false" />
                 <element signature="method#arrayPairSum#0;class#Leetcode#0" expanded="false" />
                 <element signature="docComment;method#matrixReshape#0;class#Leetcode#0" expanded="false" />
@@ -168,6 +192,8 @@
                 <element signature="docComment;method#canPlaceFlowers#0;class#Leetcode#0" expanded="false" />
                 <element signature="method#canPlaceFlowers#0;class#Leetcode#0" expanded="false" />
                 <element signature="docComment;class#TreeNode#0;class#Leetcode#0" expanded="false" />
+                <element signature="class#TreeNode#0;class#Leetcode#0" expanded="false" />
+                <element signature="method#TreeNode#0;class#TreeNode#0;class#Leetcode#0" expanded="false" />
                 <element signature="docComment;method#mergeTrees#0;class#Leetcode#0" expanded="false" />
                 <element signature="method#mergeTrees#0;class#Leetcode#0" expanded="false" />
                 <element signature="docComment;method#movie#0;class#Leetcode#0" expanded="false" />
@@ -182,6 +208,8 @@
                 <element signature="method#judgeCircle#0;class#Leetcode#0" expanded="false" />
                 <element signature="docComment;method#imageSmoother#0;class#Leetcode#0" expanded="false" />
                 <element signature="method#imageSmoother#0;class#Leetcode#0" expanded="false" />
+                <element signature="docComment;method#checkPossibility#0;class#Leetcode#0" expanded="false" />
+                <element signature="method#checkPossibility#0;class#Leetcode#0" expanded="false" />
                 <element signature="docComment;method#findLengthOfLCIS#0;class#Leetcode#0" expanded="false" />
                 <element signature="method#findLengthOfLCIS#0;class#Leetcode#0" expanded="false" />
                 <element signature="docComment;method#maxAreaOfIsland#0;class#Leetcode#0" expanded="false" />
@@ -223,6 +251,8 @@
                 <element signature="method#uniqueMorseRepresentations#0;class#Leetcode#0" expanded="false" />
                 <element signature="docComment;method#maxIncreaseKeepingSkyline#0;class#Leetcode#0" expanded="false" />
                 <element signature="method#maxIncreaseKeepingSkyline#0;class#Leetcode#0" expanded="false" />
+                <element signature="docComment;method#subdomainVisits#0;class#Leetcode#0" expanded="false" />
+                <element signature="method#subdomainVisits#0;class#Leetcode#0" expanded="false" />
                 <element signature="docComment;method#largeGroupPositions#0;class#Leetcode#0" expanded="false" />
                 <element signature="method#largeGroupPositions#0;class#Leetcode#0" expanded="false" />
                 <element signature="docComment;method#largeGroupPositions1#0;class#Leetcode#0" expanded="false" />
@@ -236,6 +266,26 @@
                 <element signature="method#peakIndexInMountainArray#0;class#Leetcode#0" expanded="false" />
                 <element signature="docComment;method#transpose#0;class#Leetcode#0" expanded="false" />
                 <element signature="method#transpose#0;class#Leetcode#0" expanded="false" />
+                <element signature="docComment;method#robotSim#0;class#Leetcode#0" expanded="false" />
+                <element signature="method#robotSim#0;class#Leetcode#0" expanded="false" />
+                <element signature="docComment;class#Robot#0;class#Leetcode#0" expanded="false" />
+                <element signature="class#Robot#0;class#Leetcode#0" expanded="false" />
+                <element signature="method#Robot#0;class#Robot#0;class#Leetcode#0" expanded="false" />
+                <element signature="docComment;method#move#0;class#Robot#0;class#Leetcode#0" expanded="false" />
+                <element signature="method#move#0;class#Robot#0;class#Leetcode#0" expanded="false" />
+                <element signature="docComment;method#changeDirection#0;class#Robot#0;class#Leetcode#0" expanded="false" />
+                <element signature="method#changeDirection#0;class#Robot#0;class#Leetcode#0" expanded="false" />
+                <element signature="docComment;class#Direction#0;class#Robot#0;class#Leetcode#0" expanded="false" />
+                <element signature="class#Direction#0;class#Robot#0;class#Leetcode#0" expanded="false" />
+                <element signature="docComment;class#Obstacle#0;class#Robot#0;class#Leetcode#0" expanded="false" />
+                <element signature="class#Obstacle#0;class#Robot#0;class#Leetcode#0" expanded="false" />
+                <element signature="method#Obstacle#0;class#Obstacle#0;class#Robot#0;class#Leetcode#0" expanded="false" />
+                <element signature="method#equals#0;class#Obstacle#0;class#Robot#0;class#Leetcode#0" expanded="false" />
+                <element signature="method#hashCode#0;class#Obstacle#0;class#Robot#0;class#Leetcode#0" expanded="false" />
+                <element signature="docComment;method#robotSim1#0;class#Leetcode#0" expanded="false" />
+                <element signature="method#robotSim1#0;class#Leetcode#0" expanded="false" />
+                <element signature="docComment;method#middleNode#0;class#Leetcode#0" expanded="false" />
+                <element signature="method#middleNode#0;class#Leetcode#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -244,8 +294,8 @@
       <file leaf-file-name="Test.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/hw/leetcode/Test.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3024">
-              <caret line="108" column="67" lean-forward="false" selection-start-line="108" selection-start-column="67" selection-end-line="108" selection-end-column="67" />
+            <state relative-caret-position="307">
+              <caret line="125" column="52" lean-forward="false" selection-start-line="125" selection-start-column="52" selection-end-line="125" selection-end-column="52" />
               <folding />
             </state>
           </provider>
@@ -275,13 +325,30 @@
       <find>1(</find>
       <find>numJewelsInStones</find>
       <find>dep</find>
+      <find>values(</find>
+      <find>[</find>
+      <find>]</find>
+      <find>1,</find>
+      <find>14</find>
+      <find>{8,</find>
+      <find>8,18</find>
+      <find>18</find>
+      <find>7,18</find>
+      <find>63,36</find>
+      <find>50,-3</find>
+      <find>{7,</find>
+      <find>Excel</find>
     </findStrings>
     <replaceStrings>
       <replace />
+      <replace>}</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="PUSH_TAGS">
+      <GitPushTagMode />
+    </option>
   </component>
   <component name="GradleLocalSettings">
     <option name="externalProjectsViewState">
@@ -303,8 +370,9 @@
         <option value="$PROJECT_DIR$/src/main/java/com/hw/algorithm/union_found/WeightedQuickUnionUF.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/hw/leetcode/leetcode.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/hw/leetcode/PSVM.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/hw/leetcode/Test.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/hw/leetcode/Leetcode.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hw/leetcode/Test.java" />
       </list>
     </option>
   </component>
@@ -335,8 +403,8 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="394" />
-    <option name="y" value="150" />
+    <option name="x" value="397" />
+    <option name="y" value="-31" />
     <option name="width" value="1333" />
     <option name="height" value="872" />
   </component>
@@ -380,9 +448,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="PackagesPane" />
-      <pane id="AndroidView" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -426,10 +492,28 @@
               <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="hw" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="algorithm" type="b2602c69:ProjectViewProjectNode" />
+              <item name="algorithm" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="hw" type="462c0819:PsiDirectoryNode" />
+              <item name="leetcode" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="algorithm" type="b2602c69:ProjectViewProjectNode" />
+              <item name="algorithm" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="AndroidView" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -437,8 +521,8 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="C:/Program Files/nodejs/node" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="SearchEverywhereHistoryKey" value="Array&#9;PSI&#9;JAVA://java.lang.reflect.Array&#10;InputStream&#9;FILE&#9;jar://C:/Program Files/Java/jdk1.8.0_161/src.zip!/java/io/InputStream.java&#10;FilterIn&#9;PSI&#9;JAVA://java.io.FilterInputStream&#10;StringBuffer&#9;PSI&#9;JAVA://java.io.StringBufferInputStream&#10;File&#9;PSI&#9;JAVA://java.io.File&#10;FileInputStream&#9;PSI&#9;JAVA://java.io.FileInputStream&#10;BufferedWriter &#9;PSI&#9;JAVA://java.io.BufferedWriter" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../JavaSE" />
+    <property name="SearchEverywhereHistoryKey" value="enum&#9;PSI&#9;JAVA://java.lang.Enum&#10;Array&#9;PSI&#9;JAVA://java.lang.reflect.Array&#10;InputStream&#9;FILE&#9;jar://C:/Program Files/Java/jdk1.8.0_161/src.zip!/java/io/InputStream.java&#10;FilterIn&#9;PSI&#9;JAVA://java.io.FilterInputStream&#10;StringBuffer&#9;PSI&#9;JAVA://java.io.StringBufferInputStream&#10;File&#9;PSI&#9;JAVA://java.io.File&#10;FileInputStream&#9;PSI&#9;JAVA://java.io.FileInputStream&#10;BufferedWriter &#9;PSI&#9;JAVA://java.io.BufferedWriter" />
     <property name="project.structure.last.edited" value="Facets" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -619,7 +703,8 @@
       <workItem from="1533968614991" duration="17502000" />
       <workItem from="1534044962755" duration="10899000" />
       <workItem from="1534091433933" duration="69000" />
-      <workItem from="1534091651881" duration="814000" />
+      <workItem from="1534091651881" duration="2115000" />
+      <workItem from="1534122596112" duration="18794000" />
     </task>
     <task id="LOCAL-00001" summary="项目初始化">
       <created>1532852799878</created>
@@ -709,7 +794,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="163452000" />
+    <option name="totallyTimeSpent" value="183547000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -724,36 +809,36 @@
     <frame x="-9" y="-9" width="1938" height="1098" extended-state="6" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32964602" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.42146018" sideWeight="0.5064795" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30862832" sideWeight="0.50863934" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="JRebel Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.42146018" sideWeight="0.5064795" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32991362" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="JRebel Executor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34734514" sideWeight="0.49352053" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3561947" sideWeight="0.49784017" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.39848813" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="JRebel" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32991362" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32964602" sideWeight="0.49784017" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25431967" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.289823" sideWeight="0.4913607" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32964602" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.12942478" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32411504" sideWeight="0.49784017" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32853982" sideWeight="0.4913607" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32991362" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.11987041" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="JRebel" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.48230088" sideWeight="0.4913607" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.12942478" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32991362" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32964602" sideWeight="0.49784017" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -818,851 +903,11 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="30" />
+      <option name="time" value="51" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hw/leetcode/Leetcode.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="docComment;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#twoSum#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#twoSum#0;class#Leetcode#0" expanded="false" />
-            <element signature="class#ListNode#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#addTwoNumbers#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#addTwoNumbers#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#mergeTwoLists#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#mergeTwoLists#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#removeDuplicates#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#removeDuplicates#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#removeDuplicates1#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#removeDuplicates1#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#removeElement#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#removeElement#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#searchInsert#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#searchInsert#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#maxSubArray#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#maxSubArray#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#plusOne#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#plusOne#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#plusOne1#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#plusOne1#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#mySqrt#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#mySqrt#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#sortColors#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#sortColors#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#sortColors1#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#sortColors1#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#deleteDuplicates#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#deleteDuplicates#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#deleteDuplicates1#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#deleteDuplicates1#0;class#Leetcode#0" expanded="false" />
-            <element signature="e#10955#10976#0" expanded="false" />
-            <element signature="docComment;method#merge#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#merge#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#maxDepth#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#generate#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#generate#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#getRow#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#getRow1#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#getRow1#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#maxProfit#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#maxProfit#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#maxProfit2#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#maxProfit2#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#hasCycle#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#hasCycle#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#hasCycle1#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#hasCycle1#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#insertionSortList#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#insertionSortList#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#insertionSortList1#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#insertionSortList1#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#getIntersectionNode#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#getIntersectionNode#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#getIntersectionNode1#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#getIntersectionNode1#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#twoSum1#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#twoSum1#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#majorityElement#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#majorityElement#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#person#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#rotate#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#rotate#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#rotate1#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#rotate1#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#reverse#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#reverse#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#numIslands#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#numIslands#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#removeElements#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#removeElements#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#reverseList#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#reverseList#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#reverseList1#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#reverseList1#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#containsDuplicate#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#containsDuplicate#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#containsNearbyDuplicate#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#containsNearbyDuplicate#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#invertTree#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#invertTree#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#isPalindrome#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#isPalindrome#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#deleteNode#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#deleteNode#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#isAnagram#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#isAnagram#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#isAnagram1#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#isAnagram1#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#missingNumber#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#missingNumber#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#moveZeroes#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#moveZeroes#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#moveZeroes1#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#moveZeroes1#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#canWinNim#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#reverseString#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#reverseString#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#intersection#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#intersection#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#intersect#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#intersect#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#thirdMax#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#thirdMax#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#findDisappearedNumbers#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#findDisappearedNumbers#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#hammingDistance#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#islandPerimeter#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#islandPerimeter#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#findComplement#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#findComplement#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#findMaxConsecutiveOnes#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#findMaxConsecutiveOnes#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#findWords#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#findWords#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#reverseWords#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#reverseWords#0;class#Leetcode#0" expanded="false" />
-            <element signature="e#40103#40104#0" expanded="true" />
-            <element signature="e#40144#40145#0" expanded="true" />
-            <element signature="docComment;method#arrayPairSum#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#arrayPairSum#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#matrixReshape#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#matrixReshape#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#world#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#world#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#canPlaceFlowers#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#canPlaceFlowers#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;class#TreeNode#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#mergeTrees#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#mergeTrees#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#movie#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#movie#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#updateSalary#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#updateSalary#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#maximumProduct#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#maximumProduct#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#findMaxAverage#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#findMaxAverage#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#judgeCircle#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#judgeCircle#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#imageSmoother#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#imageSmoother#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#findLengthOfLCIS#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#findLengthOfLCIS#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#maxAreaOfIsland#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#maxAreaOfIsland#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#findShortestSubArray#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#findShortestSubArray#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;class#MyLinkedList#0;class#Leetcode#0" expanded="false" />
-            <element signature="class#MyLinkedList#0;class#Leetcode#0" expanded="false" />
-            <element signature="class#ListNode#0;class#MyLinkedList#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#MyLinkedList#0;class#MyLinkedList#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#MyLinkedList#0;class#MyLinkedList#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#get#0;class#MyLinkedList#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#get#0;class#MyLinkedList#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#addAtHead#0;class#MyLinkedList#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#addAtHead#0;class#MyLinkedList#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#addAtTail#0;class#MyLinkedList#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#addAtTail#0;class#MyLinkedList#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#addAtIndex#0;class#MyLinkedList#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#addAtIndex#0;class#MyLinkedList#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#deleteAtIndex#0;class#MyLinkedList#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#deleteAtIndex#0;class#MyLinkedList#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#toLowerCase#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#toLowerCase#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#isOneBitCharacter#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#isOneBitCharacter#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#pivotIndex#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#pivotIndex#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#selfDividingNumbers#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#selfDividingNumbers#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#minCostClimbingStairs#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#minCostClimbingStairs#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#dominantIndex#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#dominantIndex#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#isToeplitzMatrix#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#isToeplitzMatrix#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#numJewelsInStones#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#numJewelsInStones#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#uniqueMorseRepresentations#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#uniqueMorseRepresentations#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#maxIncreaseKeepingSkyline#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#maxIncreaseKeepingSkyline#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#largeGroupPositions#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#largeGroupPositions#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#largeGroupPositions1#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#largeGroupPositions1#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#flipAndInvertImage#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#flipAndInvertImage#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#numMagicSquaresInside#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#numMagicSquaresInside#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#magic#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#peakIndexInMountainArray#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#peakIndexInMountainArray#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#transpose#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#transpose#0;class#Leetcode#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hw/leetcode/PSVM.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="588">
-          <caret line="21" column="45" lean-forward="false" selection-start-line="21" selection-start-column="45" selection-end-line="21" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hw/leetcode/Leetcode.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3248">
-          <caret line="687" column="7" lean-forward="true" selection-start-line="687" selection-start-column="7" selection-end-line="687" selection-end-column="7" />
-          <folding>
-            <element signature="docComment;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#twoSum#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#twoSum#0;class#Leetcode#0" expanded="false" />
-            <element signature="class#ListNode#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#addTwoNumbers#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#addTwoNumbers#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#mergeTwoLists#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#mergeTwoLists#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#removeDuplicates#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#removeDuplicates#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#removeDuplicates1#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#removeDuplicates1#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#removeElement#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#removeElement#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#searchInsert#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#searchInsert#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#maxSubArray#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#maxSubArray#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#plusOne#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#plusOne#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#plusOne1#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#plusOne1#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#mySqrt#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#mySqrt#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#sortColors#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#sortColors#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#sortColors1#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#sortColors1#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#deleteDuplicates#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#deleteDuplicates#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#deleteDuplicates1#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#deleteDuplicates1#0;class#Leetcode#0" expanded="false" />
-            <element signature="e#10955#10976#0" expanded="false" />
-            <element signature="docComment;method#merge#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#merge#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#maxDepth#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#generate#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#generate#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#getRow#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#getRow1#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#getRow1#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#maxProfit#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#maxProfit#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#maxProfit2#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#maxProfit2#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#hasCycle#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#hasCycle#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#hasCycle1#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#hasCycle1#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#insertionSortList#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#insertionSortList#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#insertionSortList1#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#insertionSortList1#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#getIntersectionNode#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#getIntersectionNode#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#getIntersectionNode1#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#getIntersectionNode1#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#twoSum1#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#twoSum1#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#majorityElement#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#majorityElement#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#person#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#rotate#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#rotate#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#rotate1#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#rotate1#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#reverse#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#reverse#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#numIslands#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#numIslands#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#removeElements#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#removeElements#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#reverseList#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#reverseList#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#reverseList1#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#reverseList1#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#containsDuplicate#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#containsDuplicate#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#containsNearbyDuplicate#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#containsNearbyDuplicate#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#invertTree#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#invertTree#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#isPalindrome#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#isPalindrome#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#deleteNode#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#deleteNode#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#isAnagram#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#isAnagram#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#isAnagram1#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#isAnagram1#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#missingNumber#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#missingNumber#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#moveZeroes#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#moveZeroes#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#moveZeroes1#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#moveZeroes1#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#canWinNim#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#reverseString#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#reverseString#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#intersection#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#intersection#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#intersect#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#intersect#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#thirdMax#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#thirdMax#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#findDisappearedNumbers#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#findDisappearedNumbers#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#hammingDistance#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#islandPerimeter#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#islandPerimeter#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#findComplement#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#findComplement#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#findMaxConsecutiveOnes#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#findMaxConsecutiveOnes#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#findWords#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#findWords#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#reverseWords#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#reverseWords#0;class#Leetcode#0" expanded="false" />
-            <element signature="e#40103#40104#0" expanded="true" />
-            <element signature="e#40144#40145#0" expanded="true" />
-            <element signature="docComment;method#arrayPairSum#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#arrayPairSum#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#matrixReshape#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#matrixReshape#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#world#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#world#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#canPlaceFlowers#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#canPlaceFlowers#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;class#TreeNode#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#mergeTrees#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#mergeTrees#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#movie#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#movie#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#updateSalary#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#updateSalary#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#maximumProduct#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#maximumProduct#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#findMaxAverage#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#findMaxAverage#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#judgeCircle#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#judgeCircle#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#imageSmoother#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#imageSmoother#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#findLengthOfLCIS#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#findLengthOfLCIS#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#maxAreaOfIsland#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#maxAreaOfIsland#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#findShortestSubArray#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#findShortestSubArray#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;class#MyLinkedList#0;class#Leetcode#0" expanded="false" />
-            <element signature="class#MyLinkedList#0;class#Leetcode#0" expanded="false" />
-            <element signature="class#ListNode#0;class#MyLinkedList#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#MyLinkedList#0;class#MyLinkedList#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#MyLinkedList#0;class#MyLinkedList#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#get#0;class#MyLinkedList#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#get#0;class#MyLinkedList#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#addAtHead#0;class#MyLinkedList#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#addAtHead#0;class#MyLinkedList#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#addAtTail#0;class#MyLinkedList#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#addAtTail#0;class#MyLinkedList#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#addAtIndex#0;class#MyLinkedList#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#addAtIndex#0;class#MyLinkedList#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#deleteAtIndex#0;class#MyLinkedList#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#deleteAtIndex#0;class#MyLinkedList#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#toLowerCase#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#toLowerCase#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#isOneBitCharacter#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#isOneBitCharacter#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#pivotIndex#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#pivotIndex#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#selfDividingNumbers#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#selfDividingNumbers#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#minCostClimbingStairs#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#minCostClimbingStairs#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#dominantIndex#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#dominantIndex#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#isToeplitzMatrix#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#isToeplitzMatrix#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#numJewelsInStones#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#numJewelsInStones#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#uniqueMorseRepresentations#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#uniqueMorseRepresentations#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#maxIncreaseKeepingSkyline#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#maxIncreaseKeepingSkyline#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#largeGroupPositions#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#largeGroupPositions#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#largeGroupPositions1#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#largeGroupPositions1#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#flipAndInvertImage#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#flipAndInvertImage#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#numMagicSquaresInside#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#numMagicSquaresInside#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#magic#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#peakIndexInMountainArray#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#peakIndexInMountainArray#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#transpose#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#transpose#0;class#Leetcode#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hw/leetcode/PSVM.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="560">
-          <caret line="20" column="41" lean-forward="false" selection-start-line="20" selection-start-column="41" selection-end-line="20" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hw/leetcode/Leetcode.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="docComment;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#twoSum#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#twoSum#0;class#Leetcode#0" expanded="false" />
-            <element signature="class#ListNode#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#addTwoNumbers#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#addTwoNumbers#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#mergeTwoLists#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#mergeTwoLists#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#removeDuplicates#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#removeDuplicates#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#removeDuplicates1#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#removeDuplicates1#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#removeElement#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#removeElement#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#searchInsert#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#searchInsert#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#maxSubArray#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#maxSubArray#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#plusOne#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#plusOne#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#plusOne1#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#plusOne1#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#mySqrt#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#mySqrt#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#sortColors#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#sortColors#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#sortColors1#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#sortColors1#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#deleteDuplicates#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#deleteDuplicates#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#deleteDuplicates1#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#deleteDuplicates1#0;class#Leetcode#0" expanded="false" />
-            <element signature="e#10955#10976#0" expanded="false" />
-            <element signature="docComment;method#merge#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#merge#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#maxDepth#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#generate#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#generate#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#getRow#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#getRow1#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#getRow1#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#maxProfit#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#maxProfit#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#maxProfit2#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#maxProfit2#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#hasCycle#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#hasCycle#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#hasCycle1#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#hasCycle1#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#insertionSortList#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#insertionSortList#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#insertionSortList1#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#insertionSortList1#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#getIntersectionNode#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#getIntersectionNode#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#getIntersectionNode1#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#getIntersectionNode1#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#twoSum1#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#twoSum1#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#majorityElement#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#majorityElement#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#person#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#rotate#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#rotate#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#rotate1#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#rotate1#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#reverse#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#reverse#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#numIslands#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#numIslands#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#removeElements#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#removeElements#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#reverseList#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#reverseList#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#reverseList1#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#reverseList1#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#containsDuplicate#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#containsDuplicate#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#containsNearbyDuplicate#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#containsNearbyDuplicate#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#invertTree#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#invertTree#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#isPalindrome#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#isPalindrome#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#deleteNode#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#deleteNode#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#isAnagram#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#isAnagram#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#isAnagram1#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#isAnagram1#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#missingNumber#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#missingNumber#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#moveZeroes#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#moveZeroes#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#moveZeroes1#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#moveZeroes1#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#canWinNim#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#reverseString#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#reverseString#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#intersection#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#intersection#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#intersect#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#intersect#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#thirdMax#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#thirdMax#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#findDisappearedNumbers#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#findDisappearedNumbers#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#hammingDistance#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#islandPerimeter#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#islandPerimeter#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#findComplement#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#findComplement#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#findMaxConsecutiveOnes#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#findMaxConsecutiveOnes#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#findWords#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#findWords#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#reverseWords#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#reverseWords#0;class#Leetcode#0" expanded="false" />
-            <element signature="e#40103#40104#0" expanded="true" />
-            <element signature="e#40144#40145#0" expanded="true" />
-            <element signature="docComment;method#arrayPairSum#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#arrayPairSum#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#matrixReshape#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#matrixReshape#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#world#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#world#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#canPlaceFlowers#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#canPlaceFlowers#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;class#TreeNode#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#mergeTrees#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#mergeTrees#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#movie#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#movie#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#updateSalary#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#updateSalary#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#maximumProduct#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#maximumProduct#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#findMaxAverage#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#findMaxAverage#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#judgeCircle#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#judgeCircle#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#imageSmoother#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#imageSmoother#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#findLengthOfLCIS#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#findLengthOfLCIS#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#maxAreaOfIsland#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#maxAreaOfIsland#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#findShortestSubArray#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#findShortestSubArray#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;class#MyLinkedList#0;class#Leetcode#0" expanded="false" />
-            <element signature="class#MyLinkedList#0;class#Leetcode#0" expanded="false" />
-            <element signature="class#ListNode#0;class#MyLinkedList#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#MyLinkedList#0;class#MyLinkedList#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#MyLinkedList#0;class#MyLinkedList#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#get#0;class#MyLinkedList#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#get#0;class#MyLinkedList#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#addAtHead#0;class#MyLinkedList#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#addAtHead#0;class#MyLinkedList#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#addAtTail#0;class#MyLinkedList#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#addAtTail#0;class#MyLinkedList#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#addAtIndex#0;class#MyLinkedList#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#addAtIndex#0;class#MyLinkedList#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#deleteAtIndex#0;class#MyLinkedList#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#deleteAtIndex#0;class#MyLinkedList#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#toLowerCase#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#toLowerCase#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#isOneBitCharacter#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#isOneBitCharacter#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#pivotIndex#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#pivotIndex#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#selfDividingNumbers#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#selfDividingNumbers#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#minCostClimbingStairs#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#minCostClimbingStairs#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#dominantIndex#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#dominantIndex#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#isToeplitzMatrix#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#isToeplitzMatrix#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#numJewelsInStones#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#numJewelsInStones#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#uniqueMorseRepresentations#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#uniqueMorseRepresentations#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#maxIncreaseKeepingSkyline#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#maxIncreaseKeepingSkyline#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#largeGroupPositions#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#largeGroupPositions#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#largeGroupPositions1#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#largeGroupPositions1#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#flipAndInvertImage#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#flipAndInvertImage#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#numMagicSquaresInside#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#numMagicSquaresInside#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#magic#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#peakIndexInMountainArray#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#peakIndexInMountainArray#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#transpose#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#transpose#0;class#Leetcode#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hw/leetcode/Leetcode.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="docComment;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#twoSum#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#twoSum#0;class#Leetcode#0" expanded="false" />
-            <element signature="class#ListNode#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#addTwoNumbers#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#addTwoNumbers#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#mergeTwoLists#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#mergeTwoLists#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#removeDuplicates#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#removeDuplicates#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#removeDuplicates1#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#removeDuplicates1#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#removeElement#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#removeElement#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#searchInsert#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#searchInsert#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#maxSubArray#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#maxSubArray#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#plusOne#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#plusOne#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#plusOne1#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#plusOne1#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#mySqrt#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#mySqrt#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#sortColors#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#sortColors#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#sortColors1#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#sortColors1#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#deleteDuplicates#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#deleteDuplicates#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#deleteDuplicates1#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#deleteDuplicates1#0;class#Leetcode#0" expanded="false" />
-            <element signature="e#10955#10976#0" expanded="false" />
-            <element signature="docComment;method#merge#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#merge#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#maxDepth#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#generate#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#generate#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#getRow#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#getRow1#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#getRow1#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#maxProfit#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#maxProfit#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#maxProfit2#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#maxProfit2#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#hasCycle#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#hasCycle#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#hasCycle1#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#hasCycle1#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#insertionSortList#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#insertionSortList#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#insertionSortList1#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#insertionSortList1#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#getIntersectionNode#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#getIntersectionNode#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#getIntersectionNode1#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#getIntersectionNode1#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#twoSum1#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#twoSum1#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#majorityElement#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#majorityElement#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#person#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#rotate#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#rotate#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#rotate1#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#rotate1#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#reverse#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#reverse#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#numIslands#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#numIslands#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#removeElements#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#removeElements#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#reverseList#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#reverseList#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#reverseList1#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#reverseList1#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#containsDuplicate#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#containsDuplicate#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#containsNearbyDuplicate#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#containsNearbyDuplicate#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#invertTree#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#invertTree#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#isPalindrome#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#isPalindrome#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#deleteNode#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#deleteNode#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#isAnagram#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#isAnagram#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#isAnagram1#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#isAnagram1#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#missingNumber#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#missingNumber#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#moveZeroes#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#moveZeroes#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#moveZeroes1#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#moveZeroes1#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#canWinNim#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#reverseString#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#reverseString#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#intersection#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#intersection#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#intersect#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#intersect#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#thirdMax#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#thirdMax#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#findDisappearedNumbers#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#findDisappearedNumbers#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#hammingDistance#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#islandPerimeter#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#islandPerimeter#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#findComplement#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#findComplement#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#findMaxConsecutiveOnes#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#findMaxConsecutiveOnes#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#findWords#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#findWords#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#reverseWords#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#reverseWords#0;class#Leetcode#0" expanded="false" />
-            <element signature="e#40103#40104#0" expanded="true" />
-            <element signature="e#40144#40145#0" expanded="true" />
-            <element signature="docComment;method#arrayPairSum#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#arrayPairSum#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#matrixReshape#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#matrixReshape#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#world#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#world#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#canPlaceFlowers#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#canPlaceFlowers#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;class#TreeNode#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#mergeTrees#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#mergeTrees#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#movie#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#movie#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#updateSalary#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#updateSalary#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#maximumProduct#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#maximumProduct#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#findMaxAverage#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#findMaxAverage#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#judgeCircle#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#judgeCircle#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#imageSmoother#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#imageSmoother#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#findLengthOfLCIS#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#findLengthOfLCIS#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#maxAreaOfIsland#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#maxAreaOfIsland#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#findShortestSubArray#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#findShortestSubArray#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;class#MyLinkedList#0;class#Leetcode#0" expanded="false" />
-            <element signature="class#MyLinkedList#0;class#Leetcode#0" expanded="false" />
-            <element signature="class#ListNode#0;class#MyLinkedList#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#MyLinkedList#0;class#MyLinkedList#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#MyLinkedList#0;class#MyLinkedList#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#get#0;class#MyLinkedList#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#get#0;class#MyLinkedList#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#addAtHead#0;class#MyLinkedList#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#addAtHead#0;class#MyLinkedList#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#addAtTail#0;class#MyLinkedList#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#addAtTail#0;class#MyLinkedList#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#addAtIndex#0;class#MyLinkedList#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#addAtIndex#0;class#MyLinkedList#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#deleteAtIndex#0;class#MyLinkedList#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#deleteAtIndex#0;class#MyLinkedList#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#toLowerCase#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#toLowerCase#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#isOneBitCharacter#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#isOneBitCharacter#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#pivotIndex#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#pivotIndex#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#selfDividingNumbers#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#selfDividingNumbers#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#minCostClimbingStairs#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#minCostClimbingStairs#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#dominantIndex#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#dominantIndex#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#isToeplitzMatrix#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#isToeplitzMatrix#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#numJewelsInStones#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#numJewelsInStones#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#uniqueMorseRepresentations#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#uniqueMorseRepresentations#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#maxIncreaseKeepingSkyline#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#maxIncreaseKeepingSkyline#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#largeGroupPositions#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#largeGroupPositions#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#largeGroupPositions1#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#largeGroupPositions1#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#flipAndInvertImage#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#flipAndInvertImage#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#numMagicSquaresInside#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#numMagicSquaresInside#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#magic#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#peakIndexInMountainArray#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#peakIndexInMountainArray#0;class#Leetcode#0" expanded="false" />
-            <element signature="docComment;method#transpose#0;class#Leetcode#0" expanded="false" />
-            <element signature="method#transpose#0;class#Leetcode#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/hw/leetcode/PSVM.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="392">
@@ -1761,6 +1006,7 @@
             <element signature="docComment;method#merge#0;class#Leetcode#0" expanded="false" />
             <element signature="method#merge#0;class#Leetcode#0" expanded="false" />
             <element signature="docComment;method#maxDepth#0;class#Leetcode#0" expanded="false" />
+            <element signature="method#getMax#0;class#Leetcode#0" expanded="false" />
             <element signature="docComment;method#generate#0;class#Leetcode#0" expanded="false" />
             <element signature="method#generate#0;class#Leetcode#0" expanded="false" />
             <element signature="docComment;method#getRow#0;class#Leetcode#0" expanded="false" />
@@ -1784,8 +1030,16 @@
             <element signature="method#getIntersectionNode1#0;class#Leetcode#0" expanded="false" />
             <element signature="docComment;method#twoSum1#0;class#Leetcode#0" expanded="false" />
             <element signature="method#twoSum1#0;class#Leetcode#0" expanded="false" />
+            <element signature="docComment;method#convertToTitle#0;class#Leetcode#0" expanded="false" />
+            <element signature="method#convertToTitle#0;class#Leetcode#0" expanded="false" />
             <element signature="docComment;method#majorityElement#0;class#Leetcode#0" expanded="false" />
             <element signature="method#majorityElement#0;class#Leetcode#0" expanded="false" />
+            <element signature="docComment;method#titleToNumber#0;class#Leetcode#0" expanded="false" />
+            <element signature="method#titleToNumber#0;class#Leetcode#0" expanded="false" />
+            <element signature="docComment;method#twoTable#0;class#Leetcode#0" expanded="false" />
+            <element signature="method#twoTable#0;class#Leetcode#0" expanded="false" />
+            <element signature="docComment;method#employee#0;class#Leetcode#0" expanded="false" />
+            <element signature="method#employee#0;class#Leetcode#0" expanded="false" />
             <element signature="docComment;method#person#0;class#Leetcode#0" expanded="false" />
             <element signature="docComment;method#rotate#0;class#Leetcode#0" expanded="false" />
             <element signature="method#rotate#0;class#Leetcode#0" expanded="false" />
@@ -1828,6 +1082,8 @@
             <element signature="method#intersection#0;class#Leetcode#0" expanded="false" />
             <element signature="docComment;method#intersect#0;class#Leetcode#0" expanded="false" />
             <element signature="method#intersect#0;class#Leetcode#0" expanded="false" />
+            <element signature="docComment;method#fizzBuzz#0;class#Leetcode#0" expanded="false" />
+            <element signature="method#fizzBuzz#0;class#Leetcode#0" expanded="false" />
             <element signature="docComment;method#thirdMax#0;class#Leetcode#0" expanded="false" />
             <element signature="method#thirdMax#0;class#Leetcode#0" expanded="false" />
             <element signature="docComment;method#findDisappearedNumbers#0;class#Leetcode#0" expanded="false" />
@@ -1843,8 +1099,12 @@
             <element signature="method#findWords#0;class#Leetcode#0" expanded="false" />
             <element signature="docComment;method#reverseWords#0;class#Leetcode#0" expanded="false" />
             <element signature="method#reverseWords#0;class#Leetcode#0" expanded="false" />
-            <element signature="e#40103#40104#0" expanded="true" />
-            <element signature="e#40144#40145#0" expanded="true" />
+            <element signature="docComment;class#Node#0;class#Leetcode#0" expanded="false" />
+            <element signature="class#Node#0;class#Leetcode#0" expanded="false" />
+            <element signature="method#Node#1;class#Node#0;class#Leetcode#0" expanded="false" />
+            <element signature="docComment;method#maxDepth#1;class#Leetcode#0" expanded="false" />
+            <element signature="docComment;method#getMax#1;class#Leetcode#0" expanded="false" />
+            <element signature="method#getMax#1;class#Leetcode#0" expanded="false" />
             <element signature="docComment;method#arrayPairSum#0;class#Leetcode#0" expanded="false" />
             <element signature="method#arrayPairSum#0;class#Leetcode#0" expanded="false" />
             <element signature="docComment;method#matrixReshape#0;class#Leetcode#0" expanded="false" />
@@ -1854,6 +1114,8 @@
             <element signature="docComment;method#canPlaceFlowers#0;class#Leetcode#0" expanded="false" />
             <element signature="method#canPlaceFlowers#0;class#Leetcode#0" expanded="false" />
             <element signature="docComment;class#TreeNode#0;class#Leetcode#0" expanded="false" />
+            <element signature="class#TreeNode#0;class#Leetcode#0" expanded="false" />
+            <element signature="method#TreeNode#0;class#TreeNode#0;class#Leetcode#0" expanded="false" />
             <element signature="docComment;method#mergeTrees#0;class#Leetcode#0" expanded="false" />
             <element signature="method#mergeTrees#0;class#Leetcode#0" expanded="false" />
             <element signature="docComment;method#movie#0;class#Leetcode#0" expanded="false" />
@@ -1868,6 +1130,8 @@
             <element signature="method#judgeCircle#0;class#Leetcode#0" expanded="false" />
             <element signature="docComment;method#imageSmoother#0;class#Leetcode#0" expanded="false" />
             <element signature="method#imageSmoother#0;class#Leetcode#0" expanded="false" />
+            <element signature="docComment;method#checkPossibility#0;class#Leetcode#0" expanded="false" />
+            <element signature="method#checkPossibility#0;class#Leetcode#0" expanded="false" />
             <element signature="docComment;method#findLengthOfLCIS#0;class#Leetcode#0" expanded="false" />
             <element signature="method#findLengthOfLCIS#0;class#Leetcode#0" expanded="false" />
             <element signature="docComment;method#maxAreaOfIsland#0;class#Leetcode#0" expanded="false" />
@@ -1909,6 +1173,8 @@
             <element signature="method#uniqueMorseRepresentations#0;class#Leetcode#0" expanded="false" />
             <element signature="docComment;method#maxIncreaseKeepingSkyline#0;class#Leetcode#0" expanded="false" />
             <element signature="method#maxIncreaseKeepingSkyline#0;class#Leetcode#0" expanded="false" />
+            <element signature="docComment;method#subdomainVisits#0;class#Leetcode#0" expanded="false" />
+            <element signature="method#subdomainVisits#0;class#Leetcode#0" expanded="false" />
             <element signature="docComment;method#largeGroupPositions#0;class#Leetcode#0" expanded="false" />
             <element signature="method#largeGroupPositions#0;class#Leetcode#0" expanded="false" />
             <element signature="docComment;method#largeGroupPositions1#0;class#Leetcode#0" expanded="false" />
@@ -1922,6 +1188,26 @@
             <element signature="method#peakIndexInMountainArray#0;class#Leetcode#0" expanded="false" />
             <element signature="docComment;method#transpose#0;class#Leetcode#0" expanded="false" />
             <element signature="method#transpose#0;class#Leetcode#0" expanded="false" />
+            <element signature="docComment;method#robotSim#0;class#Leetcode#0" expanded="false" />
+            <element signature="method#robotSim#0;class#Leetcode#0" expanded="false" />
+            <element signature="docComment;class#Robot#0;class#Leetcode#0" expanded="false" />
+            <element signature="class#Robot#0;class#Leetcode#0" expanded="false" />
+            <element signature="method#Robot#0;class#Robot#0;class#Leetcode#0" expanded="false" />
+            <element signature="docComment;method#move#0;class#Robot#0;class#Leetcode#0" expanded="false" />
+            <element signature="method#move#0;class#Robot#0;class#Leetcode#0" expanded="false" />
+            <element signature="docComment;method#changeDirection#0;class#Robot#0;class#Leetcode#0" expanded="false" />
+            <element signature="method#changeDirection#0;class#Robot#0;class#Leetcode#0" expanded="false" />
+            <element signature="docComment;class#Direction#0;class#Robot#0;class#Leetcode#0" expanded="false" />
+            <element signature="class#Direction#0;class#Robot#0;class#Leetcode#0" expanded="false" />
+            <element signature="docComment;class#Obstacle#0;class#Robot#0;class#Leetcode#0" expanded="false" />
+            <element signature="class#Obstacle#0;class#Robot#0;class#Leetcode#0" expanded="false" />
+            <element signature="method#Obstacle#0;class#Obstacle#0;class#Robot#0;class#Leetcode#0" expanded="false" />
+            <element signature="method#equals#0;class#Obstacle#0;class#Robot#0;class#Leetcode#0" expanded="false" />
+            <element signature="method#hashCode#0;class#Obstacle#0;class#Robot#0;class#Leetcode#0" expanded="false" />
+            <element signature="docComment;method#robotSim1#0;class#Leetcode#0" expanded="false" />
+            <element signature="method#robotSim1#0;class#Leetcode#0" expanded="false" />
+            <element signature="docComment;method#middleNode#0;class#Leetcode#0" expanded="false" />
+            <element signature="method#middleNode#0;class#Leetcode#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1988,6 +1274,7 @@
             <element signature="docComment;method#merge#0;class#Leetcode#0" expanded="false" />
             <element signature="method#merge#0;class#Leetcode#0" expanded="false" />
             <element signature="docComment;method#maxDepth#0;class#Leetcode#0" expanded="false" />
+            <element signature="method#getMax#0;class#Leetcode#0" expanded="false" />
             <element signature="docComment;method#generate#0;class#Leetcode#0" expanded="false" />
             <element signature="method#generate#0;class#Leetcode#0" expanded="false" />
             <element signature="docComment;method#getRow#0;class#Leetcode#0" expanded="false" />
@@ -2011,8 +1298,16 @@
             <element signature="method#getIntersectionNode1#0;class#Leetcode#0" expanded="false" />
             <element signature="docComment;method#twoSum1#0;class#Leetcode#0" expanded="false" />
             <element signature="method#twoSum1#0;class#Leetcode#0" expanded="false" />
+            <element signature="docComment;method#convertToTitle#0;class#Leetcode#0" expanded="false" />
+            <element signature="method#convertToTitle#0;class#Leetcode#0" expanded="false" />
             <element signature="docComment;method#majorityElement#0;class#Leetcode#0" expanded="false" />
             <element signature="method#majorityElement#0;class#Leetcode#0" expanded="false" />
+            <element signature="docComment;method#titleToNumber#0;class#Leetcode#0" expanded="false" />
+            <element signature="method#titleToNumber#0;class#Leetcode#0" expanded="false" />
+            <element signature="docComment;method#twoTable#0;class#Leetcode#0" expanded="false" />
+            <element signature="method#twoTable#0;class#Leetcode#0" expanded="false" />
+            <element signature="docComment;method#employee#0;class#Leetcode#0" expanded="false" />
+            <element signature="method#employee#0;class#Leetcode#0" expanded="false" />
             <element signature="docComment;method#person#0;class#Leetcode#0" expanded="false" />
             <element signature="docComment;method#rotate#0;class#Leetcode#0" expanded="false" />
             <element signature="method#rotate#0;class#Leetcode#0" expanded="false" />
@@ -2055,6 +1350,8 @@
             <element signature="method#intersection#0;class#Leetcode#0" expanded="false" />
             <element signature="docComment;method#intersect#0;class#Leetcode#0" expanded="false" />
             <element signature="method#intersect#0;class#Leetcode#0" expanded="false" />
+            <element signature="docComment;method#fizzBuzz#0;class#Leetcode#0" expanded="false" />
+            <element signature="method#fizzBuzz#0;class#Leetcode#0" expanded="false" />
             <element signature="docComment;method#thirdMax#0;class#Leetcode#0" expanded="false" />
             <element signature="method#thirdMax#0;class#Leetcode#0" expanded="false" />
             <element signature="docComment;method#findDisappearedNumbers#0;class#Leetcode#0" expanded="false" />
@@ -2070,8 +1367,12 @@
             <element signature="method#findWords#0;class#Leetcode#0" expanded="false" />
             <element signature="docComment;method#reverseWords#0;class#Leetcode#0" expanded="false" />
             <element signature="method#reverseWords#0;class#Leetcode#0" expanded="false" />
-            <element signature="e#40103#40104#0" expanded="true" />
-            <element signature="e#40144#40145#0" expanded="true" />
+            <element signature="docComment;class#Node#0;class#Leetcode#0" expanded="false" />
+            <element signature="class#Node#0;class#Leetcode#0" expanded="false" />
+            <element signature="method#Node#1;class#Node#0;class#Leetcode#0" expanded="false" />
+            <element signature="docComment;method#maxDepth#1;class#Leetcode#0" expanded="false" />
+            <element signature="docComment;method#getMax#1;class#Leetcode#0" expanded="false" />
+            <element signature="method#getMax#1;class#Leetcode#0" expanded="false" />
             <element signature="docComment;method#arrayPairSum#0;class#Leetcode#0" expanded="false" />
             <element signature="method#arrayPairSum#0;class#Leetcode#0" expanded="false" />
             <element signature="docComment;method#matrixReshape#0;class#Leetcode#0" expanded="false" />
@@ -2081,6 +1382,8 @@
             <element signature="docComment;method#canPlaceFlowers#0;class#Leetcode#0" expanded="false" />
             <element signature="method#canPlaceFlowers#0;class#Leetcode#0" expanded="false" />
             <element signature="docComment;class#TreeNode#0;class#Leetcode#0" expanded="false" />
+            <element signature="class#TreeNode#0;class#Leetcode#0" expanded="false" />
+            <element signature="method#TreeNode#0;class#TreeNode#0;class#Leetcode#0" expanded="false" />
             <element signature="docComment;method#mergeTrees#0;class#Leetcode#0" expanded="false" />
             <element signature="method#mergeTrees#0;class#Leetcode#0" expanded="false" />
             <element signature="docComment;method#movie#0;class#Leetcode#0" expanded="false" />
@@ -2095,6 +1398,8 @@
             <element signature="method#judgeCircle#0;class#Leetcode#0" expanded="false" />
             <element signature="docComment;method#imageSmoother#0;class#Leetcode#0" expanded="false" />
             <element signature="method#imageSmoother#0;class#Leetcode#0" expanded="false" />
+            <element signature="docComment;method#checkPossibility#0;class#Leetcode#0" expanded="false" />
+            <element signature="method#checkPossibility#0;class#Leetcode#0" expanded="false" />
             <element signature="docComment;method#findLengthOfLCIS#0;class#Leetcode#0" expanded="false" />
             <element signature="method#findLengthOfLCIS#0;class#Leetcode#0" expanded="false" />
             <element signature="docComment;method#maxAreaOfIsland#0;class#Leetcode#0" expanded="false" />
@@ -2136,6 +1441,8 @@
             <element signature="method#uniqueMorseRepresentations#0;class#Leetcode#0" expanded="false" />
             <element signature="docComment;method#maxIncreaseKeepingSkyline#0;class#Leetcode#0" expanded="false" />
             <element signature="method#maxIncreaseKeepingSkyline#0;class#Leetcode#0" expanded="false" />
+            <element signature="docComment;method#subdomainVisits#0;class#Leetcode#0" expanded="false" />
+            <element signature="method#subdomainVisits#0;class#Leetcode#0" expanded="false" />
             <element signature="docComment;method#largeGroupPositions#0;class#Leetcode#0" expanded="false" />
             <element signature="method#largeGroupPositions#0;class#Leetcode#0" expanded="false" />
             <element signature="docComment;method#largeGroupPositions1#0;class#Leetcode#0" expanded="false" />
@@ -2149,6 +1456,26 @@
             <element signature="method#peakIndexInMountainArray#0;class#Leetcode#0" expanded="false" />
             <element signature="docComment;method#transpose#0;class#Leetcode#0" expanded="false" />
             <element signature="method#transpose#0;class#Leetcode#0" expanded="false" />
+            <element signature="docComment;method#robotSim#0;class#Leetcode#0" expanded="false" />
+            <element signature="method#robotSim#0;class#Leetcode#0" expanded="false" />
+            <element signature="docComment;class#Robot#0;class#Leetcode#0" expanded="false" />
+            <element signature="class#Robot#0;class#Leetcode#0" expanded="false" />
+            <element signature="method#Robot#0;class#Robot#0;class#Leetcode#0" expanded="false" />
+            <element signature="docComment;method#move#0;class#Robot#0;class#Leetcode#0" expanded="false" />
+            <element signature="method#move#0;class#Robot#0;class#Leetcode#0" expanded="false" />
+            <element signature="docComment;method#changeDirection#0;class#Robot#0;class#Leetcode#0" expanded="false" />
+            <element signature="method#changeDirection#0;class#Robot#0;class#Leetcode#0" expanded="false" />
+            <element signature="docComment;class#Direction#0;class#Robot#0;class#Leetcode#0" expanded="false" />
+            <element signature="class#Direction#0;class#Robot#0;class#Leetcode#0" expanded="false" />
+            <element signature="docComment;class#Obstacle#0;class#Robot#0;class#Leetcode#0" expanded="false" />
+            <element signature="class#Obstacle#0;class#Robot#0;class#Leetcode#0" expanded="false" />
+            <element signature="method#Obstacle#0;class#Obstacle#0;class#Robot#0;class#Leetcode#0" expanded="false" />
+            <element signature="method#equals#0;class#Obstacle#0;class#Robot#0;class#Leetcode#0" expanded="false" />
+            <element signature="method#hashCode#0;class#Obstacle#0;class#Robot#0;class#Leetcode#0" expanded="false" />
+            <element signature="docComment;method#robotSim1#0;class#Leetcode#0" expanded="false" />
+            <element signature="method#robotSim1#0;class#Leetcode#0" expanded="false" />
+            <element signature="docComment;method#middleNode#0;class#Leetcode#0" expanded="false" />
+            <element signature="method#middleNode#0;class#Leetcode#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -2194,6 +1521,7 @@
             <element signature="docComment;method#merge#0;class#Leetcode#0" expanded="false" />
             <element signature="method#merge#0;class#Leetcode#0" expanded="false" />
             <element signature="docComment;method#maxDepth#0;class#Leetcode#0" expanded="false" />
+            <element signature="method#getMax#0;class#Leetcode#0" expanded="false" />
             <element signature="docComment;method#generate#0;class#Leetcode#0" expanded="false" />
             <element signature="method#generate#0;class#Leetcode#0" expanded="false" />
             <element signature="docComment;method#getRow#0;class#Leetcode#0" expanded="false" />
@@ -2217,8 +1545,16 @@
             <element signature="method#getIntersectionNode1#0;class#Leetcode#0" expanded="false" />
             <element signature="docComment;method#twoSum1#0;class#Leetcode#0" expanded="false" />
             <element signature="method#twoSum1#0;class#Leetcode#0" expanded="false" />
+            <element signature="docComment;method#convertToTitle#0;class#Leetcode#0" expanded="false" />
+            <element signature="method#convertToTitle#0;class#Leetcode#0" expanded="false" />
             <element signature="docComment;method#majorityElement#0;class#Leetcode#0" expanded="false" />
             <element signature="method#majorityElement#0;class#Leetcode#0" expanded="false" />
+            <element signature="docComment;method#titleToNumber#0;class#Leetcode#0" expanded="false" />
+            <element signature="method#titleToNumber#0;class#Leetcode#0" expanded="false" />
+            <element signature="docComment;method#twoTable#0;class#Leetcode#0" expanded="false" />
+            <element signature="method#twoTable#0;class#Leetcode#0" expanded="false" />
+            <element signature="docComment;method#employee#0;class#Leetcode#0" expanded="false" />
+            <element signature="method#employee#0;class#Leetcode#0" expanded="false" />
             <element signature="docComment;method#person#0;class#Leetcode#0" expanded="false" />
             <element signature="docComment;method#rotate#0;class#Leetcode#0" expanded="false" />
             <element signature="method#rotate#0;class#Leetcode#0" expanded="false" />
@@ -2261,6 +1597,8 @@
             <element signature="method#intersection#0;class#Leetcode#0" expanded="false" />
             <element signature="docComment;method#intersect#0;class#Leetcode#0" expanded="false" />
             <element signature="method#intersect#0;class#Leetcode#0" expanded="false" />
+            <element signature="docComment;method#fizzBuzz#0;class#Leetcode#0" expanded="false" />
+            <element signature="method#fizzBuzz#0;class#Leetcode#0" expanded="false" />
             <element signature="docComment;method#thirdMax#0;class#Leetcode#0" expanded="false" />
             <element signature="method#thirdMax#0;class#Leetcode#0" expanded="false" />
             <element signature="docComment;method#findDisappearedNumbers#0;class#Leetcode#0" expanded="false" />
@@ -2276,8 +1614,12 @@
             <element signature="method#findWords#0;class#Leetcode#0" expanded="false" />
             <element signature="docComment;method#reverseWords#0;class#Leetcode#0" expanded="false" />
             <element signature="method#reverseWords#0;class#Leetcode#0" expanded="false" />
-            <element signature="e#40103#40104#0" expanded="true" />
-            <element signature="e#40144#40145#0" expanded="true" />
+            <element signature="docComment;class#Node#0;class#Leetcode#0" expanded="false" />
+            <element signature="class#Node#0;class#Leetcode#0" expanded="false" />
+            <element signature="method#Node#1;class#Node#0;class#Leetcode#0" expanded="false" />
+            <element signature="docComment;method#maxDepth#1;class#Leetcode#0" expanded="false" />
+            <element signature="docComment;method#getMax#1;class#Leetcode#0" expanded="false" />
+            <element signature="method#getMax#1;class#Leetcode#0" expanded="false" />
             <element signature="docComment;method#arrayPairSum#0;class#Leetcode#0" expanded="false" />
             <element signature="method#arrayPairSum#0;class#Leetcode#0" expanded="false" />
             <element signature="docComment;method#matrixReshape#0;class#Leetcode#0" expanded="false" />
@@ -2287,6 +1629,8 @@
             <element signature="docComment;method#canPlaceFlowers#0;class#Leetcode#0" expanded="false" />
             <element signature="method#canPlaceFlowers#0;class#Leetcode#0" expanded="false" />
             <element signature="docComment;class#TreeNode#0;class#Leetcode#0" expanded="false" />
+            <element signature="class#TreeNode#0;class#Leetcode#0" expanded="false" />
+            <element signature="method#TreeNode#0;class#TreeNode#0;class#Leetcode#0" expanded="false" />
             <element signature="docComment;method#mergeTrees#0;class#Leetcode#0" expanded="false" />
             <element signature="method#mergeTrees#0;class#Leetcode#0" expanded="false" />
             <element signature="docComment;method#movie#0;class#Leetcode#0" expanded="false" />
@@ -2301,6 +1645,8 @@
             <element signature="method#judgeCircle#0;class#Leetcode#0" expanded="false" />
             <element signature="docComment;method#imageSmoother#0;class#Leetcode#0" expanded="false" />
             <element signature="method#imageSmoother#0;class#Leetcode#0" expanded="false" />
+            <element signature="docComment;method#checkPossibility#0;class#Leetcode#0" expanded="false" />
+            <element signature="method#checkPossibility#0;class#Leetcode#0" expanded="false" />
             <element signature="docComment;method#findLengthOfLCIS#0;class#Leetcode#0" expanded="false" />
             <element signature="method#findLengthOfLCIS#0;class#Leetcode#0" expanded="false" />
             <element signature="docComment;method#maxAreaOfIsland#0;class#Leetcode#0" expanded="false" />
@@ -2342,6 +1688,8 @@
             <element signature="method#uniqueMorseRepresentations#0;class#Leetcode#0" expanded="false" />
             <element signature="docComment;method#maxIncreaseKeepingSkyline#0;class#Leetcode#0" expanded="false" />
             <element signature="method#maxIncreaseKeepingSkyline#0;class#Leetcode#0" expanded="false" />
+            <element signature="docComment;method#subdomainVisits#0;class#Leetcode#0" expanded="false" />
+            <element signature="method#subdomainVisits#0;class#Leetcode#0" expanded="false" />
             <element signature="docComment;method#largeGroupPositions#0;class#Leetcode#0" expanded="false" />
             <element signature="method#largeGroupPositions#0;class#Leetcode#0" expanded="false" />
             <element signature="docComment;method#largeGroupPositions1#0;class#Leetcode#0" expanded="false" />
@@ -2355,6 +1703,26 @@
             <element signature="method#peakIndexInMountainArray#0;class#Leetcode#0" expanded="false" />
             <element signature="docComment;method#transpose#0;class#Leetcode#0" expanded="false" />
             <element signature="method#transpose#0;class#Leetcode#0" expanded="false" />
+            <element signature="docComment;method#robotSim#0;class#Leetcode#0" expanded="false" />
+            <element signature="method#robotSim#0;class#Leetcode#0" expanded="false" />
+            <element signature="docComment;class#Robot#0;class#Leetcode#0" expanded="false" />
+            <element signature="class#Robot#0;class#Leetcode#0" expanded="false" />
+            <element signature="method#Robot#0;class#Robot#0;class#Leetcode#0" expanded="false" />
+            <element signature="docComment;method#move#0;class#Robot#0;class#Leetcode#0" expanded="false" />
+            <element signature="method#move#0;class#Robot#0;class#Leetcode#0" expanded="false" />
+            <element signature="docComment;method#changeDirection#0;class#Robot#0;class#Leetcode#0" expanded="false" />
+            <element signature="method#changeDirection#0;class#Robot#0;class#Leetcode#0" expanded="false" />
+            <element signature="docComment;class#Direction#0;class#Robot#0;class#Leetcode#0" expanded="false" />
+            <element signature="class#Direction#0;class#Robot#0;class#Leetcode#0" expanded="false" />
+            <element signature="docComment;class#Obstacle#0;class#Robot#0;class#Leetcode#0" expanded="false" />
+            <element signature="class#Obstacle#0;class#Robot#0;class#Leetcode#0" expanded="false" />
+            <element signature="method#Obstacle#0;class#Obstacle#0;class#Robot#0;class#Leetcode#0" expanded="false" />
+            <element signature="method#equals#0;class#Obstacle#0;class#Robot#0;class#Leetcode#0" expanded="false" />
+            <element signature="method#hashCode#0;class#Obstacle#0;class#Robot#0;class#Leetcode#0" expanded="false" />
+            <element signature="docComment;method#robotSim1#0;class#Leetcode#0" expanded="false" />
+            <element signature="method#robotSim1#0;class#Leetcode#0" expanded="false" />
+            <element signature="docComment;method#middleNode#0;class#Leetcode#0" expanded="false" />
+            <element signature="method#middleNode#0;class#Leetcode#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -2561,18 +1929,92 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="28">
+          <caret line="1" column="1" lean-forward="false" selection-start-line="1" selection-start-column="1" selection-end-line="1" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_161/src.zip!/java/lang/Enum.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="60" column="7" lean-forward="true" selection-start-line="60" selection-start-column="7" selection-end-line="60" selection-end-column="7" />
+          <folding>
+            <element signature="docComment;class#Enum#0" expanded="false" />
+            <element signature="docComment;field#name#0;class#Enum#0" expanded="false" />
+            <element signature="docComment;method#name#0;class#Enum#0" expanded="false" />
+            <element signature="docComment;field#ordinal#0;class#Enum#0" expanded="false" />
+            <element signature="docComment;method#ordinal#0;class#Enum#0" expanded="false" />
+            <element signature="docComment;method#Enum#0;class#Enum#0" expanded="false" />
+            <element signature="method#Enum#0;class#Enum#0" expanded="false" />
+            <element signature="docComment;method#toString#0;class#Enum#0" expanded="false" />
+            <element signature="docComment;method#equals#0;class#Enum#0" expanded="false" />
+            <element signature="docComment;method#hashCode#0;class#Enum#0" expanded="false" />
+            <element signature="docComment;method#clone#0;class#Enum#0" expanded="false" />
+            <element signature="method#clone#0;class#Enum#0" expanded="false" />
+            <element signature="docComment;method#compareTo#0;class#Enum#0" expanded="false" />
+            <element signature="method#compareTo#0;class#Enum#0" expanded="false" />
+            <element signature="docComment;method#getDeclaringClass#0;class#Enum#0" expanded="false" />
+            <element signature="method#getDeclaringClass#0;class#Enum#0" expanded="false" />
+            <element signature="method#valueOf#0;class#Enum#0" expanded="false" />
+            <element signature="docComment;method#finalize#0;class#Enum#0" expanded="false" />
+            <element signature="method#finalize#0;class#Enum#0" expanded="false" />
+            <element signature="docComment;method#readObject#0;class#Enum#0" expanded="false" />
+            <element signature="method#readObject#0;class#Enum#0" expanded="false" />
+            <element signature="method#readObjectNoData#0;class#Enum#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_161/src.zip!/java/lang/StringBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="232">
+          <caret line="110" column="11" lean-forward="false" selection-start-line="110" selection-start-column="11" selection-end-line="110" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_161/src.zip!/java/util/Arrays.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="4138" column="22" lean-forward="false" selection-start-line="4138" selection-start-column="22" selection-end-line="4138" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_161/src.zip!/java/util/Set.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="101">
+          <caret line="115" column="17" lean-forward="false" selection-start-line="115" selection-start-column="17" selection-end-line="115" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_161/src.zip!/java/util/Objects.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="248">
+          <caret line="127" column="25" lean-forward="false" selection-start-line="127" selection-start-column="25" selection-end-line="127" selection-end-column="25" />
+          <folding>
+            <element signature="e#3914#3915#0" expanded="false" />
+            <element signature="e#3960#3961#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/hw/leetcode/Test.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3024">
-          <caret line="108" column="67" lean-forward="false" selection-start-line="108" selection-start-column="67" selection-end-line="108" selection-end-column="67" />
+        <state relative-caret-position="307">
+          <caret line="125" column="52" lean-forward="false" selection-start-line="125" selection-start-column="52" selection-end-line="125" selection-end-column="52" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/hw/leetcode/Leetcode.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="2633" column="33" lean-forward="false" selection-start-line="2633" selection-start-column="33" selection-end-line="2633" selection-end-column="33" />
+        <state relative-caret-position="-8400">
+          <caret line="851" column="40" lean-forward="false" selection-start-line="851" selection-start-column="40" selection-end-line="851" selection-end-column="40" />
           <folding>
             <element signature="docComment;class#Leetcode#0" expanded="false" />
             <element signature="docComment;method#twoSum#0;class#Leetcode#0" expanded="false" />
@@ -2610,6 +2052,7 @@
             <element signature="docComment;method#merge#0;class#Leetcode#0" expanded="false" />
             <element signature="method#merge#0;class#Leetcode#0" expanded="false" />
             <element signature="docComment;method#maxDepth#0;class#Leetcode#0" expanded="false" />
+            <element signature="method#getMax#0;class#Leetcode#0" expanded="false" />
             <element signature="docComment;method#generate#0;class#Leetcode#0" expanded="false" />
             <element signature="method#generate#0;class#Leetcode#0" expanded="false" />
             <element signature="docComment;method#getRow#0;class#Leetcode#0" expanded="false" />
@@ -2633,8 +2076,16 @@
             <element signature="method#getIntersectionNode1#0;class#Leetcode#0" expanded="false" />
             <element signature="docComment;method#twoSum1#0;class#Leetcode#0" expanded="false" />
             <element signature="method#twoSum1#0;class#Leetcode#0" expanded="false" />
+            <element signature="docComment;method#convertToTitle#0;class#Leetcode#0" expanded="false" />
+            <element signature="method#convertToTitle#0;class#Leetcode#0" expanded="false" />
             <element signature="docComment;method#majorityElement#0;class#Leetcode#0" expanded="false" />
             <element signature="method#majorityElement#0;class#Leetcode#0" expanded="false" />
+            <element signature="docComment;method#titleToNumber#0;class#Leetcode#0" expanded="false" />
+            <element signature="method#titleToNumber#0;class#Leetcode#0" expanded="false" />
+            <element signature="docComment;method#twoTable#0;class#Leetcode#0" expanded="false" />
+            <element signature="method#twoTable#0;class#Leetcode#0" expanded="false" />
+            <element signature="docComment;method#employee#0;class#Leetcode#0" expanded="false" />
+            <element signature="method#employee#0;class#Leetcode#0" expanded="false" />
             <element signature="docComment;method#person#0;class#Leetcode#0" expanded="false" />
             <element signature="docComment;method#rotate#0;class#Leetcode#0" expanded="false" />
             <element signature="method#rotate#0;class#Leetcode#0" expanded="false" />
@@ -2677,6 +2128,8 @@
             <element signature="method#intersection#0;class#Leetcode#0" expanded="false" />
             <element signature="docComment;method#intersect#0;class#Leetcode#0" expanded="false" />
             <element signature="method#intersect#0;class#Leetcode#0" expanded="false" />
+            <element signature="docComment;method#fizzBuzz#0;class#Leetcode#0" expanded="false" />
+            <element signature="method#fizzBuzz#0;class#Leetcode#0" expanded="false" />
             <element signature="docComment;method#thirdMax#0;class#Leetcode#0" expanded="false" />
             <element signature="method#thirdMax#0;class#Leetcode#0" expanded="false" />
             <element signature="docComment;method#findDisappearedNumbers#0;class#Leetcode#0" expanded="false" />
@@ -2692,8 +2145,12 @@
             <element signature="method#findWords#0;class#Leetcode#0" expanded="false" />
             <element signature="docComment;method#reverseWords#0;class#Leetcode#0" expanded="false" />
             <element signature="method#reverseWords#0;class#Leetcode#0" expanded="false" />
-            <element signature="e#40103#40104#0" expanded="true" />
-            <element signature="e#40144#40145#0" expanded="true" />
+            <element signature="docComment;class#Node#0;class#Leetcode#0" expanded="false" />
+            <element signature="class#Node#0;class#Leetcode#0" expanded="false" />
+            <element signature="method#Node#1;class#Node#0;class#Leetcode#0" expanded="false" />
+            <element signature="docComment;method#maxDepth#1;class#Leetcode#0" expanded="false" />
+            <element signature="docComment;method#getMax#1;class#Leetcode#0" expanded="false" />
+            <element signature="method#getMax#1;class#Leetcode#0" expanded="false" />
             <element signature="docComment;method#arrayPairSum#0;class#Leetcode#0" expanded="false" />
             <element signature="method#arrayPairSum#0;class#Leetcode#0" expanded="false" />
             <element signature="docComment;method#matrixReshape#0;class#Leetcode#0" expanded="false" />
@@ -2703,6 +2160,8 @@
             <element signature="docComment;method#canPlaceFlowers#0;class#Leetcode#0" expanded="false" />
             <element signature="method#canPlaceFlowers#0;class#Leetcode#0" expanded="false" />
             <element signature="docComment;class#TreeNode#0;class#Leetcode#0" expanded="false" />
+            <element signature="class#TreeNode#0;class#Leetcode#0" expanded="false" />
+            <element signature="method#TreeNode#0;class#TreeNode#0;class#Leetcode#0" expanded="false" />
             <element signature="docComment;method#mergeTrees#0;class#Leetcode#0" expanded="false" />
             <element signature="method#mergeTrees#0;class#Leetcode#0" expanded="false" />
             <element signature="docComment;method#movie#0;class#Leetcode#0" expanded="false" />
@@ -2717,6 +2176,8 @@
             <element signature="method#judgeCircle#0;class#Leetcode#0" expanded="false" />
             <element signature="docComment;method#imageSmoother#0;class#Leetcode#0" expanded="false" />
             <element signature="method#imageSmoother#0;class#Leetcode#0" expanded="false" />
+            <element signature="docComment;method#checkPossibility#0;class#Leetcode#0" expanded="false" />
+            <element signature="method#checkPossibility#0;class#Leetcode#0" expanded="false" />
             <element signature="docComment;method#findLengthOfLCIS#0;class#Leetcode#0" expanded="false" />
             <element signature="method#findLengthOfLCIS#0;class#Leetcode#0" expanded="false" />
             <element signature="docComment;method#maxAreaOfIsland#0;class#Leetcode#0" expanded="false" />
@@ -2758,6 +2219,8 @@
             <element signature="method#uniqueMorseRepresentations#0;class#Leetcode#0" expanded="false" />
             <element signature="docComment;method#maxIncreaseKeepingSkyline#0;class#Leetcode#0" expanded="false" />
             <element signature="method#maxIncreaseKeepingSkyline#0;class#Leetcode#0" expanded="false" />
+            <element signature="docComment;method#subdomainVisits#0;class#Leetcode#0" expanded="false" />
+            <element signature="method#subdomainVisits#0;class#Leetcode#0" expanded="false" />
             <element signature="docComment;method#largeGroupPositions#0;class#Leetcode#0" expanded="false" />
             <element signature="method#largeGroupPositions#0;class#Leetcode#0" expanded="false" />
             <element signature="docComment;method#largeGroupPositions1#0;class#Leetcode#0" expanded="false" />
@@ -2771,6 +2234,26 @@
             <element signature="method#peakIndexInMountainArray#0;class#Leetcode#0" expanded="false" />
             <element signature="docComment;method#transpose#0;class#Leetcode#0" expanded="false" />
             <element signature="method#transpose#0;class#Leetcode#0" expanded="false" />
+            <element signature="docComment;method#robotSim#0;class#Leetcode#0" expanded="false" />
+            <element signature="method#robotSim#0;class#Leetcode#0" expanded="false" />
+            <element signature="docComment;class#Robot#0;class#Leetcode#0" expanded="false" />
+            <element signature="class#Robot#0;class#Leetcode#0" expanded="false" />
+            <element signature="method#Robot#0;class#Robot#0;class#Leetcode#0" expanded="false" />
+            <element signature="docComment;method#move#0;class#Robot#0;class#Leetcode#0" expanded="false" />
+            <element signature="method#move#0;class#Robot#0;class#Leetcode#0" expanded="false" />
+            <element signature="docComment;method#changeDirection#0;class#Robot#0;class#Leetcode#0" expanded="false" />
+            <element signature="method#changeDirection#0;class#Robot#0;class#Leetcode#0" expanded="false" />
+            <element signature="docComment;class#Direction#0;class#Robot#0;class#Leetcode#0" expanded="false" />
+            <element signature="class#Direction#0;class#Robot#0;class#Leetcode#0" expanded="false" />
+            <element signature="docComment;class#Obstacle#0;class#Robot#0;class#Leetcode#0" expanded="false" />
+            <element signature="class#Obstacle#0;class#Robot#0;class#Leetcode#0" expanded="false" />
+            <element signature="method#Obstacle#0;class#Obstacle#0;class#Robot#0;class#Leetcode#0" expanded="false" />
+            <element signature="method#equals#0;class#Obstacle#0;class#Robot#0;class#Leetcode#0" expanded="false" />
+            <element signature="method#hashCode#0;class#Obstacle#0;class#Robot#0;class#Leetcode#0" expanded="false" />
+            <element signature="docComment;method#robotSim1#0;class#Leetcode#0" expanded="false" />
+            <element signature="method#robotSim1#0;class#Leetcode#0" expanded="false" />
+            <element signature="docComment;method#middleNode#0;class#Leetcode#0" expanded="false" />
+            <element signature="method#middleNode#0;class#Leetcode#0" expanded="false" />
           </folding>
         </state>
       </provider>

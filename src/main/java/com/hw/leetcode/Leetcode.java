@@ -842,6 +842,28 @@ public class Leetcode {
     }
 
 
+    /**
+     * 168. Excel表列名称
+     * 给定一个正整数，返回它在 Excel 表中相对应的列名称。
+     * @param n 正整数
+     * @return 列名称
+     * 思路: 十进制转二十六进制
+     */
+    public String convertToTitle(int n) {
+        StringBuilder result = new StringBuilder("");
+        while (n != 0) {
+            int x = n % 26;
+            if (x == 0) {
+                result.insert(0, "Z");
+            } else {
+                result.insert(0, (char)(64 + x));
+            }
+
+            n = (n - 1) / 26;
+        }
+        return result.toString();
+    }
+
 
 
 
@@ -874,6 +896,47 @@ public class Leetcode {
         }
 
         return result;
+    }
+
+
+
+
+    /**
+     * 171. Excel表列序号
+     * 给定一个Excel表格中的列名称，返回其相应的列序号。
+     * @param s 列名
+     * @return 序号
+     * 思路： 26进制转为10进制
+     */
+    public int titleToNumber(String s) {
+        if (s == null) {
+            return 0;
+        }
+        int result = 0;
+        for (int i = s.length() - 1; i >= 0; i--) {
+            int bit = s.length() - 1 - i;
+            char c = s.charAt(i);
+            result += (c - 64) * Math.pow(26, bit);
+        }
+        return result;
+    }
+
+
+    /**
+     * 175. 组合两个表
+     * @return S
+     */
+    public String twoTable() {
+        return "select FirstName, LastName, City, State from Person left join Address on Person.PersonId = Address.PersonId";
+    }
+
+
+    /**
+     * 181. 超过经理收入的员工
+     * @return S
+     */
+    public String employee(){
+        return "select e1.name as Employee from Employee e1 join Employee e2 on e1.ManagerId = e2.Id and e1.Salary > e2.Salary";
     }
 
 
@@ -1430,6 +1493,34 @@ public class Leetcode {
 
 
     /**
+     * 412. Fizz Buzz
+     * 写一个程序，输出从 1 到 n 数字的字符串表示。
+     * 1. 如果 n 是3的倍数，输出“Fizz”；
+     * 2. 如果 n 是5的倍数，输出“Buzz”；
+     * 3.如果 n 同时是3和5的倍数，输出 “FizzBuzz”。
+     * @param n 最大数字
+     * @return 字符串集合
+     */
+    public List<String> fizzBuzz(int n) {
+        List<String> result = new ArrayList<>();
+        for (int i = 1; i <= n; i++) {
+            StringBuilder s = new StringBuilder("");
+            if (i % 3 == 0) {
+                s.append("Fizz");
+            }
+            if (i % 5 == 0) {
+                s.append("Buzz");
+            }
+            if (s.length() > 0) {
+                result.add(s.toString());
+            } else {
+                result.add(Integer.toString(i));
+            }
+        }
+        return result;
+    }
+
+    /**
      * 414. 第三大的数
      * 给定一个非空数组，返回此数组中第三大的数。如果不存在，则返回数组中最大的数。要求算法时间复杂度必须是O(n)。
      * @param nums 数组
@@ -1977,6 +2068,30 @@ public class Leetcode {
     }
 
 
+    // TODO: 2018/8/13 理解思想 重做一遍
+    /**
+     * 665. 非递减数列
+     * 给定一个长度为 n 的整数数组，你的任务是判断在最多改变 1 个元素的情况下，该数组能否变成一个非递减数列。
+     * 我们是这样定义一个非递减数列的： 对于数组中所有的 i (1 <= i < n)，满足 array[i] <= array[i + 1]。
+     * @param nums 数组
+     * @return 是否可以变为非递减数组
+     * 思路： 当你找到nums[i-1] > nums[i]一些时i，你会更喜欢改变它nums[i-1]的值，因为更大的值nums[i]会给你更大的风险
+     */
+    public boolean checkPossibility(int[] nums) {
+        if (nums == null) {
+            return false;
+        }
+        int cnt = 0;
+        for(int i = 1; i < nums.length && cnt<=1 ; i++){
+            if(nums[i-1] > nums[i]){
+                cnt++;
+                if(i-2<0 || nums[i-2] <= nums[i])nums[i-1] = nums[i];
+                else nums[i] = nums[i-1];
+            }
+        }
+        return cnt<=1;
+    }
+
 
     /**
      * 674. 最长连续递增序列
@@ -2518,6 +2633,56 @@ public class Leetcode {
     }
 
 
+    // TODO: 2018/8/13 思路有错重做
+    /**
+     * 811. 子域名访问计数
+     * 一个网站域名，如"discuss.leetcode.com"，包含了多个子域名。作为顶级域名，常用的有"com"，下一级则有"leetcode.com"，
+     * 最低的一级为"discuss.leetcode.com"。当我们访问域名"discuss.leetcode.com"时，
+     * 也同时访问了其父域名"leetcode.com"以及顶级域名 "com"。
+     * 给定一个带访问次数和域名的组合，要求分别计算每个域名被访问的次数。
+     * 其格式为访问次数+空格+地址，例如："9001 discuss.leetcode.com"。
+     * 接下来会给出一组访问次数和域名组合的列表cpdomains 。要求解析出所有域名的访问次数，输出格式和输入格式相同，不限定先后顺序。
+     * @param cpdomains 网址访问次数计数
+     * @return 访问次数集合
+     */
+    public List<String> subdomainVisits(String[] cpdomains) {
+        if (cpdomains == null) {
+            return null;
+        }
+        int maxIndex = 0, maxCount = 0;
+        for (int i = 0; i < cpdomains.length; i++) {
+            int count = cpdomains[i].split(" ")[1].split("\\.").length;
+            if (count > maxCount) {
+                maxCount = count;
+                maxIndex = i;
+            }
+        }
+
+        // 0 ~ 最低级网址访问次数
+        int[] visits = new int[maxCount];
+        for (String cpdomain : cpdomains) {
+            int count = cpdomain.split(" ")[1].split("\\.").length;
+            int visit = Integer.parseInt(cpdomain.split(" ")[0]);
+            for (int j = 0; j < count; j++) {
+                visits[j] += visit;
+            }
+        }
+
+        List<String> result = new ArrayList<>();
+        String[] full = cpdomains[maxIndex].split(" ")[1].split("\\.");
+        StringBuilder net = new StringBuilder();
+        for (int i = 0; i < maxCount; i++) {
+            if (i != 0) {
+                net.insert(0, ".");
+            }
+            net.insert(0, full[maxCount - 1 - i]);
+            result.add(visits[i] + " " + net);
+        }
+        return result;
+    }
+
+
+
 
     /**
      * 830. 较大分组的位置
@@ -2726,4 +2891,241 @@ public class Leetcode {
         return result;
     }
 
+
+    /**
+     * 874. 模拟行走机器人
+     * 机器人在一个无限大小的网格上行走，从点 (0, 0) 处开始出发，面向北方。该机器人可以接收以下三种类型的命令：
+     * -2：向左转 90 度
+     * -1：向右转 90 度
+     * 1 <= x <= 9：向前移动 x 个单位长度
+     * 在网格上有一些格子被视为障碍物。
+     * 第 i 个障碍物位于网格点  (obstacles[i][0], obstacles[i][1])
+     * 如果机器人试图走到障碍物上方，那么它将停留在障碍物的前一个网格方块上，但仍然可以继续该路线的其余部分。
+     * 返回从原点到机器人的最大欧式距离的平方。
+     * @param commands 命令集合
+     * @param obstacles 障碍物集合
+     * @return 返回距离原点的距离
+     */
+    public int robotSim(int[] commands, int[][] obstacles) {
+        Robot robot = new Robot(0, 0, obstacles);
+        for(int command : commands) {
+            robot.move(command);
+        }
+        return robot.max;
+    }
+
+    /**
+     * 机器人类
+     */
+    class Robot {
+
+        Direction direction;
+        Set<Obstacle> obstacleList;
+        int max;
+        //机器人所处坐标
+        int x;
+        int y;
+
+        Robot(int x, int y, int[][] obstacles) {
+            //设置方向
+            Direction N = new Direction("N");
+            Direction S = new Direction("S");
+            Direction W = new Direction("W");
+            Direction E = new Direction("E");
+            N.nex = E;
+            N.pre = W;
+            S.nex = W;
+            S.pre = E;
+            W.nex = N;
+            W.pre = S;
+            E.pre = N;
+            E.nex = S;
+            direction = N;
+            this.x = x;
+            this.y = y;
+            //障碍物集合
+            obstacleList = new HashSet<>();
+            for (int[] obstacle : obstacles) {
+                obstacleList.add(new Obstacle(obstacle[0], obstacle[1]));
+            }
+        }
+
+        /**
+         * 根据操作移动
+         * @param move 操作值
+         */
+        void move(int move) {
+            if (move < 0) {
+                changeDirection(move);
+            } else {
+                OUT:
+                for (int i = 1; i <= move; i++) {
+                    switch (direction.val) {
+                        case "N":
+                            Obstacle obstacleN = new Obstacle(x, y+1);
+                            if (obstacleList.contains(obstacleN)) {
+                                break OUT;
+                            } else {
+                                y += 1;
+                                max = Math.max(max, getDistance());
+                            }
+                            break;
+                        case "S":
+                            Obstacle obstacleS = new Obstacle(x, y-1);
+                            if (obstacleList.contains(obstacleS)) {
+                                break OUT;
+                            } else {
+                                y -= 1;
+                                max = Math.max(max, getDistance());
+                            }
+                            break;
+                        case "W":
+                            Obstacle obstacleW = new Obstacle(x-1, y);
+                            if (obstacleList.contains(obstacleW)) {
+                                break OUT;
+                            } else {
+                                x -= 1;
+                                max = Math.max(max, getDistance());
+                            }
+                            break;
+                        case "E":
+                            Obstacle obstacleE = new Obstacle(x+1, y);
+                            if (obstacleList.contains(obstacleE)) {
+                                break OUT;
+                            } else {
+                                x += 1;
+                                max = Math.max(max, getDistance());
+                            }
+                            break;
+                    }
+                }
+            }
+        }
+
+        int getDistance() {
+            return (int)(Math.pow(x, 2) + Math.pow(y, 2));
+        }
+
+        /**
+         * 根据输入值转变方向
+         * @param i 操作
+         */
+        void changeDirection (int i) {
+            if (i == -1) {
+                direction = direction.nex;
+            } else if (i == -2){
+                direction = direction.pre;
+            }
+        }
+
+        /**
+         * 双向循环链表表示方向
+         */
+        class Direction {
+            Direction pre;
+            Direction nex;
+            String val;
+
+            Direction(String val) {
+                this.val = val;
+            }
+        }
+
+        /**
+         * 障碍物类
+         */
+        class Obstacle {
+            int x;
+            int y;
+            Obstacle(int x, int y) {
+                this.x = x;
+                this.y = y;
+            }
+
+            @Override
+            public boolean equals(Object o) {
+                if (this == o) return true;
+                if (o == null || getClass() != o.getClass()) return false;
+                Obstacle obstacle = (Obstacle) o;
+                return x == obstacle.x &&
+                        y == obstacle.y;
+            }
+
+            @Override
+            public int hashCode() {
+
+                return Objects.hash(x, y);
+            }
+        }
+
+    }
+
+
+    // TODO: 2018/8/13 重做一遍 想的太复杂了
+    /**
+     * 874. 模拟行走机器人
+     * 机器人在一个无限大小的网格上行走，从点 (0, 0) 处开始出发，面向北方。该机器人可以接收以下三种类型的命令：
+     * -2：向左转 90 度
+     * -1：向右转 90 度
+     * 1 <= x <= 9：向前移动 x 个单位长度
+     * 在网格上有一些格子被视为障碍物。
+     * 第 i 个障碍物位于网格点  (obstacles[i][0], obstacles[i][1])
+     * 如果机器人试图走到障碍物上方，那么它将停留在障碍物的前一个网格方块上，但仍然可以继续该路线的其余部分。
+     * 返回从原点到机器人的最大欧式距离的平方。
+     * @param commands 命令集合
+     * @param obstacles 障碍物集合
+     * @return 返回距离原点的距离
+     * 非面向对象解决
+     */
+    public int robotSim1(int[] commands, int[][] obstacles) {
+        Set<String> set = new HashSet<>();
+        for (int[] obs : obstacles) {
+            set.add(obs[0] + " " + obs[1]);
+        }
+        //方向
+        int[][] dirs = new int[][]{{0, 1}, {1, 0}, {0, -1}, {-1, 0}};
+        int d = 0, x = 0, y = 0, result = 0;
+        for (int c : commands) {
+            if (c == -1) {
+                d++;
+                if (d == 4) {
+                    d = 0;
+                }
+            } else if (c == -2) {
+                d--;
+                if (d == -1) {
+                    d = 3;
+                }
+            } else {
+                while (c-- > 0 && !set.contains((x + dirs[d][0]) + " " + (y + dirs[d][1]))) {
+                    x += dirs[d][0];
+                    y += dirs[d][1];
+                }
+            }
+            result = Math.max(result, x * x + y * y);
+        }
+        return result;
+    }
+
+
+
+    /**
+     * 876. 链表的中间结点
+     * 给定一个带有头结点 head 的非空单链表，返回链表的中间结点。
+     * 如果有两个中间结点，则返回第二个中间结点。
+     * @param head 链表
+     * @return 中间节点
+     * 思路： 快慢双指针
+     */
+    public ListNode middleNode(ListNode head) {
+        ListNode nodeFast = head, nodeSlow = head;
+        while (nodeFast != null) {
+            nodeFast = nodeFast.next;
+            if (nodeFast != null) {
+                nodeFast = nodeFast.next;
+                nodeSlow = nodeSlow.next;
+            }
+        }
+        return nodeSlow;
+    }
 }

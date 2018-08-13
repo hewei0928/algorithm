@@ -7,6 +7,7 @@
     <groupId>com.hw</groupId>
     <artifactId>algorithm</artifactId>
     <version>1.0-SNAPSHOT</version>
+
     <build>
         <plugins>
             <plugin>
