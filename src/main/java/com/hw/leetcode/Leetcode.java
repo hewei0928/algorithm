@@ -2,6 +2,7 @@ package com.hw.leetcode;
 
 import com.hw.algorithm.union_found.WeightedQuickUnionUF;
 
+import java.lang.reflect.Array;
 import java.util.*;
 import java.util.stream.Stream;
 
@@ -72,6 +73,181 @@ public class Leetcode {
         }
         return result.next;
     }
+
+    /**
+     * 7. 反转整数
+     * 给定一个 32 位有符号整数，将整数中的数字进行反转。
+     * @param x 给定整数
+     * @return 反转后结果
+     */
+    public int reverse(int x) {
+
+        int result = 0;
+        while (x != 0) {
+
+        }
+        return result;
+    }
+
+
+
+    /**
+     * 9. 回文数
+     * 判断一个整数是否是回文数。回文数是指正序（从左向右）和倒序（从右向左）读都是一样的整数。
+     * @param x 整数
+     * @return 是否为回文数
+     * 思路 不将数字转为字符串，逻辑判断反转半数字符串
+     */
+    public boolean isPalindrome(int x) {
+
+        if (x < 0 || (x % 10 == 0 && x != 0)) {
+            return false;
+        }
+        int half = 0;
+        while (x > half) {
+            int last = x % 10;
+            half = half * 10 + last;
+            x = x / 10;
+        }
+        return half == x || half / 10 == x;
+    }
+
+
+    /**
+     * 13. 罗马数字转整数
+     * @param s 罗马字符串数组
+     * @return 结果
+     */
+    public int romanToInt(String s) {
+        if (s == null) {
+            return 0;
+        }
+        char[] chars = {'I', 'V', 'X', 'L', 'C', 'D', 'M'};
+        String[] contains = {"IV", "IX", "XL", "XC", "CD", "CM"};
+        StringBuilder flag = new StringBuilder("");
+        int[] ints = {1, 5, 10, 50, 100, 500, 1000};
+        int[] containInts = {4, 9, 40, 90, 400, 900};
+        int result = 0;
+        for (char c : s.toCharArray()) {
+            flag.append(c);
+            if (flag.length() == 2) {
+                boolean f = false;
+                for (int j = 0; j < containInts.length; j++) {
+                    if (contains[j].equals(flag.toString())) {
+                        f = true;
+                        result += containInts[j];
+                        flag.delete(0, flag.length());
+                    }
+                }
+                if (!f) {
+                    char first = flag.substring(0, 1).toCharArray()[0];
+                    for (int i = 0; i < chars.length; i++) {
+                        if (chars[i] == first) {
+                            result += ints[i];
+                        }
+                    }
+                    flag.deleteCharAt(0);
+                }
+            }
+        }
+
+        if (flag.length() > 0) {
+            char first = flag.substring(0, 1).toCharArray()[0];
+            for (int i = 0; i < chars.length; i++) {
+                if (chars[i] == first) {
+                    result += ints[i];
+                }
+            }
+        }
+        return result;
+    }
+
+
+    /**
+     * 13. 罗马数字转整数
+     * @param s 罗马字符串数组
+     * @return 结果
+     * 思路 各特殊字符串只会出现最多一次
+     */
+    public int romanToInt1(String s) {
+        if (s == null) {
+            return 0;
+        }
+        int sum=0;
+        if(s.contains("IV")){sum-=2;}
+        if(s.contains("IX")){sum-=2;}
+        if(s.contains("XL")){sum-=20;}
+        if(s.contains("XC")){sum-=20;}
+        if(s.contains("CD")){sum-=200;}
+        if(s.contains("CM")){sum-=200;}
+
+        char c[]=s.toCharArray();
+        int count=0;
+
+        for(;count<=s.length()-1;count++){
+            switch (c[count]) {
+                case 'M':
+                    sum+=1000;
+                    break;
+                case 'D':
+                    sum += 500;
+                    break;
+                case 'C':
+                    sum += 100;
+                    break;
+                case 'L':
+                    sum += 50;
+                    break;
+                case 'X':
+                    sum += 10;
+                    break;
+                case 'V':
+                    sum += 5;
+                    break;
+                case 'I':
+                    sum += 1;
+                    break;
+            }
+
+        }
+
+        return sum;
+
+    }
+
+
+    /**
+     * 20. 有效的括号
+     * 给定一个只包括 '('，')'，'{'，'}'，'['，']' 的字符串，判断字符串是否有效。
+     * 有效字符串需满足：
+     * 左括号必须用相同类型的右括号闭合。
+     * 左括号必须以正确的顺序闭合。
+     * 注意空字符串可被认为是有效字符串。
+     * @param s 字符串
+     * @return 是否有效
+     * 思路： 使用栈
+     */
+    public boolean isValid(String s) {
+        if (s == null) {
+            return true;
+        }
+        Stack<Character> stack = new Stack<>();
+        for (char c : s.toCharArray()) {
+            if (stack.isEmpty()) {
+                stack.push(c);
+            } else {
+                char before = stack.peek();
+                if (c - before == 1 || c - before == 2) {
+                    stack.pop();
+                } else {
+                    stack.push(c);
+                }
+            }
+        }
+
+        return stack.isEmpty();
+    }
+
 
 
     /**
@@ -200,6 +376,24 @@ public class Leetcode {
     }
 
 
+    // TODO: 2018/8/15 使用算法重做一遍
+    /**
+     * 28. 实现strStr()
+     * 给定一个 haystack 字符串和一个 needle 字符串，
+     * 在 haystack 字符串中找出 needle 字符串出现的第一个位置 (从0开始)。如果不存在，则返回  -1。
+     * @param haystack haystack
+     * @param needle needle
+     * @return index
+     */
+    public int strStr(String haystack, String needle) {
+        if (haystack == null || needle == null) {
+            return Objects.equals(haystack, needle) ? 0 : -1;
+        }
+        return haystack.indexOf(needle);
+    }
+
+
+
     /**
      * 35. 搜索插入位置
      * 给定一个排序数组和一个目标值，在数组中找到目标值，并返回其索引。如果目标值不存在于数组中，返回它将会被按顺序插入的位置。
@@ -303,6 +497,19 @@ public class Leetcode {
 
 
     /**
+     * 67. 二进制求和
+     * 给定两个二进制字符串，返回他们的和（用二进制表示）。
+     * 输入为非空字符串且只包含数字 1 和 0。
+     * @param a 字符串a
+     * @param b 字符串b
+     * @return 二进制
+     * 思路： 使用StringBuilder？
+     */
+    public String addBinary(String a, String b) {
+
+    }
+
+    /**
      * 69. x 的平方根
      * 实现 int sqrt(int x) 函数。
      * 计算并返回 x 的平方根，其中 x 是非负整数。
@@ -323,6 +530,30 @@ public class Leetcode {
         }
         return 0;
     }
+
+
+    // TODO: 2018/8/28 动态规划
+    /**
+     * 70. 爬楼梯
+     * 假设你正在爬楼梯。需要 n 阶你才能到达楼顶。
+     * 每次你可以爬 1 或 2 个台阶。你有多少种不同的方法可以爬到楼顶呢？
+     * @param n 楼梯个数
+     * @return 方法数
+     */
+    public int climbStairs(int n) {
+        if (n <= 2) {
+            return n;
+        }
+        int left = 1, right = 2, index = 0;
+        for (int i = 3; i <= n; i++) {
+            index = left + right;
+            left = right;
+            right = index;
+        }
+        return index;
+
+    }
+
 
 
 
@@ -630,6 +861,65 @@ public class Leetcode {
         }
 
         return maxSum;
+    }
+
+
+    // TODO: 2018/8/15 重做一遍 走进弯路了
+    /**
+     * 125. 验证回文串
+     * 给定一个字符串，验证它是否是回文串，只考虑字母和数字字符，可以忽略字母的大小写。
+     * 说明：本题中，我们将空字符串定义为有效的回文串。
+     * @param s 字符串
+     * @return 是否为回文字符串
+     * 思路：双指针
+     */
+    public boolean isPalindromeOne(String s) {
+        if (s == null) {
+            return true;
+        }
+        int front = 0, end = s.length() - 1;
+        while (front < s.length() && end >= 0) {
+            Character sFront = s.charAt(front), sEnd = s.charAt(end);
+            while (!Character.isLetterOrDigit(sFront)) {
+                if (++front < s.length()) {
+                    sFront = s.charAt(front);
+                } else {
+                    sFront = ' ';
+                    break;
+                }
+            }
+            while (!Character.isLetterOrDigit(sEnd)) {
+                if (--end >= 0) {
+                    sEnd = s.charAt(end);
+                } else {
+                    sEnd = ' ';
+                    break;
+                }
+            }
+            if (!(Character.toLowerCase(sEnd) == Character.toLowerCase(sFront))) {
+                return false;
+            }
+            end--;
+            front++;
+        }
+        return true;
+    }
+
+
+    /**
+     * 125. 验证回文串
+     * 给定一个字符串，验证它是否是回文串，只考虑字母和数字字符，可以忽略字母的大小写。
+     * 说明：本题中，我们将空字符串定义为有效的回文串。
+     * @param s 字符串
+     * @return 是否为回文字符串
+     * 思路： 正则替代
+     */
+    public boolean isPalindromeOne1(String s) {
+        if (s == null) {
+            return true;
+        }
+        String sFront = s.replaceAll("[^A-Za-z0-9]", "");
+        return sFront.equalsIgnoreCase(new StringBuilder(sFront).reverse().toString());
     }
 
 
@@ -1688,6 +1978,35 @@ public class Leetcode {
 
 
     /**
+     * 547. 朋友圈
+     * 班上有 N 名学生。其中有些人是朋友，有些则不是。他们的友谊具有是传递性。
+     * 如果已知 A 是 B 的朋友，B 是 C 的朋友，那么我们可以认为 A 也是 C 的朋友。所谓的朋友圈，是指所有朋友的集合。
+     * 给定一个 N * N 的矩阵 M，表示班级中学生之间的朋友关系。
+     * 如果M[i][j] = 1，表示已知第 i 个和 j 个学生互为朋友关系，否则为不知道。你必须输出所有学生中的已知的朋友圈总数。
+     * @param M 表示朋友关系的矩阵
+     * @return 朋友圈总数
+     * 思路： union-found 变种
+     */
+    public int findCircleNum(int[][] M) {
+        if (M == null) {
+            return 0;
+        }
+        int length = M.length;
+        WeightedQuickUnionUF quickUnionUF = new WeightedQuickUnionUF(length);
+        for (int i = 0; i < M.length; i++) {
+            for (int j = 0; j < M[i].length; j++) {
+                if (M[i][j] == 1) {
+                    quickUnionUF.union(i, j);
+                }
+            }
+        }
+
+        return quickUnionUF.getCount();
+    }
+
+
+
+    /**
      * 557. 反转字符串中的单词 III
      * 给定一个字符串，你需要反转字符串中每个单词的字符顺序，同时仍保留空格和单词的初始顺序。
      * @param s S
@@ -2164,8 +2483,6 @@ public class Leetcode {
 
 
 
-
-
     /**
      * 697. 数组的度
      * 给定一个非空且只包含非负数的整数数组 nums, 数组的度的定义是指数组里任一元素出现频数的最大值。
@@ -2515,6 +2832,61 @@ public class Leetcode {
     }
 
 
+    // TODO: 2018/8/15 思路有误
+//    /**
+//     * 765. 情侣牵手
+//     * N 对情侣坐在连续排列的 2N 个座位上，想要牵到对方的手。
+//     * 计算最少交换座位的次数，以便每对情侣可以并肩坐在一起。一次交换可选择任意两人，让他们站起来交换座位。
+//     * 人和座位用 0 到 2N-1 的整数表示，情侣们按顺序编号，第一对是 (0, 1)，第二对是 (2, 3)，
+//     * 以此类推，最后一对是 (2N-2, 2N-1)。
+//     * 这些情侣的初始座位  row[i] 是由最初始坐在第 i 个座位上的人决定的。
+//     * @param 座位数组
+//     * @return 调换次数
+//     */
+/*
+    public int minSwapsCouples(int[] row) {
+        if (row == null || row.length % 2 != 0) {
+            return 0;
+        }
+        int length = row.length;
+        //找出打乱的座位
+        int size = 0;
+        int[][] rows = new int[length / 2][2];
+        for (int i = 0; i < length; i+=2) {
+            if (row[i] > row[i+1]) {
+                int temp = row[i];
+                row[i] = row[i+1];
+                row[i+1] = temp;
+            }
+            if (!connected(row[i], row[i+1])) {
+                rows[size][0] = row[i];
+                rows[size][1] = row[i+1];
+                size++;
+            }
+        }
+        // 直接交换座位即可变为有序的情侣数
+        int count = 0;
+        for (int i = 0; i < size; i++) {
+            for (int j = i + 1; j < size; j++) {
+                int num1 = rows[i][0], num2 = rows[i][1], num3 = rows[j][0], num4 = rows[j][1];
+                if (connected(num1, num3) && connected(num2,  num4)) {
+                    count++;
+                }
+
+            }
+        }
+
+    }
+*/
+
+    private boolean connected(int x, int y) {
+        int left  = y < x ? y : x;
+        int right = y > x ? y : x;
+        return right - left == 1 && left % 2 == 0;
+    }
+
+
+
     /**
      * 766. 托普利茨矩阵
      * 如果一个矩阵的每一方向由左上到右下的对角线上具有相同元素，那么这个矩阵是托普利茨矩阵。
@@ -2841,6 +3213,62 @@ public class Leetcode {
                 vals[2] + vals[4] + vals[6] == 15);
     }
 
+
+    /**
+     * 844. 比较含退格的字符串
+     * 给定 S 和 T 两个字符串，当它们分别被输入到空白的文本编辑器后，判断二者是否相等，并返回结果。 # 代表退格字符。
+     * @param S 字符串S
+     * @param T 字符串T
+     * @return 是否相等
+     */
+    public boolean backspaceCompare(String S, String T) {
+        if (S == null || T == null) {
+            return Objects.equals(S, T);
+        }
+        S = getString1(S);
+        T =getString1(T);
+        S = getString(S);
+        T = getString(T);
+        return S.equals(T);
+    }
+
+    /**
+     * 使用StringBuilder
+     * @param s 字符串
+     * @return 字符串
+     */
+    private String getString (String s) {
+        StringBuilder result = new StringBuilder("");
+        for (char c : s.toCharArray()) {
+            if (c == '#') {
+                if (result.length() > 0) {
+                    result.deleteCharAt(result.length()-1);
+                }
+            } else {
+                result.append(c);
+            }
+        }
+        return result.toString();
+    }
+
+    /**
+     * 使用栈
+     * @param s 字符串
+     * @return 字符串
+     */
+    private String getString1 (String s) {
+        Stack<Character> result = new Stack<>();
+        for (char c : s.toCharArray()) {
+            if (c != '#') {
+                result.push(c);
+            } else {
+                if (!result.isEmpty()) {
+                    result.pop();
+                }
+            }
+        }
+        return String.valueOf(result);
+    }
 
 
     /**

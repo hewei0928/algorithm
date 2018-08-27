@@ -124,5 +124,17 @@ public class Test {
         String[] a = new String[]{"9001 discuss.leetcode.com"};
         System.out.println(Leetcode.subdomainVisits(a));
         System.out.println(Leetcode.convertToTitle(0));
+        System.out.println(Leetcode.backspaceCompare(null, null));
+        System.out.println(Leetcode.isPalindromeOne("A man, a plan, a canal: Panama"));
+        System.out.println(Leetcode.isPalindromeOne1(null));
+        System.out.println(Leetcode.strStr(null, null));
+        System.out.println(Leetcode.findCircleNum(null));
+        int[] as = new int[]{0,2,4,6,7,1,3,5};
+        System.out.println(Leetcode.isPalindrome(1000));
+        System.out.println(Leetcode.romanToInt(""));
+        System.out.println(Leetcode.romanToInt1(null));
+        System.out.println(-11 % 10);
+        System.out.println(Leetcode.isValid(null));
+        System.out.println(Leetcode.climbStairs(0));
     }
 }
