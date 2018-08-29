@@ -136,5 +136,11 @@ public class Test {
         System.out.println(-11 % 10);
         System.out.println(Leetcode.isValid(null));
         System.out.println(Leetcode.climbStairs(0));
+        System.out.println(Leetcode.isSameTree(null, null));
+        System.out.println(Leetcode.isSymmetric(null));
+        System.out.println(Leetcode.hammingWeight(11));
+        System.out.println(Leetcode.isUgly(0));
+        System.out.println(Leetcode.countPrimes(1));
+        System.out.println(Leetcode.countPrimes1(0));
     }
 }

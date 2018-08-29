@@ -2,7 +2,7 @@ package com.hw.leetcode;
 
 import com.hw.algorithm.union_found.WeightedQuickUnionUF;
 
-import java.lang.reflect.Array;
+
 import java.util.*;
 import java.util.stream.Stream;
 
@@ -496,18 +496,7 @@ public class Leetcode {
     }
 
 
-    /**
-     * 67. 二进制求和
-     * 给定两个二进制字符串，返回他们的和（用二进制表示）。
-     * 输入为非空字符串且只包含数字 1 和 0。
-     * @param a 字符串a
-     * @param b 字符串b
-     * @return 二进制
-     * 思路： 使用StringBuilder？
-     */
-    public String addBinary(String a, String b) {
 
-    }
 
     /**
      * 69. x 的平方根
@@ -717,6 +706,58 @@ public class Leetcode {
 
 
     /**
+     * 100. 相同的树
+     * 给定两个二叉树，编写一个函数来检验它们是否相同。
+     * 如果两个树在结构上相同，并且节点具有相同的值，则认为它们是相同的。
+     * @param p 树p
+     * @param q 树q
+     * @return 是否相同
+     */
+    public boolean isSameTree(TreeNode p, TreeNode q) {
+        if (p == null || q == null) {
+            return p == q;
+        }
+
+        if (p.left == null && q.left == null && p.right == null && q.right == null) {
+            return p.val == q.val;
+        } else {
+            return p.val == q.val && isSameTree(p.left, q.left) && isSameTree(p.right, q.right);
+        }
+    }
+
+
+    /**
+     * 101. 对称二叉树
+     * 给定一个二叉树，检查它是否是镜像对称的。
+     * @param root 树
+     * @return 是否对称
+     * 思路 调用isSameTree方法
+     */
+    public boolean isSymmetric(TreeNode root) {
+        return root == null || isSameTreeSymmetric(root.left, root.right);
+    }
+
+    /**
+     * isSameTree略微调整
+     * @param p 树p
+     * @param q 树q
+     * @return 是否对称相等
+     */
+    private boolean isSameTreeSymmetric(TreeNode p, TreeNode q) {
+        if (p == null || q == null) {
+            return p == q;
+        }
+
+        if (p.left == null && q.left == null && p.right == null && q.right == null) {
+            return p.val == q.val;
+        } else {
+            return p.val == q.val && isSameTree(p.left, q.right) && isSameTree(p.right, q.left);
+        }
+    }
+
+
+
+    /**
      * 104. 二叉树的最大深度
      * 给定一个二叉树，找出其最大深度。
      * 二叉树的深度为根节点到最远叶子节点的最长路径上的节点数。
@@ -738,6 +779,20 @@ public class Leetcode {
         return max;
     }
 
+
+    /**
+     *
+     * @param root
+     * @param sum
+     * @return
+     */
+    public boolean hasPathSum(TreeNode root, int sum) {
+        return false;
+    }
+
+    private boolean isPathSum(TreeNode root, int parent, int sum) {
+        return root.left == null && root.right == null && root.val + parent == sum;
+    }
 
 
     /**
@@ -1302,6 +1357,16 @@ public class Leetcode {
 
 
     /**
+     * 191. 位1的个数
+     * 编写一个函数，输入是一个无符号整数，返回其二进制表达式中数字位数为 ‘1’ 的个数（也被称为汉明重量）。
+     * @param n 整数
+     * @return 1的个数
+     */
+    public int hammingWeight(int n) {
+        return Integer.bitCount(n);
+    }
+
+    /**
      * 200. 岛屿的个数
      * 给定一个由 '1'（陆地）和 '0'（水）组成的的二维网格，计算岛屿的数量。
      * 一个岛被水包围，并且它是通过水平方向或垂直方向上相邻的陆地连接而成的。
@@ -1375,6 +1440,57 @@ public class Leetcode {
         }
         return head;
     }
+
+
+    /**
+     * 204. 计数质数
+     * 统计所有小于非负整数 n 的质数的数量。
+     * @param n 整数n
+     * @return 质数数量
+     */
+    public int countPrimes(int n) {
+        if (n <= 1) {
+            return 0;
+        }
+        int count = 0;
+        for (int i = 2; i < n; i++) {
+            boolean flag = false;
+            for (int j = 2; j < i; j++) {
+                if (i % j == 0) {
+                    flag = true;
+                    break;
+                }
+            }
+            if (!flag) {
+                count++;
+            }
+        }
+        return count;
+    }
+
+
+    // TODO: 2018/8/28
+    /**
+     * 204. 计数质数
+     * 统计所有小于非负整数 n 的质数的数量。
+     * @param n 整数n
+     * @return 质数数量
+     */
+    public int countPrimes1(int n) {
+        boolean[] notPrime = new boolean[n];
+        int count = 0;
+        for (int i = 2; i < n; i++) {
+            if (!notPrime[i]) {
+                count++;
+                for (int j = 2; i*j < n; j++) {
+                    notPrime[i*j] = true;
+                }
+            }
+        }
+
+        return count;
+    }
+
 
 
     /**
@@ -1601,6 +1717,28 @@ public class Leetcode {
 
     }
 
+
+    /**
+     * 263. 丑数
+     * 编写一个程序判断给定的数是否为丑数。
+     * 丑数就是只包含质因数 2, 3, 5 的正整数。
+     * @param num 输入
+     * @return 是否为丑数
+     */
+    public boolean isUgly(int num) {
+        if (num == 1) {
+            return true;
+        } else if (num == 0) {
+            return false;
+        }
+
+        if (num % 2 == 0) {
+            return isUgly(num / 2);
+        } else if (num % 3 == 0) {
+            return isUgly(num / 3);
+        } else
+            return num >= 5 && num % 5 == 0 && isUgly(num / 5);
+    }
 
     /**
      * 268. 缺失数字
