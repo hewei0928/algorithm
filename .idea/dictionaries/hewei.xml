@@ -2,8 +2,10 @@
   <dictionary name="hewei">
     <words>
       <w>cpdomain</w>
+      <w>cpdomains</w>
       <w>leetcode</w>
       <w>nums</w>
+      <w>subdomain</w>
       <w>toeplitz</w>
       <w>vals</w>
     </words>

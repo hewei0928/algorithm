@@ -74,21 +74,6 @@ public class Leetcode {
         return result.next;
     }
 
-    /**
-     * 7. 反转整数
-     * 给定一个 32 位有符号整数，将整数中的数字进行反转。
-     * @param x 给定整数
-     * @return 反转后结果
-     */
-    public int reverse(int x) {
-
-        int result = 0;
-        while (x != 0) {
-
-        }
-        return result;
-    }
-
 
 
     /**
@@ -780,20 +765,6 @@ public class Leetcode {
     }
 
 
-    /**
-     *
-     * @param root
-     * @param sum
-     * @return
-     */
-    public boolean hasPathSum(TreeNode root, int sum) {
-        return false;
-    }
-
-    private boolean isPathSum(TreeNode root, int parent, int sum) {
-        return root.left == null && root.right == null && root.val + parent == sum;
-    }
-
 
     /**
      * 118. 杨辉三角
@@ -1012,7 +983,7 @@ public class Leetcode {
             return false;
         }
         ListNode slow = head, fast = head.next;
-        // 仔细思考，不会发生无线循环的情况
+        // 仔细思考，不会发生无限循环的情况
         while (slow != null && fast != null) {
             if (fast.next == null) {
                 return false;
@@ -1025,6 +996,74 @@ public class Leetcode {
         }
         return false;
     }
+
+
+    // TODO: 2018/8/29 不使用额外空间做一遍
+    /**
+     * 142. 环形链表 II
+     * 给定一个链表，返回链表开始入环的第一个节点。 如果链表无环，则返回 null。
+     * @param head 链表
+     * @return 入环的首个节点
+     * 时间复杂度O(n) 空间复杂度O(n)
+     */
+    public ListNode detectCycle(ListNode head) {
+        if (head == null) {
+            return null;
+        }
+        Set<ListNode> nodes = new HashSet<>();
+        boolean flag = false;
+        ListNode fast = head.next, slow = head;
+        while (fast != null && slow != null) {
+            if (fast.next == null) {
+                return null;
+            }
+            if (fast == slow) {
+                flag = true;
+            }
+            if (flag && nodes.contains(slow)) {
+                return slow;
+            }
+            nodes.add(slow);
+            slow = slow.next;
+            fast = fast.next.next;
+        }
+
+        return null;
+    }
+
+
+    /**
+     * 142. 环形链表 II
+     * 给定一个链表，返回链表开始入环的第一个节点。 如果链表无环，则返回 null。
+     * @param head 链表
+     * @return 入环的首个节点
+     * 时间复杂度O(n) 空间复杂度O(n)
+     * fast路程： a + 2b + c  slow路程： a + b 得出 a = c
+     */
+    public ListNode detectCycle1(ListNode head) {
+        if (head == null) {
+            return null;
+        }
+        ListNode fast = head, slow = head;
+        while (fast != null && slow != null) {
+            if (fast.next == null) {
+                return null;
+            }
+            slow = slow.next;
+            fast = fast.next.next;
+            if (fast == slow) {
+                ListNode s = head;
+                while (s != slow) {
+                    slow = slow.next;
+                    s = s.next;
+                }
+                return slow;
+            }
+        }
+
+        return null;
+    }
+
 
 
     /**

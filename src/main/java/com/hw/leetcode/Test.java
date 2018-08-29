@@ -142,5 +142,7 @@ public class Test {
         System.out.println(Leetcode.isUgly(0));
         System.out.println(Leetcode.countPrimes(1));
         System.out.println(Leetcode.countPrimes1(0));
+        System.out.println(Leetcode.detectCycle(null));
+        System.out.println(Leetcode.detectCycle1(null));
     }
 }
