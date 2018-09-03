@@ -201,6 +201,37 @@ public class Leetcode {
     }
 
 
+    // TODO: 2018/9/3 重做一遍
+    /**
+     * 19. 删除链表的倒数第N个节点
+     * 给定一个链表，删除链表的倒数第 n 个节点，并且返回链表的头结点。
+     * @param head 链表
+     * @param n 倒数第n个节点 n保证有效
+     * @return 链表的头节点
+     */
+    public ListNode removeNthFromEnd(ListNode head, int n) {
+        if (head == null) {
+            return null;
+        }
+
+        ListNode cache = new ListNode(0);
+        ListNode first = cache, second = cache;
+        cache.next = head;
+        for (int i = 0; i <= n; i++) {
+            second = second.next;
+        }
+
+        while (second != null) {
+            second = second.next;
+            first = first.next;
+        }
+
+        first.next = first.next.next;
+        return cache.next;
+    }
+
+
+
     /**
      * 20. 有效的括号
      * 给定一个只包括 '('，')'，'{'，'}'，'['，']' 的字符串，判断字符串是否有效。
@@ -277,6 +308,28 @@ public class Leetcode {
         }
         return listNode.next;
     }
+
+
+    // TODO: 2018/8/29 自己思考出来的，多看几遍
+    /**
+     * 24. 两两交换链表中的节点
+     * 给定一个链表，两两交换其中相邻的节点，并返回交换后的链表。
+     * @param head 链表
+     * @return 交换后的链表
+     */
+    public ListNode swapPairs(ListNode head) {
+        if (head == null) {
+            return null;
+        } else if (head.next == null) {
+            return head;
+        }
+
+        ListNode second = head.next;
+        head.next = swapPairs(second.next);
+        second.next = head;
+        return second;
+    }
+
 
 
     /**
@@ -591,6 +644,7 @@ public class Leetcode {
             }
         }
     }
+
 
 
     /**
@@ -947,6 +1001,23 @@ public class Leetcode {
         String sFront = s.replaceAll("[^A-Za-z0-9]", "");
         return sFront.equalsIgnoreCase(new StringBuilder(sFront).reverse().toString());
     }
+
+
+    // TODO: 2018/9/3 理解位运算
+    /**
+     * 136. 只出现一次的数字
+     * 给定一个非空整数数组，除了某个元素只出现一次以外，其余每个元素均出现两次。找出那个只出现了一次的元素。
+     * @param nums 数组
+     * @return 只出现了一次的元素
+     */
+    public int singleNumber(int[] nums) {
+        int result = 0;
+        for (int num : nums) {
+            result ^= num;
+        }
+        return result;
+    }
+
 
 
     /**
@@ -1446,6 +1517,38 @@ public class Leetcode {
     }
 
 
+    // TODO: 2018/9/3 理解思路重做
+    /**
+     * 202. 快乐数
+     * 编写一个算法来判断一个数是不是“快乐数”。
+     * 一个“快乐数”定义为：对于一个正整数，每一次将该数替换为它每个位置上的数字的平方和，
+     * 然后重复这个过程直到这个数变为 1，也可能是无限循环但始终变不到 1。
+     * 如果可以变为 1，那么这个数就是快乐数。
+     * @param n 数
+     * @return 是否为快乐数
+     * 思路： 类似于双指针
+     */
+    public boolean isHappy(int n) {
+        int fast = n, slow = n;
+        do {
+            slow = calculate(slow);
+            fast = calculate(fast);
+            fast = calculate(fast);
+        } while (fast != slow);
+
+        return slow == 1;
+    }
+
+    private int calculate(int n) {
+        int result = 0;
+        while (n != 0) {
+            int i = n % 10;
+            result += i * i;
+            n /= 10;
+        }
+        return result;
+    }
+
 
     /**
      * 203. 删除链表中的节点
@@ -1861,6 +1964,39 @@ public class Leetcode {
         return (n % 4) > 0;
     }
 
+
+    // TODO: 2018/8/29 有错
+    /**
+     * 328. 奇偶链表
+     * 给定一个单链表，把所有的奇数节点和偶数节点分别排在一起。请注意，
+     * 这里的奇数节点和偶数节点指的是节点编号的奇偶性，而不是节点的值的奇偶性。
+     * @param head
+     * @return
+     */
+    public ListNode oddEvenList(ListNode head) {
+        if (head == null) {
+            return null;
+        } else if (head.next == null) {
+            return head;
+        }
+        ListNode odd = head, even = head.next, second = head.next;
+        int index = 1;
+        while (odd.next != null || even.next != null) {
+            if (index % 2 == 1) {
+                if (odd.next != null) {
+                    odd.next = odd.next.next;
+                }
+                odd = odd.next;
+            } else {
+                even.next = even.next.next;
+                even = even.next;
+            }
+        }
+        odd.next = second;
+
+
+        return head;
+    }
 
     /**
      * 344. 反转字符串
@@ -3733,5 +3869,37 @@ public class Leetcode {
             }
         }
         return nodeSlow;
+    }
+
+
+    /**
+     * 884. 两句话中的不常见单词
+     * 给定两个句子 A 和 B 。 （句子是一串由空格分隔的单词。每个单词仅由小写字母组成。）
+     * 如果一个单词在其中一个句子中只出现一次，在另一个句子中却没有出现，那么这个单词就是不常见的。
+     * @param A 字符串A
+     * @param B 字符串B
+     * @return 不常见单词
+     */
+    public String[] uncommonFromSentences(String A, String B) {
+        if (A == null || B == null) {
+            return null;
+        }
+        String AB = A + " " + B;
+        Map<String, Integer> stringIntegerMap = new HashMap<>();
+        for (String s : AB.split(" ")) {
+            if (stringIntegerMap.containsKey(s)) {
+                stringIntegerMap.put(s, stringIntegerMap.get(s) + 1);
+            } else {
+                stringIntegerMap.put(s, 1);
+            }
+        }
+
+        ArrayList<String> result = new ArrayList<>();
+        for (String s : stringIntegerMap.keySet()) {
+            if (stringIntegerMap.get(s) == 1) {
+                result.add(s);
+            }
+        }
+        return result.toArray(new String[result.size()]);
     }
 }
