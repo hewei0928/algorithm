@@ -1406,6 +1406,15 @@ public class Leetcode {
 
 
     /**
+     * 183. 从不订购的客户
+     * 某网站包含两个表，Customers 表和 Orders 表。编写一个 SQL 查询，找出所有从不订购任何东西的客户。
+     * @return 返回值
+     */
+    public String Customers(){
+        return "select c.Name as Customers from Customers c left join Orders o on c.Id = o.CustomerId where o.Id is null";
+    }
+
+    /**
      * 189. 旋转数组
      * 给定一个数组，将数组中的元素向右移动 k 个位置，其中 k 是非负数。
      * @param nums 数组
@@ -2444,6 +2453,53 @@ public class Leetcode {
         }
         return result;
     }
+
+
+    /**
+     * 589. N叉树的前序遍历
+     * 给定一个N叉树，返回其节点值的前序遍历。
+     * @param root 树节点
+     * @return 前序遍历结果
+     */
+    public List<Integer> preorder(Node root) {
+        if (root == null) {
+            return new ArrayList<>();
+        }
+        List<Integer> result = new ArrayList<>();
+        result.add(root.val);
+        if (root.children != null) {
+            for (Node child : root.children) {
+                result.addAll(preorder(child));
+            }
+        }
+
+        return result;
+    }
+
+
+
+    /**
+     * 590. N叉树的后序遍历
+     * 给定一个N叉树，返回其节点值的后序遍历。
+     * @param root 树
+     * @return 后续遍历结果
+     */
+    public List<Integer> postorder(Node root) {
+        if (root == null) {
+            return new ArrayList<>();
+        }
+        List<Integer> result = new ArrayList<>();
+        if (root.children != null) {
+            for (Node node : root.children) {
+                result.addAll(postorder(node));
+            }
+        }
+        result.add(root.val);
+        return result;
+    }
+
+
+
 
     /**
      * 595. 大的国家

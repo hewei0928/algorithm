@@ -154,5 +154,8 @@ public class Test {
         System.out.println(Leetcode.singleNumber(as));
         System.out.println(Leetcode.isHappy(11));
         System.out.println(Arrays.toString(Leetcode.uncommonFromSentences(null, null)));
+        System.out.println(Leetcode.postorder(null));
+        System.out.println(Leetcode.preorder(null));
+        System.out.println(Leetcode.Customers());
     }
 }
