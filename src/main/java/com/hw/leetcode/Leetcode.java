@@ -2844,6 +2844,31 @@ public class Leetcode {
     }
 
 
+    /**
+     * 704. 二分查找
+     * 给定一个 n 个元素有序的（升序）整型数组 nums 和一个目标值 target，
+     * 写一个函数搜索 nums 中的 target，如果目标值存在返回下标，否则返回 -1。
+     * @param nums 数组
+     * @param target 目标值
+     * @return 下标
+     */
+    public int search(int[] nums, int target) {
+        int before = 0, behind = nums.length - 1;
+        while (before <= behind) {
+            int t = (before + behind) / 2;
+            if (nums[t] == target) {
+                return t;
+            } else if (nums[t] < target) {
+                before = t + 1;
+            } else {
+                behind = t - 1;
+            }
+        }
+
+        return -1;
+    }
+
+
     // TODO: 2018/8/11 未完成
     /**
      * 707. 设计链表

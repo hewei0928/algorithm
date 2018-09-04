@@ -5,16 +5,9 @@
     <bookmark url="file://D:/SUNAOS/B1.0.1/08程序/a源代码/运营管理平台（SunAOS）/运营管理平台-系统管理-system/src/main/java/com/sunyard/aos/system/dao/ModuleDao.java" description="* @param query 模块号" line="195" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6e035667-41d0-4d8c-9993-943dc018bc60" name="Default" comment="简单部分题目 按题号完成">
+    <list default="true" id="6e035667-41d0-4d8c-9993-943dc018bc60" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/hw/leetcode/Leetcode.java" afterPath="$PROJECT_DIR$/src/main/java/com/hw/leetcode/Leetcode.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hw/leetcode/Test.java" afterPath="$PROJECT_DIR$/src/main/java/com/hw/leetcode/Test.java" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/hw/leetcode/Leetcode$MyLinkedList$ListNode.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/hw/leetcode/Leetcode$MyLinkedList.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/hw/leetcode/Leetcode$Node.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/hw/leetcode/Leetcode$TreeNode.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/hw/leetcode/Leetcode.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/hw/leetcode/Test.class" afterPath="$PROJECT_DIR$/target/classes/com/hw/leetcode/Test.class" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -52,8 +45,8 @@
       <file leaf-file-name="Leetcode.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/hw/leetcode/Leetcode.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="199">
-              <caret line="3883" column="37" lean-forward="true" selection-start-line="3883" selection-start-column="37" selection-end-line="3883" selection-end-column="37" />
+            <state relative-caret-position="351">
+              <caret line="2863" column="31" lean-forward="true" selection-start-line="2863" selection-start-column="31" selection-end-line="2863" selection-end-column="31" />
               <folding>
                 <element signature="docComment;class#Leetcode#0" expanded="false" />
                 <element signature="docComment;method#twoSum#0;class#Leetcode#0" expanded="false" />
@@ -290,7 +283,7 @@
                 <element signature="method#minCostClimbingStairs#0;class#Leetcode#0" expanded="false" />
                 <element signature="docComment;method#dominantIndex#0;class#Leetcode#0" expanded="false" />
                 <element signature="method#dominantIndex#0;class#Leetcode#0" expanded="false" />
-                <element signature="e#79176#79199#0" expanded="false" />
+                <element signature="e#79793#79816#0" expanded="false" />
                 <element signature="method#connected#0;class#Leetcode#0" expanded="false" />
                 <element signature="docComment;method#isToeplitzMatrix#0;class#Leetcode#0" expanded="false" />
                 <element signature="method#isToeplitzMatrix#0;class#Leetcode#0" expanded="false" />
@@ -342,16 +335,6 @@
                 <element signature="docComment;method#middleNode#0;class#Leetcode#0" expanded="false" />
                 <element signature="method#middleNode#0;class#Leetcode#0" expanded="false" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Test.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/hw/leetcode/Test.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="479">
-              <caret line="155" column="52" lean-forward="false" selection-start-line="155" selection-start-column="52" selection-end-line="155" selection-end-column="52" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -460,10 +443,10 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="18" />
-    <option name="y" value="149" />
-    <option name="width" value="1734" />
-    <option name="height" value="949" />
+    <option name="x" value="272" />
+    <option name="y" value="406" />
+    <option name="width" value="1574" />
+    <option name="height" value="963" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -505,6 +488,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="AndroidView" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -584,13 +569,41 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="algorithm" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+            </path>
+            <path>
+              <item name="algorithm" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="&lt; 1.8 &gt;" type="70bed36:NamedLibraryElementNode" />
+            </path>
+            <path>
+              <item name="algorithm" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="&lt; 1.8 &gt;" type="70bed36:NamedLibraryElementNode" />
+              <item name="rt.jar" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="algorithm" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="&lt; 1.8 &gt;" type="70bed36:NamedLibraryElementNode" />
+              <item name="rt.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="algorithm" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="&lt; 1.8 &gt;" type="70bed36:NamedLibraryElementNode" />
+              <item name="rt.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="net" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
       <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -600,7 +613,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="SearchEverywhereHistoryKey" value="httpser&#9;PSI&#9;JAVA://com.sun.net.httpserver.HttpServer&#10;SerSocket&#9;PSI&#9;JAVA://java.net.ServerSocket&#10;enum&#9;PSI&#9;JAVA://java.lang.Enum&#10;Array&#9;PSI&#9;JAVA://java.lang.reflect.Array&#10;InputStream&#9;FILE&#9;jar://C:/Program Files/Java/jdk1.8.0_161/src.zip!/java/io/InputStream.java&#10;FilterIn&#9;PSI&#9;JAVA://java.io.FilterInputStream&#10;StringBuffer&#9;PSI&#9;JAVA://java.io.StringBufferInputStream&#10;File&#9;PSI&#9;JAVA://java.io.File&#10;FileInputStream&#9;PSI&#9;JAVA://java.io.FileInputStream&#10;BufferedWriter &#9;PSI&#9;JAVA://java.io.BufferedWriter" />
+    <property name="SearchEverywhereHistoryKey" value="HttpUrl&#9;PSI&#9;JAVA://java.net.HttpURLConnection&#10;httpser&#9;PSI&#9;JAVA://com.sun.net.httpserver.HttpServer&#10;SerSocket&#9;PSI&#9;JAVA://java.net.ServerSocket&#10;enum&#9;PSI&#9;JAVA://java.lang.Enum&#10;Array&#9;PSI&#9;JAVA://java.lang.reflect.Array&#10;InputStream&#9;FILE&#9;jar://C:/Program Files/Java/jdk1.8.0_161/src.zip!/java/io/InputStream.java&#10;FilterIn&#9;PSI&#9;JAVA://java.io.FilterInputStream&#10;StringBuffer&#9;PSI&#9;JAVA://java.io.StringBufferInputStream&#10;File&#9;PSI&#9;JAVA://java.io.File&#10;FileInputStream&#9;PSI&#9;JAVA://java.io.FileInputStream&#10;BufferedWriter &#9;PSI&#9;JAVA://java.io.BufferedWriter" />
     <property name="project.structure.last.edited" value="Facets" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -793,7 +806,8 @@
       <workItem from="1535503381328" duration="8367000" />
       <workItem from="1535589987900" duration="1203000" />
       <workItem from="1535705527805" duration="607000" />
-      <workItem from="1535935110286" duration="12084000" />
+      <workItem from="1535935110286" duration="13788000" />
+      <workItem from="1536021896564" duration="267000" />
     </task>
     <task id="LOCAL-00001" summary="项目初始化">
       <created>1532852799878</created>
@@ -928,11 +942,18 @@
       <option name="project" value="LOCAL" />
       <updated>1535540053573</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="简单部分题目 按题号完成">
+      <created>1535967060675</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1535967060675</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="243098000" />
+    <option name="totallyTimeSpent" value="245069000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -948,7 +969,6 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32964602" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.12057522" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -956,24 +976,25 @@
       <window_info id="JRebel Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.42146018" sideWeight="0.5064795" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32991362" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="JRebel Executor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20022124" sideWeight="0.49784017" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32853982" sideWeight="0.4913607" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20022124" sideWeight="0.49784017" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12041037" sideWeight="0.49376947" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14416847" sideWeight="0.49376947" order="0" side_tool="false" content_ui="combo" />
       <window_info id="JRebel" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32991362" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25431967" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21004319" sideWeight="0.50623053" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30973452" sideWeight="0.4913607" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21004319" sideWeight="0.50623053" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.12057522" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32991362" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32964602" sideWeight="0.49784017" order="1" side_tool="false" content_ui="tabs" />
@@ -1048,20 +1069,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_161/src.zip!/java/io/StringBufferInputStream.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="364">
-          <caret line="58" column="0" lean-forward="true" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_161/src.zip!/java/io/FileDescriptor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="42" column="26" lean-forward="false" selection-start-line="42" selection-start-column="26" selection-end-line="42" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_161/src.zip!/java/io/FilterInputStream.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="616">
@@ -1309,7 +1316,7 @@
             <element signature="method#minCostClimbingStairs#0;class#Leetcode#0" expanded="false" />
             <element signature="docComment;method#dominantIndex#0;class#Leetcode#0" expanded="false" />
             <element signature="method#dominantIndex#0;class#Leetcode#0" expanded="false" />
-            <element signature="e#79176#79199#0" expanded="false" />
+            <element signature="e#79793#79816#0" expanded="false" />
             <element signature="method#connected#0;class#Leetcode#0" expanded="false" />
             <element signature="docComment;method#isToeplitzMatrix#0;class#Leetcode#0" expanded="false" />
             <element signature="method#isToeplitzMatrix#0;class#Leetcode#0" expanded="false" />
@@ -1625,7 +1632,7 @@
             <element signature="method#minCostClimbingStairs#0;class#Leetcode#0" expanded="false" />
             <element signature="docComment;method#dominantIndex#0;class#Leetcode#0" expanded="false" />
             <element signature="method#dominantIndex#0;class#Leetcode#0" expanded="false" />
-            <element signature="e#79176#79199#0" expanded="false" />
+            <element signature="e#79793#79816#0" expanded="false" />
             <element signature="method#connected#0;class#Leetcode#0" expanded="false" />
             <element signature="docComment;method#isToeplitzMatrix#0;class#Leetcode#0" expanded="false" />
             <element signature="method#isToeplitzMatrix#0;class#Leetcode#0" expanded="false" />
@@ -1920,7 +1927,7 @@
             <element signature="method#minCostClimbingStairs#0;class#Leetcode#0" expanded="false" />
             <element signature="docComment;method#dominantIndex#0;class#Leetcode#0" expanded="false" />
             <element signature="method#dominantIndex#0;class#Leetcode#0" expanded="false" />
-            <element signature="e#79176#79199#0" expanded="false" />
+            <element signature="e#79793#79816#0" expanded="false" />
             <element signature="method#connected#0;class#Leetcode#0" expanded="false" />
             <element signature="docComment;method#isToeplitzMatrix#0;class#Leetcode#0" expanded="false" />
             <element signature="method#isToeplitzMatrix#0;class#Leetcode#0" expanded="false" />
@@ -2155,7 +2162,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="28">
           <caret line="1" column="1" lean-forward="false" selection-start-line="1" selection-start-column="1" selection-end-line="1" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2178,7 +2184,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="101">
           <caret line="115" column="17" lean-forward="false" selection-start-line="115" selection-start-column="17" selection-end-line="115" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2186,13 +2191,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="43">
           <caret line="14" column="22" lean-forward="false" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_161/src.zip!/java/net/ServerSocket.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="41" column="6" lean-forward="false" selection-start-line="41" selection-start-column="6" selection-end-line="41" selection-end-column="6" />
         </state>
       </provider>
     </entry>
@@ -2246,7 +2244,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="722">
           <caret line="92" column="1" lean-forward="false" selection-start-line="7" selection-start-column="7" selection-end-line="92" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2262,6 +2259,21 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
           <caret line="15" column="39" lean-forward="true" selection-start-line="15" selection-start-column="39" selection-end-line="15" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_161/src.zip!/java/net/ServerSocket.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="41" column="6" lean-forward="false" selection-start-line="41" selection-start-column="6" selection-end-line="41" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_161/src.zip!/java/net/Socket.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="53" column="6" lean-forward="false" selection-start-line="53" selection-start-column="6" selection-end-line="53" selection-end-column="6" />
           <folding />
         </state>
       </provider>
@@ -2274,10 +2286,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_161/src.zip!/java/net/HttpURLConnection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="70" column="0" lean-forward="true" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/hw/leetcode/Leetcode.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="199">
-          <caret line="3883" column="37" lean-forward="true" selection-start-line="3883" selection-start-column="37" selection-end-line="3883" selection-end-column="37" />
+        <state relative-caret-position="351">
+          <caret line="2863" column="31" lean-forward="true" selection-start-line="2863" selection-start-column="31" selection-end-line="2863" selection-end-column="31" />
           <folding>
             <element signature="docComment;class#Leetcode#0" expanded="false" />
             <element signature="docComment;method#twoSum#0;class#Leetcode#0" expanded="false" />
@@ -2514,7 +2534,7 @@
             <element signature="method#minCostClimbingStairs#0;class#Leetcode#0" expanded="false" />
             <element signature="docComment;method#dominantIndex#0;class#Leetcode#0" expanded="false" />
             <element signature="method#dominantIndex#0;class#Leetcode#0" expanded="false" />
-            <element signature="e#79176#79199#0" expanded="false" />
+            <element signature="e#79793#79816#0" expanded="false" />
             <element signature="method#connected#0;class#Leetcode#0" expanded="false" />
             <element signature="docComment;method#isToeplitzMatrix#0;class#Leetcode#0" expanded="false" />
             <element signature="method#isToeplitzMatrix#0;class#Leetcode#0" expanded="false" />
