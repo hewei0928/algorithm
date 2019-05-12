@@ -36,9 +36,9 @@ public class Leetcode {
 
     public class ListNode {
         int val;
-        ListNode next;
+        public ListNode next;
 
-        ListNode(int x) {
+        public ListNode(int x) {
             val = x;
         }
     }
@@ -109,7 +109,7 @@ public class Leetcode {
         }
         char[] chars = {'I', 'V', 'X', 'L', 'C', 'D', 'M'};
         String[] contains = {"IV", "IX", "XL", "XC", "CD", "CM"};
-        StringBuilder flag = new StringBuilder("");
+        StringBuilder flag = new StringBuilder();
         int[] ints = {1, 5, 10, 50, 100, 500, 1000};
         int[] containInts = {4, 9, 40, 90, 400, 900};
         int result = 0;
@@ -1202,6 +1202,50 @@ public class Leetcode {
     }
 
 
+    /**
+     * 155. 最小栈
+     * 设计一个支持 push，pop，top 操作，并能在常数时间内检索到最小元素的栈。
+     */
+//    class MinStack {
+//
+//        // 数组
+//        private int[] a;
+//        // 栈最大长度
+//        private int maxLength = 10;
+//        // 实际存储数量
+//        private int realNum = 0;
+//        // 最小数的下标
+//        private int minIndex = 0;
+//
+//
+//        public MinStack() {
+//            a = new int[maxLength];
+//        }
+//
+//        public void push(int x) {
+//            if (realNum + 1 >= maxLength) {
+//                maxLength = 2 * maxLength;
+//            }
+//
+//
+//        }
+//
+//        public void pop() {
+//
+//        }
+//
+//        public int top() {
+//
+//        }
+//
+//        public int getMin() {
+//
+//        }
+//    }
+
+
+
+
 
     /**
      * 160. 相交链表
@@ -1761,6 +1805,17 @@ public class Leetcode {
         }
         return treeNode;
     }
+
+
+    /**
+     * 231. 2的幂
+     * 给定一个整数，编写一个函数来判断它是否是 2 的幂次方。
+     * @param n
+     * @return
+     */
+//    public boolean isPowerOfTwo(int n) {
+//
+//    }
 
 
 
@@ -2351,13 +2406,13 @@ public class Leetcode {
     /**
      * n叉树节点
      */
-    class Node {
+    public class Node {
         int val;
         List<Node> children;
 
-        Node() {}
+        public Node() {}
 
-        Node(int _val, List<Node> _children) {
+        public Node(int _val, List<Node> _children) {
             val = _val;
             children = _children;
         }
@@ -2548,11 +2603,11 @@ public class Leetcode {
     /**
      * 树节点
      */
-    class TreeNode {
+    public class TreeNode {
       int val;
       TreeNode left;
       TreeNode right;
-      TreeNode(int x) { val = x; }
+      public TreeNode(int x) { val = x; }
     }
 
     /**
@@ -2948,7 +3003,7 @@ public class Leetcode {
         /**
          * Initialize your data structure here.
          */
-        MyLinkedList() {
+        public MyLinkedList() {
         }
 
         /**

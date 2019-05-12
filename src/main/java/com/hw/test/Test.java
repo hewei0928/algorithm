@@ -1,4 +1,6 @@
-package com.hw.leetcode;
+package com.hw.test;
+
+import com.hw.leetcode.Leetcode;
 
 import java.util.Arrays;
 
