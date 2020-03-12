@@ -15,5 +15,7 @@ public class PSVM {
         System.out.println(2147483647+1);
         System.out.println(" ".matches("[a-zA-Z0-9]"));
 
+        int[] a = {0,1,0,2,1,0,1,3,2,1,2,1};
+        System.out.println(new Leetcode().trap(a));
     }
 }

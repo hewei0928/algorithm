@@ -159,5 +159,7 @@ public class Test {
         System.out.println(Leetcode.postorder(null));
         System.out.println(Leetcode.preorder(null));
         System.out.println(Leetcode.Customers());
+        System.out.println(Leetcode.trap(null));
+        System.out.println();
     }
 }

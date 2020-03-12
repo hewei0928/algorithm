@@ -231,6 +231,28 @@ public class Leetcode {
     }
 
 
+    public boolean isValid1(String s) {
+        if (s == null || "".equals(s)) {
+            return false;
+        } else {
+            Stack<Character> stack = new Stack<>();
+            for (char c : s.toCharArray()) {
+                if (stack.isEmpty()) {
+                    stack.push(c);
+                } else {
+                    char before = stack.peek();
+                    if (c - before == 1 || c - before == 2) {
+                        stack.pop();
+                    } else {
+                        stack.push(c);
+                    }
+                }
+            }
+            return stack.isEmpty();
+        }
+    }
+
+
 
     /**
      * 20. 有效的括号
@@ -451,6 +473,41 @@ public class Leetcode {
         }
         return nums.length;
     }
+
+
+    /**
+     * 给定 n 个非负整数表示每个宽度为 1 的柱子的高度图，计算按此排列的柱子，下雨之后能接多少雨水。
+     * @param height 代表格子的数组
+     * @return 积水数
+     *  思路： 查找当前格子左右最高的格子
+     */
+    public int trap(int[] height) {
+        if (height == null) {
+            return 0;
+        }
+        int result = 0;
+        for (int i = 1; i < height.length; i++) {
+            // 计算格子两侧的最高格子
+            int highLeft = 0;
+            for (int j = i - 1; j >= 0; j--) {
+                if(height[j] > highLeft) {
+                    highLeft = height[j];
+                }
+            }
+            int highRight = 0;
+            for (int j = i + 1; j <= height.length - 1; j++) {
+                if(height[j] > highRight) {
+                    highRight = height[j];
+                }
+            }
+            int h = Math.min(highLeft, highRight);
+            if (h > height[i]) {
+                result += h - height[i];
+            }
+        }
+        return result;
+    }
+
 
 
 
@@ -743,6 +800,30 @@ public class Leetcode {
         }
     }
 
+    /**
+     * 给定一个二叉树，返回它的中序 遍历。
+     * @param root 二叉树
+     * @return 中序遍历结果
+     * 思路 使用递归
+     */
+    public List<Integer> inorderTraversal(TreeNode root) {
+        List<Integer> result = new ArrayList<>();
+        inorderTraversal(result, root);
+        return result;
+    }
+
+    private void inorderTraversal(List<Integer> list, TreeNode root) {
+        if (root != null) {
+            inorderTraversal(list, root.left);
+            list.add(root.val);
+            inorderTraversal(list, root.right);
+        }
+    }
+
+
+
+
+
 
     /**
      * 100. 相同的树
@@ -959,7 +1040,7 @@ public class Leetcode {
         }
         int front = 0, end = s.length() - 1;
         while (front < s.length() && end >= 0) {
-            Character sFront = s.charAt(front), sEnd = s.charAt(end);
+            char sFront = s.charAt(front), sEnd = s.charAt(end);
             while (!Character.isLetterOrDigit(sFront)) {
                 if (++front < s.length()) {
                     sFront = s.charAt(front);
@@ -1136,6 +1217,46 @@ public class Leetcode {
     }
 
 
+    /**
+     * 144 二叉树前序遍历
+     * @param root 二叉树前序遍历
+     * @return 遍历结果
+     */
+    public List<Integer> preorderTraversal(TreeNode root) {
+        List<Integer> list = new ArrayList<>();
+        preorderTraversal(list, root);
+        return list;
+    }
+
+    private void preorderTraversal(List<Integer> list, TreeNode root) {
+        if (root != null) {
+            list.add(root.val);
+            preorderTraversal(list, root.left);
+            preorderTraversal(list, root.right);
+        }
+    }
+
+
+
+    /**
+     * 145 二叉树后续遍历
+     * @param root 二叉树后续遍历
+     * @return 遍历结果
+     */
+    public List<Integer> postorderTraversal(TreeNode root) {
+        List<Integer> list = new ArrayList<>();
+        postorderTraversal(list, root);
+        return list;
+    }
+
+    private void postorderTraversal(List<Integer> list, TreeNode root) {
+        if (root != null) {
+            postorderTraversal(list, root.left);
+            postorderTraversal(list, root.right);
+            list.add(root.val);
+        }
+    }
+
 
     /**
      * 147. 对链表进行插入排序
@@ -1202,10 +1323,10 @@ public class Leetcode {
     }
 
 
-    /**
-     * 155. 最小栈
-     * 设计一个支持 push，pop，top 操作，并能在常数时间内检索到最小元素的栈。
-     */
+//    /**
+//     * 155. 最小栈
+//     * 设计一个支持 push，pop，top 操作，并能在常数时间内检索到最小元素的栈。
+//     */
 //    class MinStack {
 //
 //        // 数组
@@ -1349,7 +1470,7 @@ public class Leetcode {
      * 思路: 十进制转二十六进制
      */
     public String convertToTitle(int n) {
-        StringBuilder result = new StringBuilder("");
+        StringBuilder result = new StringBuilder();
         while (n != 0) {
             int x = n % 26;
             if (x == 0) {
@@ -1807,12 +1928,12 @@ public class Leetcode {
     }
 
 
-    /**
-     * 231. 2的幂
-     * 给定一个整数，编写一个函数来判断它是否是 2 的幂次方。
-     * @param n
-     * @return
-     */
+//    /**
+//     * 231. 2的幂
+//     * 给定一个整数，编写一个函数来判断它是否是 2 的幂次方。
+//     * @param n
+//     * @return
+//     */
 //    public boolean isPowerOfTwo(int n) {
 //
 //    }
@@ -2046,7 +2167,7 @@ public class Leetcode {
         ListNode odd = head, even = head.next, second = head.next;
         int index = 1;
         while (odd.next != null || even.next != null) {
-            if (index % 2 == 1) {
+            if ((index % 2) == 1) {
                 if (odd.next != null) {
                     odd.next = odd.next.next;
                 }
@@ -2171,7 +2292,7 @@ public class Leetcode {
     public List<String> fizzBuzz(int n) {
         List<String> result = new ArrayList<>();
         for (int i = 1; i <= n; i++) {
-            StringBuilder s = new StringBuilder("");
+            StringBuilder s = new StringBuilder();
             if (i % 3 == 0) {
                 s.append("Fizz");
             }
@@ -2394,7 +2515,7 @@ public class Leetcode {
             return null;
         }
         String[] ss = s.split(" ");
-        StringBuilder result = new StringBuilder("");
+        StringBuilder result = new StringBuilder();
         for (String s1 : ss) {
             StringBuilder si = new StringBuilder(s1);
             si.reverse();
@@ -3282,17 +3403,16 @@ public class Leetcode {
 
 
     // TODO: 2018/8/15 思路有误
-//    /**
-//     * 765. 情侣牵手
-//     * N 对情侣坐在连续排列的 2N 个座位上，想要牵到对方的手。
-//     * 计算最少交换座位的次数，以便每对情侣可以并肩坐在一起。一次交换可选择任意两人，让他们站起来交换座位。
-//     * 人和座位用 0 到 2N-1 的整数表示，情侣们按顺序编号，第一对是 (0, 1)，第二对是 (2, 3)，
-//     * 以此类推，最后一对是 (2N-2, 2N-1)。
-//     * 这些情侣的初始座位  row[i] 是由最初始坐在第 i 个座位上的人决定的。
-//     * @param 座位数组
-//     * @return 调换次数
-//     */
-/*
+    /**
+     * 765. 情侣牵手
+     * N 对情侣坐在连续排列的 2N 个座位上，想要牵到对方的手。
+     * 计算最少交换座位的次数，以便每对情侣可以并肩坐在一起。一次交换可选择任意两人，让他们站起来交换座位。
+     * 人和座位用 0 到 2N-1 的整数表示，情侣们按顺序编号，第一对是 (0, 1)，第二对是 (2, 3)，
+     * 以此类推，最后一对是 (2N-2, 2N-1)。
+     * 这些情侣的初始座位  row[i] 是由最初始坐在第 i 个座位上的人决定的。
+     * @param row 座位数组
+     * @return 调换次数
+     */
     public int minSwapsCouples(int[] row) {
         if (row == null || row.length % 2 != 0) {
             return 0;
@@ -3325,8 +3445,8 @@ public class Leetcode {
             }
         }
 
+        return 0;
     }
-*/
 
     private boolean connected(int x, int y) {
         int left  = y < x ? y : x;
@@ -3687,7 +3807,7 @@ public class Leetcode {
      * @return 字符串
      */
     private String getString (String s) {
-        StringBuilder result = new StringBuilder("");
+        StringBuilder result = new StringBuilder();
         for (char c : s.toCharArray()) {
             if (c == '#') {
                 if (result.length() > 0) {
