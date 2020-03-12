@@ -18,6 +18,7 @@ public class HeapOOM {
         }
     }
 
+    /* 测试提交2 */
     public static void main(String[] args) {
 //        List<OOMProject> oomProjects = new ArrayList<>();
 //        OOMProject oomProject = new OOMProject();
