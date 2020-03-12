@@ -3,13 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="6e035667-41d0-4d8c-9993-943dc018bc60" name="Default" comment="不规范处修改">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hw/base/HeapOOM.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hw/base/HeapOOM.java" afterDir="false" />
     </list>
-    <list id="a53e65b3-eb2f-45e9-b3f8-060446969bbe" name="garbage" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/junitgenerator-prj-settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/junitgenerator-prj-settings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list id="a53e65b3-eb2f-45e9-b3f8-060446969bbe" name="garbage" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -98,52 +93,6 @@
         <option value="git@github.com:hewei0928/algorithm.git" />
       </set>
     </option>
-  </component>
-  <component name="LineStatusTrackerManager">
-    <file path="$PROJECT_DIR$/.idea/workspace.xml">
-      <ranges>
-        <range start1="3" end1="4" start2="3" end2="10" changelist="6e035667-41d0-4d8c-9993-943dc018bc60" />
-        <range start1="5" end1="13" start2="11" end2="11" changelist="6e035667-41d0-4d8c-9993-943dc018bc60" />
-        <range start1="14" end1="16" start2="12" end2="12" changelist="6e035667-41d0-4d8c-9993-943dc018bc60" />
-        <range start1="24" end1="24" start2="20" end2="23" changelist="6e035667-41d0-4d8c-9993-943dc018bc60" />
-        <range start1="41" end1="71" start2="40" end2="40" changelist="6e035667-41d0-4d8c-9993-943dc018bc60" />
-        <range start1="73" end1="386" start2="42" end2="42" changelist="6e035667-41d0-4d8c-9993-943dc018bc60" />
-        <range start1="396" end1="397" start2="52" end2="52" changelist="6e035667-41d0-4d8c-9993-943dc018bc60" />
-        <range start1="424" end1="424" start2="79" end2="82" changelist="6e035667-41d0-4d8c-9993-943dc018bc60" />
-        <range start1="436" end1="443" start2="94" end2="99" changelist="6e035667-41d0-4d8c-9993-943dc018bc60" />
-        <range start1="445" end1="465" start2="101" end2="146" changelist="6e035667-41d0-4d8c-9993-943dc018bc60" />
-        <range start1="469" end1="472" start2="150" end2="153" changelist="6e035667-41d0-4d8c-9993-943dc018bc60" />
-        <range start1="480" end1="492" start2="161" end2="162" changelist="6e035667-41d0-4d8c-9993-943dc018bc60" />
-        <range start1="515" end1="515" start2="185" end2="186" changelist="6e035667-41d0-4d8c-9993-943dc018bc60" />
-        <range start1="517" end1="591" start2="188" end2="192" changelist="6e035667-41d0-4d8c-9993-943dc018bc60" />
-        <range start1="593" end1="594" start2="194" end2="195" changelist="6e035667-41d0-4d8c-9993-943dc018bc60" />
-        <range start1="596" end1="598" start2="197" end2="199" changelist="6e035667-41d0-4d8c-9993-943dc018bc60" />
-        <range start1="602" end1="603" start2="203" end2="204" changelist="6e035667-41d0-4d8c-9993-943dc018bc60" />
-        <range start1="604" end1="615" start2="205" end2="207" changelist="6e035667-41d0-4d8c-9993-943dc018bc60" />
-        <range start1="616" end1="618" start2="208" end2="210" changelist="6e035667-41d0-4d8c-9993-943dc018bc60" />
-        <range start1="623" end1="623" start2="215" end2="229" changelist="6e035667-41d0-4d8c-9993-943dc018bc60" />
-        <range start1="637" end1="637" start2="243" end2="257" changelist="6e035667-41d0-4d8c-9993-943dc018bc60" />
-        <range start1="658" end1="658" start2="278" end2="279" changelist="6e035667-41d0-4d8c-9993-943dc018bc60" />
-        <range start1="663" end1="664" start2="284" end2="286" changelist="6e035667-41d0-4d8c-9993-943dc018bc60" />
-        <range start1="671" end1="672" start2="293" end2="294" changelist="6e035667-41d0-4d8c-9993-943dc018bc60" />
-        <range start1="675" end1="676" start2="297" end2="298" changelist="6e035667-41d0-4d8c-9993-943dc018bc60" />
-        <range start1="683" end1="683" start2="305" end2="307" changelist="6e035667-41d0-4d8c-9993-943dc018bc60" />
-        <range start1="686" end1="686" start2="310" end2="313" changelist="6e035667-41d0-4d8c-9993-943dc018bc60" />
-        <range start1="687" end1="688" start2="314" end2="314" changelist="6e035667-41d0-4d8c-9993-943dc018bc60" />
-        <range start1="691" end1="691" start2="317" end2="329" changelist="6e035667-41d0-4d8c-9993-943dc018bc60" />
-        <range start1="700" end1="700" start2="338" end2="339" changelist="6e035667-41d0-4d8c-9993-943dc018bc60" />
-        <range start1="743" end1="744" start2="382" end2="396" changelist="6e035667-41d0-4d8c-9993-943dc018bc60" />
-        <range start1="899" end1="900" start2="551" end2="566" changelist="6e035667-41d0-4d8c-9993-943dc018bc60" />
-        <range start1="901" end1="904" start2="567" end2="567" changelist="6e035667-41d0-4d8c-9993-943dc018bc60" />
-        <range start1="913" end1="984" start2="576" end2="576" changelist="6e035667-41d0-4d8c-9993-943dc018bc60" />
-        <range start1="998" end1="1000" start2="590" end2="602" changelist="6e035667-41d0-4d8c-9993-943dc018bc60" />
-        <range start1="1012" end1="1013" start2="614" end2="616" changelist="6e035667-41d0-4d8c-9993-943dc018bc60" />
-        <range start1="1015" end1="1016" start2="618" end2="619" changelist="6e035667-41d0-4d8c-9993-943dc018bc60" />
-        <range start1="1018" end1="1019" start2="621" end2="626" changelist="6e035667-41d0-4d8c-9993-943dc018bc60" />
-        <range start1="1055" end1="1055" start2="662" end2="666" changelist="6e035667-41d0-4d8c-9993-943dc018bc60" />
-        <range start1="1063" end1="1063" start2="674" end2="678" changelist="a53e65b3-eb2f-45e9-b3f8-060446969bbe" />
-      </ranges>
-    </file>
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
@@ -565,15 +514,6 @@
     </task>
     <option name="localTasksCounter" value="25" />
     <servers />
-  </component>
-  <component name="TodoView">
-    <todo-panel id="selected-file">
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
-    <todo-panel id="all">
-      <are-packages-shown value="true" />
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
